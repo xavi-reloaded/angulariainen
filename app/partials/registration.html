@@ -1,0 +1,91 @@
+<div ng-controller="UserForm" >
+
+    <form name="myForm">
+
+        <div>
+            <div class="span4">
+                <label>citizen me</label>
+                <input type="text" ng-model="form.name" required/><br/>
+                <input type="text" ng-model="form.familyName1" required/><br/>
+                <input type="text" ng-model="form.familyName2"/><br/>
+                <input type="text" ng-model="form.nickname" ng-pattern="nickname" required/><br/>
+
+                <input type="email" name="input" ng-model="form.email" required><br/>
+
+                <input type="radio" ng-model="form.genre" value="male">  Male <br/>
+                <input type="radio" ng-model="form.genre" value="female"> Female <br/>
+
+                <select ng-model="form.birthyear" ng-options="y for y in years()"></select><br>
+                <select ng-model="form.address.country" ng-options="c for c in countries"></select><br>
+                <input type="text" ng-model="form.address.zip" ng-pattern="zip" required/><br/>
+                <select ng-model="form.languages" ng-options="l for l in languages"></select><br>
+                <select ng-model="form.education" ng-options="e for e in education"></select><br>
+                <select ng-model="form.activity" ng-options="a for a in activity"></select><br>
+
+
+            </div>
+
+            <div class="span3" ng-show="showPrioritiesForm()">
+                <label>my priorities</label>
+                [ <a href="" ng-click="addPriority()">add</a> ]
+                <div ng-repeat="priority in form.priorities">
+                    <input type="text" ng-model="priority.value" required/>
+                    [ <a href="" ng-click="removePriority(priority)">X</a> ]
+                </div>
+            </div>
+
+            <div class="span3" ng-show="showIssuesForm()">
+                <label>my issues</label>
+                [ <a href="" ng-click="addIssue()">add</a> ]
+                <div ng-repeat="issue in form.issues">
+                    <input type="text" ng-model="issue.value" required/>
+                    [ <a href="" ng-click="removeIssue(issue)">X</a> ]
+                </div>
+            </div>
+
+            <div class="span4" ng-show="showTopicsForm()">
+                <label>my topics</label>
+                [ <a href="" ng-click="addTopic()">add</a> ]
+
+                <table>
+                    <tr ng-repeat="topic in form.topics">
+                        <td><label>{{topic.value}}</label></td>
+                        <td style="width: 200px;"><wijslider value="{{topic.val}}" min="{{topic.min}}" max="{{topic.max}}" ></wijslider></td>
+                        <td class="small">[&nbsp;<a href="" ng-click="removeTopic(topic)">X</a>&nbsp;]</td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div class="span4" ng-show="showSourcesForm()">
+                <label>my sources</label>
+                [ <a href="" ng-click="addSource()">add</a> ]
+
+                <table>
+                    <tr ng-repeat="source in form.sources">
+                        <td><label>{{source.value}}</label></td>
+                        <td style="width: 200px;"><wijslider value="{{source.val}}" min="{{source.min}}" max="{{source.max}}" ></wijslider></td>
+                        <td class="small">[&nbsp;<a href="" ng-click="removeSource(source)">X</a>&nbsp;]</td>
+                    </tr>
+                </table>
+
+            </div>
+
+
+        </div>
+
+        <div class="navbar-fixed-bottom">
+            <hr/>
+            <button ng-click="cancel()" ng-disabled="isCancelDisabled()">Cancel</button>
+            <button ng-click="save()" ng-disabled="isSaveDisabled()">set my profile</button>
+
+            <hr/>
+            Debug View:
+            <pre>form={{form}}</pre>
+
+        </div>
+
+    </form>
+
+
+</div>
