@@ -27,7 +27,7 @@
     <script src="lib/wijmo/angular.wijmo.js" type="text/javascript"></script>
 
 </head>
-<body>
+<body ng-model="trainTron">
 
 
 <?php

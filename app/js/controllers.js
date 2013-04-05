@@ -2,6 +2,49 @@
 
 /* Controllers */
 
+function trainTron($scope)
+{
+    $scope.course = {
+        courseId: '123456789',
+        isInstructor: true,
+        courseUrl: 'http://www.apiumtech.com/course/course-flipante',
+        courseTitle: 'Curso Flipante de Taxidermia',
+        userId: '123456789',
+        uiMessages: 'bla bla bla',
+        autoplay: '1',
+        introCourse: {},
+        chapters: [
+            {"name": "City", "order": 3,"type":"select",
+                "values": [
+                    "Madrid",
+                    "Barcelona",
+                    "Bilbao",
+                    "Valencia",
+                    "Pamplona"
+                ]}
+        ]
+    };
+
+    $scope.orderProp = 'order';
+
+    $scope.customHtml = function(v){
+        return "weke";
+    };
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function questionsCitizenCtrl($scope) {
     $scope.questions = [
@@ -14,12 +57,12 @@ function questionsCitizenCtrl($scope) {
         {"name": "City",
             "order": 3,"type":"select",
             "values": [
-            "Madrid",
-            "Barcelona",
-            "Bilbao",
-            "Valencia",
-            "Pamplona"
-        ]}
+                "Madrid",
+                "Barcelona",
+                "Bilbao",
+                "Valencia",
+                "Pamplona"
+            ]}
     ];
 
     $scope.orderProp = 'order';
@@ -27,6 +70,11 @@ function questionsCitizenCtrl($scope) {
     $scope.customHtml = function(v){
         return "weke";
     };
+}
+
+function trainTron($scope)
+{
+
 }
 
 

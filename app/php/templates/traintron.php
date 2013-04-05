@@ -8,15 +8,16 @@
  */
 ?>
 
-<div ng-model=""
+<div
      id="course-taking-page"
      class="ud-coursetaking wrapper"
-     data-courseid="5362"
-     data-isinstructor=""
-     data-courseurl="https://www.petrainen"
-     data-coursetitle="How to Create a Udemy Course"
-     data-userid="697256" data-uimessages="{&quot;continueWithLecture&quot;:&quot;Continue with Lecture: &quot;,&quot;startWithLecture&quot;:&quot;Start with Lecture: &quot;,&quot;completedCourse&quot;:&quot;Congratulations! You completed this course.&quot;,&quot;noLectures&quot;:&quot;This course has no lectures&quot;,&quot;resumeLecture&quot;:&quot;Resume Lecture&quot;,&quot;revisitLecture&quot;:&quot;Revisit Lecture&quot;,&quot;startLecture&quot;:&quot;Start Lecture&quot;,&quot;resumeQuiz&quot;:&quot;Resume Quiz&quot;,&quot;revisitQuiz&quot;:&quot;Revisit Quiz&quot;,&quot;startQuiz&quot;:&quot;Start Quiz&quot;,&quot;feedbackDidntLike&quot;:&quot;Please tell others why you didn&#39;t like this course&quot;,&quot;feedbackCourseFine&quot;:&quot;Please tell others why this course is fine&quot;,&quot;feedbackCourseGood&quot;:&quot;Please tell others why this course is good&quot;,&quot;feedbackCourseVeryGood&quot;:&quot;Please tell others why this course is very good&quot;}"
-     data-autoplay="1">
+     data-courseid="{{courseId}}"
+     data-isinstructor="{{isInstructor}}"
+     data-courseurl="{{courseUrl}}"
+     data-coursetitle="{{courseTitle}}"
+     data-userid="{{userId}}"
+     data-uimessages="{{uiMessages}}"
+     data-autoplay="{{autoplay}}">
 
 <div class="main">
 <a id="go-back" href="#dashboard">Back to Course</a>
@@ -29,26 +30,22 @@
         <span class="ch">SECTION 0</span> <span class="le">LECTURE</span> <span class="no">1</span>
         <h1>Welcome to the Course!</h1>
     </div>
-    <div class="asset-container">
-        <div class="ud-lecture" data-lectureid="213438" data-autoload="false"></div>
-    </div>
+
+    <div class="asset-container"> <div class="ud-lecture" data-lectureid="213438" data-autoload="false"></div> </div>
+
     <div class="bottom">
-        <a class="autoplay on" data-name="lectureAutoStart">
-            Auto Play
-            <span>ON</span>
-        </a>
-
+        <a class="autoplay on" data-name="lectureAutoStart"> Auto Play <span>ON</span> </a>
         <a class="next-lecture" href="">NEXT LECTURE</a>
-
         <div class="share mini-tooltip">
-            share                    <div class="tooltip-content">
+            share
+            <div class="tooltip-content">
                 <a class="f" href="http://www.facebook.com/sharer.php?t=Welcome%20to%20the%20Course!&u=https://www.apiumtech.com/lectures/welcome-to-the-course-213438" data-h="370" data-w="640">facebook</a>
                 <a class="t" href="https://twitter.com/intent/tweet?text=Welcome%20to%20the%20Course!&url=https://www.apiumtech.com/lectures/welcome-to-the-course-213438&via=udemy">twitter</a>
             </div>
         </div>
-        <a href="" class="mark mini-tooltip read"><span class="tooltip-content"><b>Mark as Completed</b><b>Mark as Uncompleted</b></span>
-        </a>
+        <a href="" class="mark mini-tooltip read"><span class="tooltip-content"><b>Mark as Completed</b><b>Mark as Uncompleted</b></span></a>
     </div>
+
 </li>
 
 <li class="show-progress">
@@ -57,6 +54,7 @@
         <span>You have completed <b class="completion-ratio">37%</b> of this course</span>
     </div>
 </li>
+
 
 <li class="chapter">
         <span class="percent chapter-number">
