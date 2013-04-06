@@ -51,8 +51,8 @@ function trainTron($scope, $timeout)
         console.log(steps );
 
         if (steps==-1) {
-            $scope.scrollTimeline(true);
             $('.show-progress').remove();
+            $scope.scrollTimeline(true);
             return;
         }
 
@@ -78,8 +78,14 @@ function trainTron($scope, $timeout)
     };
 
     $scope.scrollTimeline = function(goBack){
-        $scope.screenOnFront=(goBack==true) ? $scope.screenOnFront-100 : $scope.screenOnFront+100;
-        console.log('updated screenOnFront'+$scope.screenOnFront);
+
+        var max = ($scope.activities.length + 3)*100;
+
+        $scope.screenOnFront=(goBack==true) ?
+            ($scope.screenOnFront==0)?0:(($scope.screenOnFront > (max-200))?max-200:$scope.screenOnFront-100) :
+                ($scope.screenOnFront > max)?max:$scope.screenOnFront+100;
+
+        console.log('updated max => '+max+' || screenOnFront => '+$scope.screenOnFront);
     }
 
     $scope.insertAt = function(index, element) {
@@ -93,17 +99,6 @@ function trainTron($scope, $timeout)
             timeline.children().eq(index).before(timeline.children().last())
         }
         return index;
-    }
-
-    $scope.allActivitiesBytopic = function(){
-        var activities= [
-            {t:1,tt:'The first Section',number: 1, title: 'Hola',type:[]},
-            {t:1,tt:'',number: 2, title: 'Caracola',type:[]},
-            {t:1,tt:'',number: 3, title: 'Caracola',type:[]},
-            {t:2,tt:'The second Section',number: 1, title: 'Caracola',type:[]},
-            {t:2,tt:'',number: 2, title: 'Caracola',type:[]}
-        ];
-        return activities;
     }
 }
 

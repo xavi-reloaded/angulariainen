@@ -54,6 +54,33 @@
                 </div>
             </li>
 
+            <li class="certificate">
+                <div class="badge">
+                    <span class="icon"></span>
+                    <!-- <span class="title">Junior Web Developer</span> -->
+                </div>
+                <div class="congrats">
+                    <h2>Congratulations!</h2>
+                    <!--
+                    <p>
+                        You just completed "<b>Junior Developer</b>" certificate!<br> It's added to your <span>Udemy Profile</span>.            </p>
+                    -->
+                    <p>
+                        You just completed the course <br> "<b>How to Create a Udemy Course</b>"!<br>            </p>
+
+                    <div class="share">
+                        <h4>Share the good news:</h4>
+                        <div class="btns">
+                            <a class="fb" target="_blank" href="http://www.facebook.com/sharer.php?t=How%20to%20Create%20a%20Udemy%20Course&u=https://www.apiumtech.com/official-udemy-instructor-course/">Facebook</a>
+                            <a class="tw" target="_blank" href="http://twitter.com/intent/tweet?text=How%20to%20Create%20a%20Udemy%20Course&url=https://www.apiumtech.com/official-udemy-instructor-course/&via=udemy">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <a href="" class="next-lecture continue">Continue</a>
+                </div>
+            </li>
+
 
 
         </ul>
