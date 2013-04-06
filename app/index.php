@@ -26,6 +26,11 @@
 
     <script src="lib/wijmo/angular.wijmo.js" type="text/javascript"></script>
 
+    <link href="css/video-js.css" rel="stylesheet" type="text/css">
+
+    <!-- LOAD VIDEO.JS SOURCE FILES IN ORDER -->
+    <script src="/app/lib/video-js/source-loader.js"></script>
+
 </head>
 <body ng-controller="trainTron">
 

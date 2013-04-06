@@ -37,11 +37,38 @@
                     <h1>{{activity.title}}</h1>
                 </div>
                 <div class="asset-container">
-                    <div class="ud-lecture" data-lectureid="213440" data-autoload="false"></div>
+<!--                    <div class="ud-lecture" data-lectureid="213440" data-autoload="false"></div>-->
+                    <video id="vid_{{activity.number}}" class="video-js vjs-default-skin" controls preload="auto" width="100%" height="100%" poster="http://video-js.zencoder.com/oceans-clip.png">
+                        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4'>
+                        <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm'>
+                        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg'>
+                        <p>Video Playback Not Supported</p>
+                    </video>
+                    <script>
+                        (function() {
+                            var vid1, progressed;
+
+                            // create a really simple plugin
+                            // this one just logs the buffered percentage to the console whenever
+                            // more data is downloaded
+                            progressed = function(options) {
+                                this.on('progress', function(e) {
+                                    console.log(this.bufferedPercent());
+                                });
+                            };
+
+                            // register the plugin
+                            vjs.plugin('progressed', progressed);
+
+                            // initialize it
+                            vid1 = vjs('vid_{{activity.number}}');
+                            vid1.progressed();
+                        })();
+                    </script>
                 </div>
 
                 <div class="bottom">
-                    <a class="autoplay on" data-name="lectureAutoStart">Auto Play<span>ON</span></a>
+<!--                    <a class="autoplay on" data-name="lectureAutoStart">Auto Play<span>ON</span></a>-->
                     <a class="next-lecture" href="" ng-click="continue(2)">NEXT LECTURE</a>
                     <div class="share mini-tooltip">
                         share

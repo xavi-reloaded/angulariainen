@@ -109,7 +109,7 @@
     width: 100%;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .asset-container {
+#course-taking-page.wrapper .main ul#timeline>li  .asset-container {
     position: absolute;
     top: 100px;
     bottom: 80px;
