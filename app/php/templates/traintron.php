@@ -114,4 +114,9 @@
 
 
     </div>
+
+    <div class="sidebar">
+        <a class="close-btn" href=""></a>
+
+    </div>
 </div>
