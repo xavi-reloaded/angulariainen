@@ -37,7 +37,7 @@
                     <h1>{{activity.title}}</h1>
                 </div>
                 <div class="asset-container">
-<!--                    <div class="ud-lecture" data-lectureid="213440" data-autoload="false"></div>-->
+                    <!--                    <div class="ud-lecture" data-lectureid="213440" data-autoload="false"></div>-->
                     <video id="vid_{{activity.number}}" class="video-js vjs-default-skin" controls preload="auto" width="100%" height="100%" poster="http://video-js.zencoder.com/oceans-clip.png">
                         <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4'>
                         <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm'>
@@ -68,7 +68,7 @@
                 </div>
 
                 <div class="bottom">
-<!--                    <a class="autoplay on" data-name="lectureAutoStart">Auto Play<span>ON</span></a>-->
+                    <!--                    <a class="autoplay on" data-name="lectureAutoStart">Auto Play<span>ON</span></a>-->
                     <a class="next-lecture" href="" ng-click="continue(2)">NEXT LECTURE</a>
                     <div class="share mini-tooltip">
                         share
@@ -117,6 +117,17 @@
 
     <div class="sidebar">
         <a class="close-btn" href=""></a>
+        <div class="sidebar-container">
+            <div class="tab-label-container">
+                <tabs>
+                    <pane heading="NO SE QUE">
+                        <div>está demostrado que eres una pinki</div>
+                    </pane>
+                    <pane heading="PONER POR"></pane>
+                    <pane heading="CULPA'LAURA"></pane>
+                </tabs>
+            </div>
+        </div>
 
     </div>
 </div>
