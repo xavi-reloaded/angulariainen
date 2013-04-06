@@ -11,18 +11,18 @@
 <div
      id="course-taking-page"
      class="ud-coursetaking wrapper"
-     data-courseid="{{courseId}}"
-     data-isinstructor="{{isInstructor}}"
-     data-courseurl="{{courseUrl}}"
-     data-coursetitle="{{courseTitle}}"
-     data-userid="{{userId}}"
-     data-uimessages="{{uiMessages}}"
-     data-autoplay="{{autoplay}}">
+     data-courseid="{{form.courseId}}"
+     data-isinstructor="{{form.isInstructor}}"
+     data-courseurl="{{form.courseUrl}}"
+     data-coursetitle="{{form.courseTitle}}"
+     data-userid="{{form.userId}}"
+     data-uimessages="{{form.uiMessages}}"
+     data-autoplay="{{form.autoplay}}">
 
 <div class="main">
 <a id="go-back" href="#dashboard">Back to Course</a>
 
-<ul id="timeline" style="top: -0%;">
+<ul id="timeline" style="top: -0%;" >
 
 <li class="on completed" data-lectureid="213438">
 
