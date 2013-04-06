@@ -2,8 +2,9 @@
 
 /* Controllers */
 
-function trainTron($scope)
+function trainTron($scope, $timeout)
 {
+
     $scope.course = {
         courseId: '123456789',
         isInstructor: true,
@@ -13,23 +14,97 @@ function trainTron($scope)
         uiMessages: 'bla bla bla',
         autoplay: '1',
         introCourse: {},
-        chapters: [
-            {"name": "City", "order": 3,"type":"select",
-                "values": [
-                    "Madrid",
-                    "Barcelona",
-                    "Bilbao",
-                    "Valencia",
-                    "Pamplona"
-                ]}
+        ratioCompleted: '48',
+        intro: {message:"Wellcome to the course flipante"},
+        topics: [
+            {"number": 1, "title": 'The first Section',"type":"select",
+                "activities": [
+                    {"number": 1, "title": 'Hola',"type":[]},
+                    {"number": 2, "title": 'Caracola',"type":[]},
+                    {"number": 3, "title": 'how',"type":[]},
+                    {"number": 4, "title": 'are',"type":[]}
+                ]
+            }
         ]
     };
 
-    $scope.orderProp = 'order';
+    $scope.activities= [
+        {t:1,tt:'The first Section',number: 1, title: 'La primera actividad',type:[]},
+        {t:1,tt:'',number: 2, title: 'La segunda actividad',type:[]},
+        {t:1,tt:'',number: 3, title: 'la tercera lectura',type:[]},
+        {t:2,tt:'The second Section',number: 4, title: 'la cuarta',type:[]},
+        {t:2,tt:'',number: 5, title: 'Caracola is the good life',type:[]}
+    ];
 
-    $scope.customHtml = function(v){
-        return "weke";
+//    $scope.flattened = function () {
+//        var flat = [];
+//        $scope.course.topics.forEach(function (item) {
+//            flat.concat(item);
+//        });
+//        return flat;
+//    }
+
+    $scope.screenOnFront = 0;
+
+    $scope.continue = function(steps){
+
+        console.log(steps );
+
+        if (steps==-1) {
+            $scope.scrollTimeline(true);
+            $('.show-progress').remove();
+            return;
+        }
+
+        var s = '' +
+            '<li class="show-progress">' +
+            '   <span class="percent completion-ratio">' + $scope.course.ratioCompleted + '%</span>' +
+            '   <div class="note"> <span>You have completed <b class="completion-ratio">' + $scope.course.ratioCompleted + '%</b> of this course</span> </div>' +
+            '</li>';
+
+
+        if (steps==2) {
+            var number = (($scope.screenOnFront / 100))+1;
+            $scope.insertAt(number, s);
+
+            $timeout(function() {
+                $scope.scrollTimeline(false);
+            }, 1000);
+        }
+
+
+        $scope.scrollTimeline(false);
+
     };
+
+    $scope.scrollTimeline = function(goBack){
+        $scope.screenOnFront=(goBack==true) ? $scope.screenOnFront-100 : $scope.screenOnFront+100;
+        console.log('updated screenOnFront'+$scope.screenOnFront);
+    }
+
+    $scope.insertAt = function(index, element) {
+        var timeline = $('ul#timeline');
+        var lastIndex = timeline.children().size();
+        if (index < 0) {
+            index = Math.max(0, lastIndex + 1 + index)
+        }
+        timeline.append(element)
+        if (index < lastIndex) {
+            timeline.children().eq(index).before(timeline.children().last())
+        }
+        return index;
+    }
+
+    $scope.allActivitiesBytopic = function(){
+        var activities= [
+            {t:1,tt:'The first Section',number: 1, title: 'Hola',type:[]},
+            {t:1,tt:'',number: 2, title: 'Caracola',type:[]},
+            {t:1,tt:'',number: 3, title: 'Caracola',type:[]},
+            {t:2,tt:'The second Section',number: 1, title: 'Caracola',type:[]},
+            {t:2,tt:'',number: 2, title: 'Caracola',type:[]}
+        ];
+        return activities;
+    }
 }
 
 
@@ -72,10 +147,6 @@ function questionsCitizenCtrl($scope) {
     };
 }
 
-function trainTron($scope)
-{
-
-}
 
 
 function UserForm($scope) {

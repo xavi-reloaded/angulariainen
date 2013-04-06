@@ -1,84 +1,10 @@
-/* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
-}
-
-.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
-}
-
-.menu > li {
-  display: inline;
-}
-
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
-}
-
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
-}
-
-
-#course-taking-page:before {
-    opacity: .25;
-}
-
-#course-taking-page.wrapper {
-    background: url("../img/course-take-bg.jpg") #2c2c30 !important;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 100;
-}
-
-#course-taking-page.wrapper .main {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 40px;
-    right: 465px;
-    z-index: 1;
-}
-
-#course-taking-page.wrapper .main:before {
-    content: '';
-    width: 5px;
-    height: 100%;
-    position: fixed;
-    background: url("../img/timeline-bar.png");
-    left: 219px;
-}
-
-#course-taking-page.wrapper .main a#go-back {
-    color: #84848c;
-    font-size: 12px;
-    font-weight: bold;
-    position: fixed;
-    top: 15px;
-    left: 40px;
-    line-height: 16px;
-    z-index: 1;
-}
 
 #course-taking-page.wrapper .main a#go-back:before {
     content: '';
     width: 16px;
     height: 16px;
     float: left;
-    background: url("../img/sprites.png?v=10") 0 -520px;
+    background: url("../images/v3/sprites.png?v=10") 0 -520px;
     margin-right: 5px;
     opacity: .3;
 }
@@ -102,14 +28,14 @@
     transition: top 1s ease;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li {
+#course-taking-page.wrapper .main ul#timeline>div>li {
     position: relative;
     height: 100%;
     float: left;
     width: 100%;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .asset-container {
+#course-taking-page.wrapper .main ul#timeline>div>li .asset-container {
     position: absolute;
     top: 100px;
     bottom: 80px;
@@ -117,43 +43,43 @@
     background: #000;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .asset-container>* {
+#course-taking-page.wrapper .main ul#timeline>div>li .asset-container>* {
     width: 100%;
     height: 100%;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .asset-container .fit-height {
+#course-taking-page.wrapper .main ul#timeline>div>li .asset-container .fit-height {
     width: auto;
     height: 100%;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .asset-container .fit-width {
+#course-taking-page.wrapper .main ul#timeline>div>li .asset-container .fit-width {
     width: 100%;
     height: auto;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .asset-container .article-view {
+#course-taking-page.wrapper .main ul#timeline>div>li .asset-container .article-view {
     background: #fff;
     overflow: auto;
     padding: 15px;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .asset-container .article-view p {
+#course-taking-page.wrapper .main ul#timeline>div>li .asset-container .article-view p {
     font-size: 16px;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .asset-container .wufoo-survey-asset {
+#course-taking-page.wrapper .main ul#timeline>div>li .asset-container .wufoo-survey-asset {
     background: #fff;
     overflow: auto;
     padding: 15px;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .asset-container .wufoo-survey-completed {
+#course-taking-page.wrapper .main ul#timeline>div>li .asset-container .wufoo-survey-completed {
     height: 100%;
     overflow: hidden;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .asset-container .wufoo-survey-completed .main-view {
+#course-taking-page.wrapper .main ul#timeline>div>li .asset-container .wufoo-survey-completed .main-view {
     height: 100%;
     width: 100%;
     position: relative;
@@ -162,8 +88,8 @@
     left: 0;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .asset-container .wufoo-survey-completed .frame {
-    background: url("../img/noise.png") #ffffff;
+#course-taking-page.wrapper .main ul#timeline>div>li .asset-container .wufoo-survey-completed .frame {
+    background: url("../images/v3/noise.png") #ffffff;
     border-radius: 5px;
     display: inline-block;
     height: 100%;
@@ -174,7 +100,7 @@
     overflow: hidden;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .asset-container .wufoo-survey-completed .completed-page {
+#course-taking-page.wrapper .main ul#timeline>div>li .asset-container .wufoo-survey-completed .completed-page {
     position: relative;
     background: #EFF1F6;
     box-shadow: 0 0 135px 15px rgba(0, 0, 0, 0.45) inset, 0 0 0 1px #ffffff inset;
@@ -182,7 +108,7 @@
     padding: 0 15%;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .asset-container .wufoo-survey-completed .completed-page .completed-text {
+#course-taking-page.wrapper .main ul#timeline>div>li .asset-container .wufoo-survey-completed .completed-page .completed-text {
     position: absolute;
     top: 50%;
     left: 0;
@@ -195,11 +121,11 @@
     text-shadow: 0 1px #fff;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .asset-container .wufoo-survey-completed .completed-page .completed-text>span {
+#course-taking-page.wrapper .main ul#timeline>div>li .asset-container .wufoo-survey-completed .completed-page .completed-text>span {
     margin: 0px 5px;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .prev-lecture {
+#course-taking-page.wrapper .main ul#timeline>div>li .prev-lecture {
     position: absolute;
     left: 172px;
     top: 14px;
@@ -207,7 +133,7 @@
     cursor: pointer;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .prev-lecture a {
+#course-taking-page.wrapper .main ul#timeline>div>li .prev-lecture a {
     height: 18px;
     width: 19px;
     background-color: #000;
@@ -220,8 +146,8 @@
     float: left;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .prev-lecture a:before {
-    background: url("../img/sprites.png?v=10") 0px -690px;
+#course-taking-page.wrapper .main ul#timeline>div>li .prev-lecture a:before {
+    background: url("../images/v3/sprites.png?v=10") 0px -690px;
     content: "";
     float: left;
     margin-left: 2px;
@@ -234,7 +160,7 @@
     -webkit-backface-visibility: hidden;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .prev-lecture span {
+#course-taking-page.wrapper .main ul#timeline>div>li .prev-lecture span {
     float: left;
     color: #84848c;
     font-size: 12px;
@@ -244,46 +170,46 @@
     padding-left: 5px;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .prev-lecture:hover span {
+#course-taking-page.wrapper .main ul#timeline>div>li .prev-lecture:hover span {
     color: #fff;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li:first-child .prev-lecture {
+#course-taking-page.wrapper .main ul#timeline>div>li:first-child .prev-lecture {
     display: none;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li:last-child .next-lecture {
+#course-taking-page.wrapper .main ul#timeline>div>li:last-child .next-lecture {
     display: none;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top {
+#course-taking-page.wrapper .main ul#timeline>div>li .top {
     position: absolute;
     top: 40px;
     width: 100%;
     *zoom: 1;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top:before, #course-taking-page.wrapper .main ul#timeline>li .top:after {
+#course-taking-page.wrapper .main ul#timeline>div>li .top:before, #course-taking-page.wrapper .main ul#timeline>div>li .top:after {
     display: table;
     content: "";
     line-height: 0;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top:after {
+#course-taking-page.wrapper .main ul#timeline>div>li .top:after {
     clear: both;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top:before, #course-taking-page.wrapper .main ul#timeline>li .top:after {
+#course-taking-page.wrapper .main ul#timeline>div>li .top:before, #course-taking-page.wrapper .main ul#timeline>div>li .top:after {
     display: table;
     content: "";
     line-height: 0;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top:after {
+#course-taking-page.wrapper .main ul#timeline>div>li .top:after {
     clear: both;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top .ch {
+#course-taking-page.wrapper .main ul#timeline>div>li .top .ch {
     float: left;
     background: #5a5a61;
     color: #202227;
@@ -298,7 +224,7 @@
     text-align: center;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top .le {
+#course-taking-page.wrapper .main ul#timeline>div>li .top .le {
     float: left;
     background: #000;
     border-radius: 10px;
@@ -311,13 +237,13 @@
     width: 84px;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top .no {
+#course-taking-page.wrapper .main ul#timeline>div>li .top .no {
     float: left;
-    background: #d98028 url("../img/noise.png");
-    background: url("../img/noise.png"), -webkit-linear-gradient(#d98028, #a64624);
-    background: url("../img/noise.png"), -o-linear-gradient(#d98028, #a64624);
-    background: url("../img/noise.png"), -ms-linear-gradient(#d98028, #a64624);
-    background: url("../img/noise.png"), linear-gradient(#d98028, #a64624);
+    background: #d98028 url("../images/v3/noise.png");
+    background: url("../images/v3/noise.png"), -webkit-linear-gradient(#d98028, #a64624);
+    background: url("../images/v3/noise.png"), -o-linear-gradient(#d98028, #a64624);
+    background: url("../images/v3/noise.png"), -ms-linear-gradient(#d98028, #a64624);
+    background: url("../images/v3/noise.png"), linear-gradient(#d98028, #a64624);
     width: 32px;
     height: 32px;
     line-height: 30px;
@@ -332,7 +258,7 @@
     position: relative;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top h1 {
+#course-taking-page.wrapper .main ul#timeline>div>li .top h1 {
     position: absolute;
     left: 200px;
     right: 0;
@@ -348,12 +274,12 @@
     white-space: nowrap;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top .ddown {
+#course-taking-page.wrapper .main ul#timeline>div>li .top .ddown {
     float: right;
     margin: 8px 0 0 10px;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top .ddown>a {
+#course-taking-page.wrapper .main ul#timeline>div>li .top .ddown>a {
     border-radius: 3px;
     height: 22px;
     padding: 1px 10px 1px 32px;
@@ -361,15 +287,15 @@
     color: #999;
     font-weight: bold;
     position: relative;
-    background: #393c44 url("../img/noise.png");
-    background: url("../img/noise.png"), -webkit-linear-gradient(#393c44, #1d1f23);
-    background: url("../img/noise.png"), -o-linear-gradient(#393c44, #1d1f23);
-    background: url("../img/noise.png"), -ms-linear-gradient(#393c44, #1d1f23);
-    background: url("../img/noise.png"), linear-gradient(#393c44, #1d1f23);
+    background: #393c44 url("../images/v3/noise.png");
+    background: url("../images/v3/noise.png"), -webkit-linear-gradient(#393c44, #1d1f23);
+    background: url("../images/v3/noise.png"), -o-linear-gradient(#393c44, #1d1f23);
+    background: url("../images/v3/noise.png"), -ms-linear-gradient(#393c44, #1d1f23);
+    background: url("../images/v3/noise.png"), linear-gradient(#393c44, #1d1f23);
     box-shadow: 0 1px #5b5d64 inset, 0 0 0 3px #000;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top .ddown>a:before {
+#course-taking-page.wrapper .main ul#timeline>div>li .top .ddown>a:before {
     content: '';
     border-style: solid;
     border-width: 5px;
@@ -382,7 +308,7 @@
     box-shadow: 0 -2px 0 0 #000000;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top .ddown>a:after {
+#course-taking-page.wrapper .main ul#timeline>div>li .top .ddown>a:after {
     background: #424449;
     border: 0 none;
     height: 22px;
@@ -393,7 +319,7 @@
     border-right: 1px solid #1d1e22;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top .ddown ul {
+#course-taking-page.wrapper .main ul#timeline>div>li .top .ddown ul {
     left: auto;
     right: -3px;
     margin-top: 0;
@@ -403,7 +329,7 @@
     width: 270px;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top .ddown ul li h3 {
+#course-taking-page.wrapper .main ul#timeline>div>li .top .ddown ul li h3 {
     font-size: 10px;
     color: #888;
     text-shadow: 0 1px #fff;
@@ -415,7 +341,7 @@
     background: linear-gradient(#dadada, #b2b2b2);
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top .ddown ul li a {
+#course-taking-page.wrapper .main ul#timeline>div>li .top .ddown ul li a {
     color: #353535;
     text-shadow: 0 1px #fff;
     font-weight: bold;
@@ -426,17 +352,17 @@
     background: linear-gradient(#ffffff, #ebebeb) "!important";
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top .ddown ul li.on, #course-taking-page.wrapper .main ul#timeline>li .top .ddown ul li a:hover {
+#course-taking-page.wrapper .main ul#timeline>div>li .top .ddown ul li.on, #course-taking-page.wrapper .main ul#timeline>div>li .top .ddown ul li a:hover {
     color: #45729c;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top {
+#course-taking-page.wrapper .main ul#timeline>div>li .top {
     opacity: 1;
     position: relative;
     float: left;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top>a {
+#course-taking-page.wrapper .main ul#timeline>div>li .top>a {
     font-size: 14px;
     color: #666;
     padding: 0 25px 0 15px;
@@ -452,7 +378,7 @@
     box-shadow: 1px 1px 1px #828282;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top>a:after {
+#course-taking-page.wrapper .main ul#timeline>div>li .top>a:after {
     content: '';
     width: 0;
     height: 0;
@@ -465,7 +391,7 @@
     margin-top: -1px;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top>ul, #course-taking-page.wrapper .main ul#timeline>li .top>div {
+#course-taking-page.wrapper .main ul#timeline>div>li .top>ul, #course-taking-page.wrapper .main ul#timeline>div>li .top>div {
     position: absolute;
     margin-top: 1px;
     display: none;
@@ -479,7 +405,7 @@
     width: auto;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top>ul li>a, #course-taking-page.wrapper .main ul#timeline>li .top>div li>a {
+#course-taking-page.wrapper .main ul#timeline>div>li .top>ul li>a, #course-taking-page.wrapper .main ul#timeline>div>li .top>div li>a {
     color: #252525;
     padding: 7px 15px;
     text-align: left;
@@ -493,30 +419,30 @@
     white-space: nowrap;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top>ul li>a:hover, #course-taking-page.wrapper .main ul#timeline>li .top>div li>a:hover {
+#course-taking-page.wrapper .main ul#timeline>div>li .top>ul li>a:hover, #course-taking-page.wrapper .main ul#timeline>div>li .top>div li>a:hover {
     background: #F1F1F1;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top>ul li:first-child>a, #course-taking-page.wrapper .main ul#timeline>li .top>div li:first-child>a {
+#course-taking-page.wrapper .main ul#timeline>div>li .top>ul li:first-child>a, #course-taking-page.wrapper .main ul#timeline>div>li .top>div li:first-child>a {
     border-radius: 0 3px 0 0;
     border-top: 0;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top>ul li:last-child>a, #course-taking-page.wrapper .main ul#timeline>li .top>div li:last-child>a {
+#course-taking-page.wrapper .main ul#timeline>div>li .top>ul li:last-child>a, #course-taking-page.wrapper .main ul#timeline>div>li .top>div li:last-child>a {
     border-radius: 0 0 3px 3px;
     border-bottom: 0;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top.on>a {
+#course-taking-page.wrapper .main ul#timeline>div>li .top.on>a {
     border-radius: 5px 5px 0 0;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top.on>ul, #course-taking-page.wrapper .main ul#timeline>li .top.on>div {
+#course-taking-page.wrapper .main ul#timeline>div>li .top.on>ul, #course-taking-page.wrapper .main ul#timeline>div>li .top.on>div {
     display: block;
     z-index: 5;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top.green-ddown>a {
+#course-taking-page.wrapper .main ul#timeline>div>li .top.green-ddown>a {
     background: #3e7929;
     background: -webkit-linear-gradient(#a8c073, #3e7929);
     background: -o-linear-gradient(#a8c073, #3e7929);
@@ -524,7 +450,7 @@
     background: linear-gradient(#a8c073, #3e7929);
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top.gray-ddown>a {
+#course-taking-page.wrapper .main ul#timeline>div>li .top.gray-ddown>a {
     background: #666666;
     background: -webkit-linear-gradient(#999999, #666666);
     background: -o-linear-gradient(#999999, #666666);
@@ -532,7 +458,7 @@
     background: linear-gradient(#999999, #666666);
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top.red-ddown>a {
+#course-taking-page.wrapper .main ul#timeline>div>li .top.red-ddown>a {
     background: #b71524;
     background: -webkit-linear-gradient(#cb5660, #b71524);
     background: -o-linear-gradient(#cb5660, #b71524);
@@ -540,7 +466,7 @@
     background: linear-gradient(#cb5660, #b71524);
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top.green-ddown>a, #course-taking-page.wrapper .main ul#timeline>li .top.gray-ddown>a, #course-taking-page.wrapper .main ul#timeline>li .top.red-ddown>a {
+#course-taking-page.wrapper .main ul#timeline>div>li .top.green-ddown>a, #course-taking-page.wrapper .main ul#timeline>div>li .top.gray-ddown>a, #course-taking-page.wrapper .main ul#timeline>div>li .top.red-ddown>a {
     color: #fff;
     text-shadow: 0 -1px #333333;
     padding: 0 10px;
@@ -550,7 +476,7 @@
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4) inset, 0 2px rgba(255, 255, 255, 0.4) inset, 0 1px 3px rgba(0, 0, 0, 0.33);
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top.green-ddown>a:before, #course-taking-page.wrapper .main ul#timeline>li .top.gray-ddown>a:before, #course-taking-page.wrapper .main ul#timeline>li .top.red-ddown>a:before {
+#course-taking-page.wrapper .main ul#timeline>div>li .top.green-ddown>a:before, #course-taking-page.wrapper .main ul#timeline>div>li .top.gray-ddown>a:before, #course-taking-page.wrapper .main ul#timeline>div>li .top.red-ddown>a:before {
     content: 'a';
     position: absolute;
     border-left: 1px solid rgba(0, 0, 0, 0.2);
@@ -560,16 +486,16 @@
     font-size: 0;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top.green-ddown>a:after, #course-taking-page.wrapper .main ul#timeline>li .top.gray-ddown>a:after, #course-taking-page.wrapper .main ul#timeline>li .top.red-ddown>a:after {
+#course-taking-page.wrapper .main ul#timeline>div>li .top.green-ddown>a:after, #course-taking-page.wrapper .main ul#timeline>div>li .top.gray-ddown>a:after, #course-taking-page.wrapper .main ul#timeline>div>li .top.red-ddown>a:after {
     border-top-color: #fff;
     box-shadow: 0 -1px #333333;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top.green-ddown.on>a, #course-taking-page.wrapper .main ul#timeline>li .top.gray-ddown.on>a, #course-taking-page.wrapper .main ul#timeline>li .top.red-ddown.on>a {
+#course-taking-page.wrapper .main ul#timeline>div>li .top.green-ddown.on>a, #course-taking-page.wrapper .main ul#timeline>div>li .top.gray-ddown.on>a, #course-taking-page.wrapper .main ul#timeline>div>li .top.red-ddown.on>a {
     border-radius: 4px;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top.green-ddown ul, #course-taking-page.wrapper .main ul#timeline>li .top.gray-ddown ul, #course-taking-page.wrapper .main ul#timeline>li .top.red-ddown ul {
+#course-taking-page.wrapper .main ul#timeline>div>li .top.green-ddown ul, #course-taking-page.wrapper .main ul#timeline>div>li .top.gray-ddown ul, #course-taking-page.wrapper .main ul#timeline>div>li .top.red-ddown ul {
     left: auto;
     right: 0;
     border: 1px solid #666;
@@ -577,63 +503,63 @@
     box-shadow: 0 1px #ccc;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top.green-ddown ul li a, #course-taking-page.wrapper .main ul#timeline>li .top.gray-ddown ul li a, #course-taking-page.wrapper .main ul#timeline>li .top.red-ddown ul li a {
+#course-taking-page.wrapper .main ul#timeline>div>li .top.green-ddown ul li a, #course-taking-page.wrapper .main ul#timeline>div>li .top.gray-ddown ul li a, #course-taking-page.wrapper .main ul#timeline>div>li .top.red-ddown ul li a {
     color: #777;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top.green-ddown ul li a:hover, #course-taking-page.wrapper .main ul#timeline>li .top.gray-ddown ul li a:hover, #course-taking-page.wrapper .main ul#timeline>li .top.red-ddown ul li a:hover {
+#course-taking-page.wrapper .main ul#timeline>div>li .top.green-ddown ul li a:hover, #course-taking-page.wrapper .main ul#timeline>div>li .top.gray-ddown ul li a:hover, #course-taking-page.wrapper .main ul#timeline>div>li .top.red-ddown ul li a:hover {
     background: #e7eede;
     color: #213117;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top.green-ddown ul li a:first-child, #course-taking-page.wrapper .main ul#timeline>li .top.gray-ddown ul li a:first-child, #course-taking-page.wrapper .main ul#timeline>li .top.red-ddown ul li a:first-child {
+#course-taking-page.wrapper .main ul#timeline>div>li .top.green-ddown ul li a:first-child, #course-taking-page.wrapper .main ul#timeline>div>li .top.gray-ddown ul li a:first-child, #course-taking-page.wrapper .main ul#timeline>div>li .top.red-ddown ul li a:first-child {
     border-radius: 3px 3px 0 0;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .top.green-ddown ul li a:last-child, #course-taking-page.wrapper .main ul#timeline>li .top.gray-ddown ul li a:last-child, #course-taking-page.wrapper .main ul#timeline>li .top.red-ddown ul li a:last-child {
+#course-taking-page.wrapper .main ul#timeline>div>li .top.green-ddown ul li a:last-child, #course-taking-page.wrapper .main ul#timeline>div>li .top.gray-ddown ul li a:last-child, #course-taking-page.wrapper .main ul#timeline>div>li .top.red-ddown ul li a:last-child {
     border-radius: 0 0 3px 3px;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li.on .top {
+#course-taking-page.wrapper .main ul#timeline>div>li.on .top {
     opacity: 1;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li.on .top .ddown, #course-taking-page.wrapper .main ul#timeline>li.on .top .share, #course-taking-page.wrapper .main ul#timeline>li.on .top .mark {
+#course-taking-page.wrapper .main ul#timeline>div>li.on .top .ddown, #course-taking-page.wrapper .main ul#timeline>div>li.on .top .share, #course-taking-page.wrapper .main ul#timeline>div>li.on .top .mark {
     opacity: 1;
     visibility: visible;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li.off {
+#course-taking-page.wrapper .main ul#timeline>div>li.off {
     visibility: hidden;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li.completed .top .no {
-    background: #8bbb27 url("../img/noise.png");
-    background: url("../img/noise.png"), -webkit-linear-gradient(#8bbb27, #608119);
-    background: url("../img/noise.png"), -o-linear-gradient(#8bbb27, #608119);
-    background: url("../img/noise.png"), -ms-linear-gradient(#8bbb27, #608119);
-    background: url("../img/noise.png"), linear-gradient(#8bbb27, #608119);
+#course-taking-page.wrapper .main ul#timeline>div>li.completed .top .no {
+    background: #8bbb27 url("../images/v3/noise.png");
+    background: url("../images/v3/noise.png"), -webkit-linear-gradient(#8bbb27, #608119);
+    background: url("../images/v3/noise.png"), -o-linear-gradient(#8bbb27, #608119);
+    background: url("../images/v3/noise.png"), -ms-linear-gradient(#8bbb27, #608119);
+    background: url("../images/v3/noise.png"), linear-gradient(#8bbb27, #608119);
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .bottom {
+#course-taking-page.wrapper .main ul#timeline>div>li .bottom {
     position: absolute;
     width: 100%;
     bottom: 20px;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .bottom a.next-lecture {
+#course-taking-page.wrapper .main ul#timeline>div>li .bottom a.next-lecture {
     position: absolute;
     left: 131px;
     bottom: 0;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .bottom a.next-lecture.continue {
+#course-taking-page.wrapper .main ul#timeline>div>li .bottom a.next-lecture.continue {
     position: absolute;
     bottom: 0px;
     left: 147px;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .bottom .autoplay {
+#course-taking-page.wrapper .main ul#timeline>div>li .bottom .autoplay {
     position: absolute;
     top: 6px;
     left: 242px;
@@ -644,53 +570,53 @@
     cursor: pointer;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .bottom .autoplay span {
+#course-taking-page.wrapper .main ul#timeline>div>li .bottom .autoplay span {
     color: #A53E3E;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .bottom .autoplay.on span {
+#course-taking-page.wrapper .main ul#timeline>div>li .bottom .autoplay.on span {
     color: #658165;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .bottom .share, #course-taking-page.wrapper .main ul#timeline>li .bottom .mark {
+#course-taking-page.wrapper .main ul#timeline>div>li .bottom .share, #course-taking-page.wrapper .main ul#timeline>div>li .bottom .mark {
     float: right;
     width: 26px;
     height: 26px;
-    background: url("../img/sprites.png?v=10") 0 -570px;
+    background: url("../images/v3/sprites.png?v=10") 0 -570px;
     text-indent: -999em;
     margin: 5px 0 0 5px;
     cursor: pointer;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .bottom .share {
+#course-taking-page.wrapper .main ul#timeline>div>li .bottom .share {
     background-position: 0 -600px;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .bottom .mark b:nth-child(1) {
+#course-taking-page.wrapper .main ul#timeline>div>li .bottom .mark b:nth-child(1) {
     display: block;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .bottom .mark b:nth-child(2) {
+#course-taking-page.wrapper .main ul#timeline>div>li .bottom .mark b:nth-child(2) {
     display: none;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .bottom .mark:hover {
-    background: url("../img/sprites.png?v=10") -30px -570px;
+#course-taking-page.wrapper .main ul#timeline>div>li .bottom .mark:hover {
+    background: url("../images/v3/sprites.png?v=10") -30px -570px;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .bottom .mark.read {
+#course-taking-page.wrapper .main ul#timeline>div>li .bottom .mark.read {
     background-position: -30px -570px;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .bottom .mark.read b:nth-child(1) {
+#course-taking-page.wrapper .main ul#timeline>div>li .bottom .mark.read b:nth-child(1) {
     display: none;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .bottom .mark.read b:nth-child(2) {
+#course-taking-page.wrapper .main ul#timeline>div>li .bottom .mark.read b:nth-child(2) {
     display: block;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .percent {
+#course-taking-page.wrapper .main ul#timeline>div>li .percent {
     position: absolute;
     background: #6e8d39;
     background: -webkit-linear-gradient(#c3c456, #6e8d39);
@@ -711,7 +637,7 @@
     margin-top: -40px;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .note {
+#course-taking-page.wrapper .main ul#timeline>div>li .note {
     left: 240px;
     margin-top: -16px;
     overflow: hidden;
@@ -720,7 +646,7 @@
     top: 50%;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .note span {
+#course-taking-page.wrapper .main ul#timeline>div>li .note span {
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -734,11 +660,11 @@
     box-shadow: 0 2px 2px #000 inset;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .note span b {
+#course-taking-page.wrapper .main ul#timeline>div>li .note span b {
     color: #fff;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li.chapter .percent {
+#course-taking-page.wrapper .main ul#timeline>div>li.chapter .percent {
     background: #6090bf;
     background: -webkit-linear-gradient(#cee7fa, #6090bf);
     background: -o-linear-gradient(#cee7fa, #6090bf);
@@ -748,14 +674,14 @@
     line-height: 104px;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li.chapter .percent span {
+#course-taking-page.wrapper .main ul#timeline>div>li.chapter .percent span {
     position: absolute;
     font-size: 14px;
     top: -22px;
     left: 15px;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .badge {
+#course-taking-page.wrapper .main ul#timeline>div>li .badge {
     position: absolute;
     top: 50%;
     left: 106px;
@@ -764,12 +690,12 @@
     text-align: center;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .badge .icon {
-    background: #e7dcad url("../img/noise.png");
-    background: url("../img/noise.png"), -webkit-linear-gradient(#e7dcad, #e09226);
-    background: url("../img/noise.png"), -o-linear-gradient(#e7dcad, #e09226);
-    background: url("../img/noise.png"), -ms-linear-gradient(#e7dcad, #e09226);
-    background: url("../img/noise.png"), linear-gradient(#e7dcad, #e09226);
+#course-taking-page.wrapper .main ul#timeline>div>li .badge .icon {
+    background: #e7dcad url("../images/v3/noise.png");
+    background: url("../images/v3/noise.png"), -webkit-linear-gradient(#e7dcad, #e09226);
+    background: url("../images/v3/noise.png"), -o-linear-gradient(#e7dcad, #e09226);
+    background: url("../images/v3/noise.png"), -ms-linear-gradient(#e7dcad, #e09226);
+    background: url("../images/v3/noise.png"), linear-gradient(#e7dcad, #e09226);
     width: 130px;
     height: 130px;
     border-radius: 99em;
@@ -777,16 +703,16 @@
     box-shadow: 0 0 0 5px #dca32a, 0 0 0 10px #000;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .badge .icon:before {
+#course-taking-page.wrapper .main ul#timeline>div>li .badge .icon:before {
     content: '';
     width: 84px;
     height: 84px;
-    background: url("../img/badges.png");
+    background: url("../images/v3/badges.png");
     display: inline-block;
     margin-top: 26px;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .badge .title {
+#course-taking-page.wrapper .main ul#timeline>div>li .badge .title {
     background: #000;
     padding: 0;
     display: inline-block;
@@ -796,50 +722,50 @@
     display: block;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .congrats {
+#course-taking-page.wrapper .main ul#timeline>div>li .congrats {
     left: 50%;
     margin: -130px 0 0 -200px;
     position: absolute;
     text-align: center;
     width: 400px;
-    background: url("../img/huge-tick.png") no-repeat center;
+    background: url("../images/v3/huge-tick.png") no-repeat center;
     height: 260px;
     top: 50%;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .congrats h2 {
+#course-taking-page.wrapper .main ul#timeline>div>li .congrats h2 {
     color: #fff;
     font-size: 30px;
     font-weight: lighter;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .congrats p {
+#course-taking-page.wrapper .main ul#timeline>div>li .congrats p {
     color: #babdc2;
     font-size: 16px;
     margin-top: 20px;
     line-height: 24px;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .congrats p b {
+#course-taking-page.wrapper .main ul#timeline>div>li .congrats p b {
     color: #fff3af;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .congrats p span {
+#course-taking-page.wrapper .main ul#timeline>div>li .congrats p span {
     color: #FFFFFF;
     font-weight: bold;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .congrats .share {
+#course-taking-page.wrapper .main ul#timeline>div>li .congrats .share {
     margin-top: 20px;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .congrats .share h4 {
+#course-taking-page.wrapper .main ul#timeline>div>li .congrats .share h4 {
     color: #FFFFFF;
     font-size: 12px;
     text-transform: uppercase;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .congrats .share .btns {
+#course-taking-page.wrapper .main ul#timeline>div>li .congrats .share .btns {
     border-radius: 20px;
     box-shadow: 0 0 0 1px #000000, 0 0 0 4px rgba(0, 0, 0, 0.5);
     display: inline-block;
@@ -848,12 +774,12 @@
     line-height: 25px;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .congrats .share .btns>* {
-    background: #6992d6 url("../img/noise.png");
-    background: url("../img/noise.png"), -webkit-linear-gradient(#6992d6, #3564ab);
-    background: url("../img/noise.png"), -o-linear-gradient(#6992d6, #3564ab);
-    background: url("../img/noise.png"), -ms-linear-gradient(#6992d6, #3564ab);
-    background: url("../img/noise.png"), linear-gradient(#6992d6, #3564ab);
+#course-taking-page.wrapper .main ul#timeline>div>li .congrats .share .btns>* {
+    background: #6992d6 url("../images/v3/noise.png");
+    background: url("../images/v3/noise.png"), -webkit-linear-gradient(#6992d6, #3564ab);
+    background: url("../images/v3/noise.png"), -o-linear-gradient(#6992d6, #3564ab);
+    background: url("../images/v3/noise.png"), -ms-linear-gradient(#6992d6, #3564ab);
+    background: url("../images/v3/noise.png"), linear-gradient(#6992d6, #3564ab);
     color: #FFFFFF;
     display: table-cell;
     font-size: 14px;
@@ -863,12 +789,12 @@
     padding-right: 10px;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .congrats .share .btns>*:before {
-    background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -632px, -moz-linear-gradient(#567fcc, #28529a);
-    background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -632px, -webkit-linear-gradient(#567fcc, #28529a);
-    background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -632px, -o-linear-gradient(#567fcc, #28529a);
-    background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -632px, -ms-linear-gradient(#567fcc, #28529a);
-    background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -632px, linear-gradient(#567fcc, #28529a);
+#course-taking-page.wrapper .main ul#timeline>div>li .congrats .share .btns>*:before {
+    background: url("../images/v3/noise.png"), url("../images/v3/sprites.png?v=10") 0 -632px, -moz-linear-gradient(#567fcc, #28529a);
+    background: url("../images/v3/noise.png"), url("../images/v3/sprites.png?v=10") 0 -632px, -webkit-linear-gradient(#567fcc, #28529a);
+    background: url("../images/v3/noise.png"), url("../images/v3/sprites.png?v=10") 0 -632px, -o-linear-gradient(#567fcc, #28529a);
+    background: url("../images/v3/noise.png"), url("../images/v3/sprites.png?v=10") 0 -632px, -ms-linear-gradient(#567fcc, #28529a);
+    background: url("../images/v3/noise.png"), url("../images/v3/sprites.png?v=10") 0 -632px, linear-gradient(#567fcc, #28529a);
     content: "";
     height: 26px;
     width: 30px;
@@ -876,21 +802,21 @@
     margin-right: 9px;
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .congrats .share .btns .tw {
+#course-taking-page.wrapper .main ul#timeline>div>li .congrats .share .btns .tw {
     border-left: 1px solid #000;
-    background: #67b2d6 url("../img/noise.png");
-    background: url("../img/noise.png"), -webkit-linear-gradient(#67b2d6, #3582ab);
-    background: url("../img/noise.png"), -o-linear-gradient(#67b2d6, #3582ab);
-    background: url("../img/noise.png"), -ms-linear-gradient(#67b2d6, #3582ab);
-    background: url("../img/noise.png"), linear-gradient(#67b2d6, #3582ab);
+    background: #67b2d6 url("../images/v3/noise.png");
+    background: url("../images/v3/noise.png"), -webkit-linear-gradient(#67b2d6, #3582ab);
+    background: url("../images/v3/noise.png"), -o-linear-gradient(#67b2d6, #3582ab);
+    background: url("../images/v3/noise.png"), -ms-linear-gradient(#67b2d6, #3582ab);
+    background: url("../images/v3/noise.png"), linear-gradient(#67b2d6, #3582ab);
 }
 
-#course-taking-page.wrapper .main ul#timeline>li .congrats .share .btns .tw:before {
-    background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -662px, -moz-linear-gradient(#59a5ce, #2b739e);
-    background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -662px, -webkit-linear-gradient(#59a5ce, #2b739e);
-    background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -662px, -o-linear-gradient(#59a5ce, #2b739e);
-    background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -662px, -ms-linear-gradient(#59a5ce, #2b739e);
-    background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -662px, linear-gradient(#59a5ce, #2b739e);
+#course-taking-page.wrapper .main ul#timeline>div>li .congrats .share .btns .tw:before {
+    background: url("../images/v3/noise.png"), url("../images/v3/sprites.png?v=10") 0 -662px, -moz-linear-gradient(#59a5ce, #2b739e);
+    background: url("../images/v3/noise.png"), url("../images/v3/sprites.png?v=10") 0 -662px, -webkit-linear-gradient(#59a5ce, #2b739e);
+    background: url("../images/v3/noise.png"), url("../images/v3/sprites.png?v=10") 0 -662px, -o-linear-gradient(#59a5ce, #2b739e);
+    background: url("../images/v3/noise.png"), url("../images/v3/sprites.png?v=10") 0 -662px, -ms-linear-gradient(#59a5ce, #2b739e);
+    background: url("../images/v3/noise.png"), url("../images/v3/sprites.png?v=10") 0 -662px, linear-gradient(#59a5ce, #2b739e);
 }
 
 #course-taking-page.wrapper .sidebar {
@@ -1036,7 +962,7 @@
     content: '';
     width: 30px;
     height: 32px;
-    background: url("../img/sprites.png?v=10") -120px -860px;
+    background: url("../images/v3/sprites.png?v=10") -120px -860px;
     float: left;
     margin-top: 3px;
 }
@@ -1063,7 +989,7 @@
 }
 
 #course-taking-page.wrapper .sidebar .sidebar-container .tab-divs #extras>ul>li .btns {
-    background: #a8cce6 url("../img/noise.png");
+    background: #a8cce6 url("../images/v3/noise.png");
     border-radius: 4px 4px 4px 4px;
     position: absolute;
     right: 10px;
@@ -1084,7 +1010,7 @@
 }
 
 #course-taking-page.wrapper .sidebar .sidebar-container .tab-divs #extras>ul>li .btns a:before {
-    background: url("../img/sprites.png?v=10") 0 -800px;
+    background: url("../images/v3/sprites.png?v=10") 0 -800px;
     content: "";
     height: 14px;
     width: 16px;
@@ -1220,7 +1146,7 @@
 }
 
 #course-taking-page.wrapper .sidebar .sidebar-container .tab-divs #notes #notes-mask ul {
-    background: url("../img/notes-bg.png"), #fff9ed url("../img/noise.png");
+    background: url("../images/v3/notes-bg.png"), #fff9ed url("../images/v3/noise.png");
     min-height: 100%;
 }
 
@@ -1229,7 +1155,7 @@
     position: absolute;
     width: 100%;
     height: 20px;
-    background: url("../img/sprites.png?v=10") 0 -943px;
+    background: url("../images/v3/sprites.png?v=10") 0 -943px;
     top: 0;
 }
 
@@ -1278,7 +1204,7 @@
 #course-taking-page.wrapper .sidebar .sidebar-container .tab-divs #notes #notes-mask ul li p:after {
     content: '';
     display: block;
-    background: url("../img/sprites.png?v=10") 120px -988px;
+    background: url("../images/v3/sprites.png?v=10") 120px -988px;
     height: 30px;
 }
 
@@ -1320,7 +1246,7 @@
 }
 
 #course-taking-page.wrapper .sidebar a.close-btn:before {
-    background: url("../img/sprites.png?v=10") 0 -690px;
+    background: url("../images/v3/sprites.png?v=10") 0 -690px;
     content: "";
     float: left;
     height: 13px;
@@ -1363,3 +1289,32 @@
     -webkit-backface-visibility: hidden;
 }
 
+.quiz-asset {
+    height: 100%;
+    overflow: hidden;
+}
+
+.quiz-asset .quiz-viewer {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    white-space: nowrap;
+    font-size: 0;
+    left: 0;
+    -webkit-transition: left 0.3s ease;
+    -moz-transition: left 0.3s ease;
+    -o-transition: left 0.3s ease;
+    transition: left 0.3s ease;
+}
+
+.quiz-asset .frame {
+    background: url("../images/v3/noise.png") #ffffff;
+    border-radius: 5px;
+    display: inline-block;
+    height: 100%;
+    white-space: normal;
+    width: 100%;
+    font-size: 14px;
+    vertical-align: top;
+    overflow: hidden;
+}

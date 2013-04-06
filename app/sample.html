@@ -1,8 +1,8 @@
 <!doctype html>
 <html ng-app="app">
 <head>
-  <meta charset="utf-8">
-  <title>My AngularJS App</title>
+    <meta charset="utf-8">
+    <title>My AngularJS App</title>
 
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular/angular-resource.js"></script>
@@ -31,28 +31,32 @@
 </head>
 
 
-<body>
-  <ul class="menu">
-    <li><a href="#/registration">User registration</a></li>
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
+<body ng-controller="trainTron">
 
-  <div ng-view></div>
+<!--<div ng-view></div>/-->
+<div
+        id="course-taking-page"
+        class="ud-coursetaking wrapper">
 
-  <!--<div class="footer">AngularJS app: v<span app-version></span></div>-->
+    <div class="main">
+        <ul id="timeline">
+            <aula-topic n="2" t="Wekeinendel is good"> </aula-topic>
+        </ul>
+    </div>
+</div>
+<!--<div class="footer">AngularJS app: v<span app-version></span></div>-->
 
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
-  -->
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
+-->
 
-  <script src="js/app.js"></script>
+<script src="js/app.js"></script>
 
-  <script src="js/services.js"></script>
-  <script src="js/controllers.js"></script>
-  <script src="js/filters.js"></script>
-  <script src="js/directives.js"></script>
+<script src="js/services.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/directives.js"></script>
 
 
 </body>

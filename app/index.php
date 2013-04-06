@@ -8,10 +8,10 @@
     <script src="lib/angular/angular-resource.js"></script>
     <script src="lib/angular/angular-ui.min.js"></script>
     <script src="lib/ui-bootstrap/ui-bootstrap-tpls-0.2.0.js"></script>
-    <script src="lib/ui-bootstrap/ui-bootstrap-0.2.0.js"></script>
 
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="css/app.css"/>
+<!--    <link rel="stylesheet" href="css/appp.css"/>-->
     <link rel="stylesheet" href="css/basic-elements.css"/>
 
     <!-- jQuery -->
@@ -27,7 +27,7 @@
     <script src="lib/wijmo/angular.wijmo.js" type="text/javascript"></script>
 
 </head>
-<body ng-model="trainTron">
+<body ng-controller="trainTron">
 
 
 <?php
