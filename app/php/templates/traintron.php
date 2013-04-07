@@ -25,17 +25,20 @@
         <ul id="timeline" style="top: -{{screenOnFront}}%;" ng-cloak>
 
             <li class="chapter">
-                <span class="percent chapter-number"><span>Section</span>1</span>
-                <div class="note"><span><b>{{course.intro.message}}</b></span></div>
-                <div class="bottom"><a href="" class="next-lecture continue" ng-click="continue(1)">Continue</a></div>
+<!--                <span class="percent chapter-number"><span>Section</span>1</span>-->
+                <span class="element"><span>Section</span>1</span>
+                <div class="tell"><span><b>{{course.intro.message}}</b></span></div>
+                <div class="bottom"><a href="" class="next continue" ng-click="continue(1)">Continue</a></div>
             </li>
 
             <li class="on" data-lectureid="213440" ng-repeat="activity in activities">
+
                 <div class="prev-lecture" ng-click="continue(-1)"><a href=""></a><span>Previous Lecture</span></div>
                 <div class="top">
                     <span class="ch">SECTION {{activity.t}}</span> <span class="le">LECTURE</span> <span class="no">{{activity.number}}</span>
                     <h1>{{activity.title}}</h1>
                 </div>
+
                 <div class="asset-container">
                     <!--                    <div class="ud-lecture" data-lectureid="213440" data-autoload="false"></div>-->
                     <video id="vid_{{activity.number}}" class="video-js vjs-default-skin" controls preload="auto" width="100%" height="100%" poster="http://video-js.zencoder.com/oceans-clip.png">
@@ -69,7 +72,7 @@
 
                 <div class="bottom">
                     <!--                    <a class="autoplay on" data-name="lectureAutoStart">Auto Play<span>ON</span></a>-->
-                    <a class="next-lecture" href="" ng-click="continue(2)">NEXT LECTURE</a>
+                    <a class="next" href="" ng-click="continue(2)">NEXT LECTURE</a>
                     <div class="share mini-tooltip">
                         share
                         <div class="tooltip-content">
@@ -82,10 +85,7 @@
             </li>
 
             <li class="certificate">
-                <div class="badge">
-                    <span class="icon"></span>
-                    <!-- <span class="title">Junior Web Developer</span> -->
-                </div>
+                <div class="badge"><span class="icon"></span></div>
                 <div class="congrats">
                     <h2>Congratulations!</h2>
                     <p>You just completed the course<br>"<b>{{course.courseTitle}}</b>"!<br></p>
@@ -98,12 +98,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="bottom">
-                    <a href="" class="next-lecture continue">Continue</a>
-                </div>
+                <div class="bottom"><a href="" class="next-lecture continue">Continue</a></div>
             </li>
-
-
 
         </ul>
 
@@ -112,8 +108,6 @@
 
     <div class="sidebar">
         <a class="close-btn" href=""></a>
-        <div class="sidebar-container">
-            <div class="tab-label-container">
                 <tabs>
                     <pane heading="NO SE QUE">
                         <div>está demostrado que eres una pinki</div>
@@ -121,8 +115,6 @@
                     <pane heading="PONER POR"></pane>
                     <pane heading="CULPA'LAURA"></pane>
                 </tabs>
-            </div>
-        </div>
 
     </div>
 </div>

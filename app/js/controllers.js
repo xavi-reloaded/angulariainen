@@ -58,7 +58,7 @@ function trainTron($scope, $timeout)
 
         var s = '' +
             '<li class="show-progress">' +
-            '   <span class="percent completion-ratio">' + $scope.course.ratioCompleted + '%</span>' +
+            '   <span class="element completion-ratio">' + $scope.course.ratioCompleted + '%</span>' +
             '   <div class="note"> <span>You have completed <b class="completion-ratio">' + $scope.course.ratioCompleted + '%</b> of this course</span> </div>' +
             '</li>';
 
@@ -100,6 +100,13 @@ function trainTron($scope, $timeout)
         }
         return index;
     }
+
+
+}
+
+// If we're running under Node,
+if(typeof exports !== 'undefined') {
+    exports.controllerTraintron = trainTron;
 }
 
 
