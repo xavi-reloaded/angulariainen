@@ -27,7 +27,7 @@
             <li class="chapter">
                 <span class="percent chapter-number"><span>Section</span>1</span>
                 <div class="note"><span><b>{{course.intro.message}}</b></span></div>
-                <div class="bottom"><a href="" class="continue" ng-click="continue(1)">Continue</a></div>
+                <div class="bottom"><a href="" class="next-lecture continue" ng-click="continue(1)">Continue</a></div>
             </li>
 
             <li class="on" data-lectureid="213440" ng-repeat="activity in activities">
@@ -88,12 +88,7 @@
                 </div>
                 <div class="congrats">
                     <h2>Congratulations!</h2>
-                    <!--
-                    <p>
-                        You just completed "<b>Junior Developer</b>" certificate!<br> It's added to your <span>Udemy Profile</span>.            </p>
-                    -->
-                    <p>
-                        You just completed the course <br> "<b>How to Create a Udemy Course</b>"!<br>            </p>
+                    <p>You just completed the course<br>"<b>{{course.courseTitle}}</b>"!<br></p>
 
                     <div class="share">
                         <h4>Share the good news:</h4>
