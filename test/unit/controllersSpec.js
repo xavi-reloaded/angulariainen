@@ -2,30 +2,34 @@
 
 /* jasmine specs for controllers go here */
 
+
 describe('MyCtrl1', function(){
-  var myCtrl1;
+    var myCtrl1;
 
-  beforeEach(function(){
-    myCtrl1 = new MyCtrl1();
-  });
+    beforeEach(function(){
+        myCtrl1 = new MyCtrl1();
+    });
 
 
-  it('should ....', function() {
-    //spec body
-  });
+    it('should ....', function() {
+        //spec body
+    });
 });
 
 
-describe('MyCtrl2', function(){
-  var myCtrl2;
 
+describe('MyCtrl2 with var in scope', function(){
+    var $scope, ctrl;
 
-  beforeEach(function(){
-    myCtrl2 = new MyCtrl2();
-  });
+//you need to inject dependencies first
+    beforeEach(inject(function($rootScope) {
+        $scope = $rootScope.$new();
+    }));
 
-
-  it('should ....', function() {
-    //spec body
-  });
+    it('Should initialize value to Loading', inject(function($controller) {
+        ctrl = $controller('MyCtrl2', {
+            $scope: $scope
+        });
+        expect($scope.var).toBe('I am just a jealous var');
+    }));
 });
