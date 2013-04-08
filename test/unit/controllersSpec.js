@@ -26,10 +26,17 @@ describe('MyCtrl2 with var in scope', function(){
         $scope = $rootScope.$new();
     }));
 
-    it('Should initialize value to Loading', inject(function($controller) {
+    it('Should initialize value of simple var', inject(function($controller) {
         ctrl = $controller('MyCtrl2', {
             $scope: $scope
         });
         expect($scope.var).toBe('I am just a jealous var');
+    }));
+
+    it('Should use method in scope', inject(function($controller) {
+        ctrl = $controller('MyCtrl2', {
+            $scope: $scope
+        });
+        expect($scope.dummyMethod()).toBe('I am just a jealous var');
     }));
 });
