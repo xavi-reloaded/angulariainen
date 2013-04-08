@@ -57,6 +57,7 @@ function trainTron($scope, $timeout)
     $scope.nextElementIsTransition = function (positionInTimeline) {
         return 0;
     };
+
     $scope.next = function(){
         var positionInTimeline = $scope.getInitialPositionInULelementFromTopValue($scope.screenOnFront);
         $scope.insertAt(positionInTimeline+1, $('ul#timeline'), showProgressElement);
@@ -69,47 +70,20 @@ function trainTron($scope, $timeout)
     $scope.getInitialPositionInULelementFromTopValue = function(topValue){
         return topValue/100;
     }
-
-
-    $scope.continue = function(steps){
-        console.log(steps );
-
-        if (steps==-1) {
-            $('.show-progress').remove();
-            $scope.scrollTimeline(true);
-            return;
+    $scope.back = function(activityId){
+        if (activityId==1) {
+            $('li.show-progress').remove();
+            $scope.screenOnFront = 0;
+        } else {
+            $('ul#timeline').children('li').eq( ( activityId + (activityId-1) ) - 1).remove();
+            $scope.screenOnFront = $scope.screenOnFront-200;
         }
-
-
-
-        if (steps==2) {
-
-            var number = (($scope.screenOnFront / 100))+1;
-            $scope.insertAt(number, $('ul#timeline'), showProgressElement);
-
-            $timeout(function() {
-                $scope.scrollTimeline(false);
-            }, 1000);
-        }
-
-
-        $scope.scrollTimeline(false);
-
     };
 
-    $scope.scrollTimeline = function(goBack){
+    $scope.continue = function(steps){
+        $scope.screenOnFront = $scope.screenOnFront+100;
 
-        var max = ($scope.activities.length + 3)*100;
-
-        $scope.screenOnFront=(goBack==true) ?
-
-            ($scope.screenOnFront==0)?0:(($scope.screenOnFront > (max-200))?max-200:$scope.screenOnFront-100) :
-
-            ($scope.screenOnFront > max)?max:$scope.screenOnFront+100;
-
-        console.log('updated max => '+max+' || screenOnFront => '+$scope.screenOnFront);
-    }
-
+    };
 
     $scope.insertAt = function(index, parentElement, childElement) {
 

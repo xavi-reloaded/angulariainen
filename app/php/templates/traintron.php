@@ -20,20 +20,20 @@
     data-autoplay="{{course.autoplay}}">
 
     <div class="main">
-        <a id="go-back" href="#dashboard">Back to Course</a>
+        <a id="go-back" href="#dashboard" ng-click="back(1  )">Back to Course</a>
 
         <ul id="timeline" style="top: -{{screenOnFront}}%;" ng-cloak>
 
-<!--            <li class="chapter">-->
-<!--<!--                <span class="percent chapter-number"><span>Section</span>1</span>-->-->
-<!--                <span class="element"><span>Section</span>1</span>-->
-<!--                <div class="tell"><span><b>{{course.intro.message}}</b></span></div>-->
-<!--                <div class="bottom"><a href="" class="next continue" ng-click="continue(1)">Continue</a></div>-->
-<!--            </li>-->
+            <li class="chapter">
+<!--                <span class="percent chapter-number"><span>Section</span>1</span>-->
+                <span class="element"><span>Section</span>1</span>
+                <div class="tell"><span><b>{{course.intro.message}}</b></span></div>
+                <div class="bottom"><a href="" class="next continue" ng-click="continue(1)">Continue</a></div>
+            </li>
 
             <li class="on" data-lectureid="213440" ng-repeat="activity in activities">
 
-                <div class="prev-lecture" ng-click="continue(-1)"><a href=""></a><span>Previous Lecture</span></div>
+                <div class="prev-lecture" ng-click="back(activity.number)"><a href=""></a><span>Previous Lecture</span></div>
                 <div class="top">
                     <span class="ch">SECTION {{activity.t}}</span> <span class="le">LECTURE</span> <span class="no">{{activity.number}}</span>
                     <h1>{{activity.title}}</h1>
