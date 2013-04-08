@@ -44,10 +44,15 @@ function trainTron($scope, $timeout)
 
     $scope.screenOnFront = 0;
 
-    $scope.getTopValueForNextPosition = function(initialPosition, goback){
+    $scope.getTopValueForNextPosition = function(initialPosition){
         var lastPosition = $('ul#timeline').children().size();
-        if (initialPosition>=lastPosition) return initialPosition*100;
-        return (initialPosition + 1) *100;
+        if (initialPosition>=lastPosition) return (lastPosition-1)*100;
+        return (initialPosition) * 100;
+    };
+    $scope.getTopValueForBackPosition = function(initialPosition){
+        var lastPosition = $('ul#timeline').children().size();
+        if (initialPosition<=2) return 0;
+        return (initialPosition-2) * 100;
     };
 
     $scope.continue = function(steps){
@@ -84,7 +89,7 @@ function trainTron($scope, $timeout)
 
             ($scope.screenOnFront==0)?0:(($scope.screenOnFront > (max-200))?max-200:$scope.screenOnFront-100) :
 
-                ($scope.screenOnFront > max)?max:$scope.screenOnFront+100;
+            ($scope.screenOnFront > max)?max:$scope.screenOnFront+100;
 
         console.log('updated max => '+max+' || screenOnFront => '+$scope.screenOnFront);
     }

@@ -55,22 +55,35 @@ describe('TrainTron controller', function(){
         expect(ulElement.children().size()).toBe(3);
     }));
 
-    it('getTopValueForNextPosition from 1 to 2 on 2 elements', inject(function($controller) {ctrl = $controller('trainTron', { $scope: $scope});
-       var dat = [
-            {pos:1,expected: 200,goback:false},
-            {pos:2,expected: 200,goback:false}
+    it('getTopValueForNextPosition on 2 elements', inject(function($controller) {ctrl = $controller('trainTron', { $scope: $scope});
+        var dat = [
+            {pos:1,expected: 100},
+            {pos:2,expected: 100},
+            {pos:3,expected: 100}
         ];
 
         for (var x=0; x<dat.length;x++) {
-            var currentPosition = dat[x].pos;
-            var actual = $scope.getTopValueForNextPosition(currentPosition, 1,dat[x].goback);
-            var expected = dat[x].expected;
+            var actual = $scope.getTopValueForNextPosition(dat[x].pos);
+            expect(actual).toBe(dat[x].expected);
             console.log(dat[x]);
-            expect(actual).toBe(expected);
         }
 
-
     }));
+
+    it('getTopValueForNextPosition back direction from second element', inject(function($controller) {ctrl = $controller('trainTron', { $scope: $scope});
+        var dat = [
+            {pos:1,expected: 0},
+            {pos:2,expected: 0},
+            {pos:3,expected: 100}
+        ];
+
+        for (var x=0; x<dat.length;x++) {
+            var actual = $scope.getTopValueForBackPosition(dat[x].pos);
+            expect(actual).toBe(dat[x].expected);
+            console.log(dat[x]);
+        }
+    }));
+
 
 
 
