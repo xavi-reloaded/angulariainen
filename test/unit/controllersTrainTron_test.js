@@ -1,7 +1,7 @@
 'use strict';
 
 
-describe('TrainTron controller', function(){
+describe('TrainTron controller ::>', function(){
 
     var $scope, ctrl;
     var childElement = '' +
@@ -9,6 +9,7 @@ describe('TrainTron controller', function(){
         '   <span class="element completion-ratio">50%</span>' +
         '   <div class="note"> <span>You have completed <b class="completion-ratio">50%</b> of this course</span> </div>' +
         '</li>';
+
 
     //you need to inject dependencies first
     beforeEach(inject(function($rootScope) {
@@ -45,14 +46,14 @@ describe('TrainTron controller', function(){
 
     }));
 
-    it('inserAt no more than one "show-progress" li element is inserted on the timeline element \<ul\> ', inject(function($controller) {
+    it('inserAt new "show-progress" li element is inserted on the timeline element \<ul\> ', inject(function($controller) {
         ctrl = $controller('trainTron', {
             $scope: $scope
         });
         var ulElement = $('ul#timeline');
         $scope.insertAt(2, ulElement, childElement);
         $scope.insertAt(2, ulElement, childElement);
-        expect(ulElement.children().size()).toBe(3);
+        expect(ulElement.children().size()).toBe(4);
     }));
 
     it('getTopValueForNextPosition on 2 elements', inject(function($controller) {ctrl = $controller('trainTron', { $scope: $scope});
@@ -79,6 +80,45 @@ describe('TrainTron controller', function(){
 
         for (var x=0; x<dat.length;x++) {
             var actual = $scope.getTopValueForBackPosition(dat[x].pos);
+            expect(actual).toBe(dat[x].expected);
+            console.log(dat[x]);
+        }
+    }));
+
+    it('next from normal activity goes to the next and create a show-progression frame in the middle', inject(function($controller) {ctrl = $controller('trainTron', { $scope: $scope});
+
+        var position= 1;
+        $scope.next(position);
+        var ulElement = $('ul#timeline');
+        expect(3).toBe(ulElement.children().size());
+
+    }));
+
+    it('getInitialPositionInULelementFromTopValue ', inject(function($controller) {ctrl = $controller('trainTron', { $scope: $scope});
+
+        var dat = [
+            {v:0,expected: 0},
+            {v:100,expected: 1},
+            {v:300,expected: 3}
+        ];
+
+        for (var x=0; x<dat.length;x++) {
+            var actual = $scope.getInitialPositionInULelementFromTopValue(dat[x].v);
+            expect(actual).toBe(dat[x].expected);
+            console.log(dat[x]);
+        }
+    }));
+
+    it('nextElementIsTransition ', inject(function($controller) {ctrl = $controller('trainTron', { $scope: $scope});
+
+        var dat = [
+            {pos:1,expected: 0},
+            {pos:2,expected: 0},
+            {pos:3,expected: 0}
+        ];
+
+        for (var x=0; x<dat.length;x++) {
+            var actual = $scope.nextElementIsTransition(dat[x].v);
             expect(actual).toBe(dat[x].expected);
             console.log(dat[x]);
         }

@@ -24,12 +24,12 @@
 
         <ul id="timeline" style="top: -{{screenOnFront}}%;" ng-cloak>
 
-            <li class="chapter">
-<!--                <span class="percent chapter-number"><span>Section</span>1</span>-->
-                <span class="element"><span>Section</span>1</span>
-                <div class="tell"><span><b>{{course.intro.message}}</b></span></div>
-                <div class="bottom"><a href="" class="next continue" ng-click="continue(1)">Continue</a></div>
-            </li>
+<!--            <li class="chapter">-->
+<!--<!--                <span class="percent chapter-number"><span>Section</span>1</span>-->-->
+<!--                <span class="element"><span>Section</span>1</span>-->
+<!--                <div class="tell"><span><b>{{course.intro.message}}</b></span></div>-->
+<!--                <div class="bottom"><a href="" class="next continue" ng-click="continue(1)">Continue</a></div>-->
+<!--            </li>-->
 
             <li class="on" data-lectureid="213440" ng-repeat="activity in activities">
 
@@ -72,7 +72,7 @@
 
                 <div class="bottom">
                     <!--                    <a class="autoplay on" data-name="lectureAutoStart">Auto Play<span>ON</span></a>-->
-                    <a class="next" href="" ng-click="continue(2)">NEXT LECTURE</a>
+                    <a class="next" href="" ng-click="next(activity.number)">NEXT LECTURE</a>
                     <div class="share mini-tooltip">
                         share
                         <div class="tooltip-content">

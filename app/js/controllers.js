@@ -36,7 +36,7 @@ function trainTron($scope, $timeout)
         {t:2,tt:'',number: 5, title: 'Caracola is the good life',type:[]}
     ];
 
-    var s = '' +
+    var showProgressElement = '' +
         '<li class="show-progress">' +
         '   <span class="element completion-ratio">' + $scope.course.ratioCompleted + '%</span>' +
         '   <div class="note"> <span>You have completed <b class="completion-ratio">' + $scope.course.ratioCompleted + '%</b> of this course</span> </div>' +
@@ -54,6 +54,22 @@ function trainTron($scope, $timeout)
         if (initialPosition<=2) return 0;
         return (initialPosition-2) * 100;
     };
+    $scope.nextElementIsTransition = function (positionInTimeline) {
+        return 0;
+    };
+    $scope.next = function(){
+        var positionInTimeline = $scope.getInitialPositionInULelementFromTopValue($scope.screenOnFront);
+        $scope.insertAt(positionInTimeline+1, $('ul#timeline'), showProgressElement);
+        $scope.screenOnFront = $scope.getTopValueForNextPosition(positionInTimeline+1);
+
+        $timeout(function() {
+            $scope.screenOnFront = $scope.getTopValueForNextPosition(positionInTimeline+2);
+        }, 1000);
+    };
+    $scope.getInitialPositionInULelementFromTopValue = function(topValue){
+        return topValue/100;
+    }
+
 
     $scope.continue = function(steps){
         console.log(steps );
@@ -69,7 +85,7 @@ function trainTron($scope, $timeout)
         if (steps==2) {
 
             var number = (($scope.screenOnFront / 100))+1;
-            $scope.insertAt(number, $('ul#timeline'), s);
+            $scope.insertAt(number, $('ul#timeline'), showProgressElement);
 
             $timeout(function() {
                 $scope.scrollTimeline(false);
@@ -97,7 +113,6 @@ function trainTron($scope, $timeout)
 
     $scope.insertAt = function(index, parentElement, childElement) {
 
-        $('li.show-progress').remove();
         var lastIndex = parentElement.children().size();
         if (index < 0) {
             index = Math.max(0, lastIndex + 1 + index)
