@@ -36,15 +36,19 @@ function trainTron($scope, $timeout)
         {t:2,tt:'',number: 5, title: 'Caracola is the good life',type:[]}
     ];
 
-//    $scope.flattened = function () {
-//        var flat = [];
-//        $scope.course.topics.forEach(function (item) {
-//            flat.concat(item);
-//        });
-//        return flat;
-//    }
+    var s = '' +
+        '<li class="show-progress">' +
+        '   <span class="element completion-ratio">' + $scope.course.ratioCompleted + '%</span>' +
+        '   <div class="note"> <span>You have completed <b class="completion-ratio">' + $scope.course.ratioCompleted + '%</b> of this course</span> </div>' +
+        '</li>';
 
     $scope.screenOnFront = 0;
+
+    $scope.getTopValueForNextPosition = function(initialPosition, goback){
+        var lastPosition = $('ul#timeline').children().size();
+        if (initialPosition>=lastPosition) return initialPosition*100;
+        return (initialPosition + 1) *100;
+    };
 
     $scope.continue = function(steps){
         console.log(steps );
@@ -54,11 +58,7 @@ function trainTron($scope, $timeout)
             $scope.scrollTimeline(true);
             return;
         }
-        var s = '' +
-            '<li class="show-progress">' +
-            '   <span class="element completion-ratio">' + $scope.course.ratioCompleted + '%</span>' +
-            '   <div class="note"> <span>You have completed <b class="completion-ratio">' + $scope.course.ratioCompleted + '%</b> of this course</span> </div>' +
-            '</li>';
+
 
 
         if (steps==2) {

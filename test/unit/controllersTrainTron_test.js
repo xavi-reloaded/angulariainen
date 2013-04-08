@@ -53,10 +53,25 @@ describe('TrainTron controller', function(){
         $scope.insertAt(2, ulElement, childElement);
         $scope.insertAt(2, ulElement, childElement);
         expect(ulElement.children().size()).toBe(3);
+    }));
 
+    it('getTopValueForNextPosition from 1 to 2 on 2 elements', inject(function($controller) {ctrl = $controller('trainTron', { $scope: $scope});
+       var dat = [
+            {pos:1,expected: 200,goback:false},
+            {pos:2,expected: 200,goback:false}
+        ];
+
+        for (var x=0; x<dat.length;x++) {
+            var currentPosition = dat[x].pos;
+            var actual = $scope.getTopValueForNextPosition(currentPosition, 1,dat[x].goback);
+            var expected = dat[x].expected;
+            console.log(dat[x]);
+            expect(actual).toBe(expected);
+        }
 
 
     }));
+
 
 
 
