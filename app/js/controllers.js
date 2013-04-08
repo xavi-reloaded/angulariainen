@@ -47,7 +47,6 @@ function trainTron($scope, $timeout)
     $scope.screenOnFront = 0;
 
     $scope.continue = function(steps){
-
         console.log(steps );
 
         if (steps==-1) {
@@ -55,7 +54,6 @@ function trainTron($scope, $timeout)
             $scope.scrollTimeline(true);
             return;
         }
-
         var s = '' +
             '<li class="show-progress">' +
             '   <span class="element completion-ratio">' + $scope.course.ratioCompleted + '%</span>' +
@@ -64,8 +62,9 @@ function trainTron($scope, $timeout)
 
 
         if (steps==2) {
+
             var number = (($scope.screenOnFront / 100))+1;
-            $scope.insertAt(number, s);
+            $scope.insertAt(number, $('ul#timeline'), s);
 
             $timeout(function() {
                 $scope.scrollTimeline(false);
@@ -82,21 +81,25 @@ function trainTron($scope, $timeout)
         var max = ($scope.activities.length + 3)*100;
 
         $scope.screenOnFront=(goBack==true) ?
+
             ($scope.screenOnFront==0)?0:(($scope.screenOnFront > (max-200))?max-200:$scope.screenOnFront-100) :
+
                 ($scope.screenOnFront > max)?max:$scope.screenOnFront+100;
 
         console.log('updated max => '+max+' || screenOnFront => '+$scope.screenOnFront);
     }
 
-    $scope.insertAt = function(index, element) {
-        var timeline = $('ul#timeline');
-        var lastIndex = timeline.children().size();
+
+    $scope.insertAt = function(index, parentElement, childElement) {
+
+        $('li.show-progress').remove();
+        var lastIndex = parentElement.children().size();
         if (index < 0) {
             index = Math.max(0, lastIndex + 1 + index)
         }
-        timeline.append(element)
+        parentElement.append(childElement)
         if (index < lastIndex) {
-            timeline.children().eq(index).before(timeline.children().last())
+            parentElement.children().eq(index).before(parentElement.children().last())
         }
         return index;
     }
