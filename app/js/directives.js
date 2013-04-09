@@ -9,31 +9,44 @@ angular.module('app.directives', []).
             elm.text(version);
         };
     }]).
-    directive('aulaTopic', function () {
-        return {
-            restrict: 'E',
-            transclude: true,
-            scope: {
-                isolatedNumber:'@n',
-                isolatedTitle:'@t'
-            },
-            template: '' +
-                '<li class="chapter">' +
-                '<span class="percent chapter-number"><span>Section</span>{{isolatedNumber}}</span>' +
-                '<div class="note"><span><b>{{isolatedTitle}}</b></span></div>' +
-                '<div class="bottom"><a href="" class="next-lecture continue" ng-click="continue(1)">Continue</a></div>' +
-                '</li>',
-            //templateUrl: 'template.html',
-            compile:function (element, attr, transclusionFunc) {
-                return function (scope, iterStartElement, attr) {
-                    var origElem = transclusionFunc(scope);
-                    var content = origElem.text();
-//                    scope.number = attr.n;
-//                    scope.title = attr.t;
-                    //scope.obj = my_custom_parsing(content);
-                };
+    directive('aulaActivity', function ($compile) {
+        var videoTemplate = '<video id="{{params.src}}" class="video-js vjs-default-skin" controls preload="auto" width="100%" height="100%" poster="{{params.poster}}">' +
+            '<source src="{{params.src}}" type={{params.type}}>' +
+            '<p>Video Playback Not Supported</p>' +
+            '</video>';
+        var pageTemplate = '<div><h2>PAGE</h2></div>';
+        var bookTemplate = '<div><h2>BOOK</h2></div>';
+        var quizTemplate = '<div><h2>QUIZ</h2></div>';
+        var sliceTemplate = '<div><h2>SLICE</h2></div>';
+
+
+        var getTemplate = function(contentType) {
+            var template = '';
+            switch(contentType) {
+                case 'video': template = videoTemplate;break;
+                case 'page':  template = pageTemplate;break;
+                case 'book':  template = bookTemplate; break;
+                case 'quiz':  template = quizTemplate;break;
+                case 'slice': template = sliceTemplate; break;
+                default:
+                    template = videoTemplate;
             }
+
+            return template;
+        }
+
+        var linker = function(scope, element, attrs) {
+            element.html(getTemplate(scope.type));
+            $compile(element.contents())(scope);
+        }
+
+        return {
+            restrict: "E",
+            rep1ace: true,
+            link: linker,
+            scope: {id: '=', type:'=', params:'='}
         };
+
     }).
 
     directive('animate', function($defer) {
@@ -54,24 +67,6 @@ angular.module('app.directives', []).
         };
     }).
 
-    directive('aulaactivity', function() {
-        return {
-            restrict: 'E',
-            template: '<li class="chapter"><span class="percent chapter-number"><span>Section</span>{{topic.number}}</span><div class="note"><span><b>{{topic.title}}</b></span></div><div class="bottom"><a href="" class="next-lecture continue">Continue</a></div></li>',
-            link: function(scope, element, attrs)
-            {
-                scope.$watch( 'shape', function(val) {
-                    var changes = {
-                        left : val.x + 'px',
-                        top  : val.y + 'px',
-                        backgroundColor : val.color
-                    }
-
-                    element.css( changes );
-                }, true );
-            }
-        };
-    }).
     directive('ball', function ($defer) {
         return {
             restrict:'E',

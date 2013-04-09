@@ -19,7 +19,7 @@ function trainTron($scope, $timeout)
         topics: [
             {"number": 1, "title": 'The first Section',"type":"select",
                 "activities": [
-                    {"number": 1, "title": 'Hola',"type":[]},
+                    {"number": 1, "title": 'Hola',"type":"video",params:{var:1}},
                     {"number": 2, "title": 'Caracola',"type":[]},
                     {"number": 3, "title": 'how',"type":[]},
                     {"number": 4, "title": 'are',"type":[]}
@@ -29,11 +29,16 @@ function trainTron($scope, $timeout)
     };
 
     $scope.activities= [
-        {t:1,tt:'The first Section',number: 1, title: 'La primera actividad',type:[]},
-        {t:1,tt:'',number: 2, title: 'La segunda actividad',type:[]},
-        {t:1,tt:'',number: 3, title: 'la tercera lectura',type:[]},
-        {t:2,tt:'The second Section',number: 4, title: 'la cuarta',type:[]},
-        {t:2,tt:'',number: 5, title: 'Caracola is the good life',type:[]}
+        {t:1,tt:'The first Section',    id:12345, number: 1, title: 'La primera actividad, un video de ejemplo',
+            type:'video', params:{src:"http://video-js.zencoder.com/oceans-clip.mp4",type:'video/mp4',poster:"http://video-js.zencoder.com/oceans-clip.png"}},
+        {t:1,tt:'',                     id:12345, number: 2, title: 'La segunda actividad',
+            type:'page', params:{}},
+        {t:1,tt:'',                     id:12345, number: 3, title: 'la tercera lectura',
+            type:'book', params:{}},
+        {t:2,tt:'The second Section',   id:12345, number: 4, title: 'la cuarta',
+            type:'quiz', params:{}},
+        {t:2,tt:'',                     id:12345, number: 5, title: 'Caracola is the good life',
+            type:'slice', params:{}}
     ];
 
     var showProgressElement = '' +
