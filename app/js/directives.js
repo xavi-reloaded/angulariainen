@@ -18,7 +18,16 @@ angular.module('app.directives', []).
         var bookTemplate = '<div><h2>BOOK</h2></div>';
         var quizTemplate = '<div><h2>QUIZ</h2></div>';
         var sliceTemplate = '<div><h2>SLICE</h2></div>';
+        var pdfTemplate =   '<div>' +
+                            '<button id="prev" onclick="goPrevious()">Previous</button>' +
+                            '<button id="next" onclick="goNext()">Next</button>' +
+                            '&nbsp; &nbsp;' +
+                            '<span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>' +
+                            '</div>' +
 
+                            '<div>' +
+                            '<canvas id="the-canvas" style="border:1px solid black"></canvas>' +
+                            '</div>';
 
         var getTemplate = function(contentType) {
             var template = '';
@@ -28,6 +37,7 @@ angular.module('app.directives', []).
                 case 'book':  template = bookTemplate; break;
                 case 'quiz':  template = quizTemplate;break;
                 case 'slice': template = sliceTemplate; break;
+                case 'pdf':   template = pdfTemplate; break;
                 default:
                     template = videoTemplate;
             }

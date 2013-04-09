@@ -29,7 +29,8 @@
     <link href="css/video-js.css" rel="stylesheet" type="text/css">
 
     <!-- LOAD VIDEO.JS SOURCE FILES IN ORDER -->
-    <script src="/app/lib/video-js/source-loader.js"></script>
+    <script type="text/javascript" src="lib/video-js/source-loader.js"></script>
+    <script type="text/javascript" src="lib/pdfjs/pdf.js"></script>
 
 </head>
 <body ng-controller="trainTron">
@@ -48,6 +49,8 @@ include_once('php/templates/traintron.php');
   <script src="js/controllers.js"></script>
   <script src="js/filters.js"></script>
   <script src="js/directives.js"></script>
+
+  <script src="js/pdf_spike.js"></script>
 
 
 </body>

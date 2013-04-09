@@ -33,7 +33,7 @@ var sourceFiles = [
 ];
 
 // Allow overriding the default project root
-var projectRoot = projectRoot || '../';
+var projectRoot = projectRoot || '../app/lib/video-js/';
 
 function loadScripts(scriptsArr){
   for (var i = 0; i < scriptsArr.length; i++) {

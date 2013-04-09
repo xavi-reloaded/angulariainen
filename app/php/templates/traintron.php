@@ -87,8 +87,8 @@
                     <div class="share">
                         <h4>Share the good news:</h4>
                         <div class="btns">
-                            <a class="fb" target="_blank" href="http://www.facebook.com/sharer.php?t=How%20to%20Create%20a%20Udemy%20Course&u=https://www.apiumtech.com/official-udemy-instructor-course/">Facebook</a>
-                            <a class="tw" target="_blank" href="http://twitter.com/intent/tweet?text=How%20to%20Create%20a%20Udemy%20Course&url=https://www.apiumtech.com/official-udemy-instructor-course/&via=udemy">Twitter</a>
+                            <a class="fb" target="_blank" href="http://www.facebook.com/sharer.php?t=eee&u=https://www.apiumtech.com">Facebook</a>
+                            <a class="tw" target="_blank" href="http://twitter.com/intent/tweet?text=eee&url=https://www.apiumtech.com">Twitter</a>
                         </div>
                     </div>
                 </div>
