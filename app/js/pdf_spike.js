@@ -1,3 +1,4 @@
+/*
 var url = 'http://cdn.mozilla.net/pdfjs/helloworld.pdf';
 PDFJS.disableWorker = true;
 
@@ -57,4 +58,6 @@ PDFJS.getDocument(url).then(function getPdfHelloWorld(_pdfDoc) {
     pdfDoc = _pdfDoc;
     renderPage(pageNum);
 });
+
+*/
 
