@@ -95,7 +95,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="bottom"><a href="" class="next-lecture continue">Continue</a></div>
             </li>
 
         </ul>
