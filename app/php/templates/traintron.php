@@ -9,8 +9,8 @@
 ?>
 
 <div
-    id="course-taking-page"
-    class="ud-coursetaking wrapper"
+    id="aula-trainning"
+    class="viewer"
     data-courseid="{{course.courseId}}"
     data-isinstructor="{{course.isInstructor}}"
     data-courseurl="{{course.courseUrl}}"
@@ -19,7 +19,7 @@
     data-uimessages="{{course.uiMessages}}"
     data-autoplay="{{course.autoplay}}">
 
-    <div class="main">
+    <div class="view">
         <a id="go-back" href="#dashboard" ng-click="back(1)">Back to Course</a>
 
         <ul id="timeline" style="top: -{{screenOnFront}}%;" ng-cloak>
@@ -34,12 +34,15 @@
             <li class="on" data-lectureid="213440" ng-repeat="activity in activities">
 
                 <div class="prev-lecture" ng-click="back(activity.number)"><a href=""></a><span>Previous Lecture</span></div>
+
                 <div class="top">
-                    <span class="ch">SECTION {{activity.t}}</span> <span class="le">LECTURE</span> <span class="no">{{activity.number}}</span>
+                    <span>SECTION {{activity.t}}</span>
+                    <span>LECTURE</span>
+                    <span>{{activity.number}}</span>
                     <h1>{{activity.title}}</h1>
                 </div>
 
-                <div class="asset-container">
+                <div class="activity-container">
                     <aula-activity id="activity.id" type="activity.type" params="activity.params"></aula-activity>
 <!--                    <script>-->
 <!--                        (function() {-->

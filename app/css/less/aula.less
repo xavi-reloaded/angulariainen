@@ -1,0 +1,398 @@
+#aula-trainning {
+
+  .view {
+
+    -webkit-transition: right 0.3s cubic-bezier(1, 0, 0, 1);
+    -moz-transition: right 0.3s cubic-bezier(1, 0, 0, 1);
+    -o-transition: right 0.3s cubic-bezier(1, 0, 0, 1);
+    transition: right 0.3s cubic-bezier(1, 0, 0, 1);
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    right: 465px;
+    z-index: 1;
+
+    &:before{
+    //      content: '';
+    //      width: 5px;
+    //      height: 100%;
+    //      position: fixed;
+    //      background: url("../../img/at_bar.png");
+    //      left: 200px;
+    }
+
+    ul {
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      -webkit-transition: top 1s ease;
+      -moz-transition: top 1s ease;
+      -o-transition: top 1s ease;
+      transition: top 1s ease;
+      li {
+        position: relative;
+        height: 100%;
+        float: left;
+        width: 100%;
+
+        .activity-container {
+          position: absolute;
+          top: 100px;
+          bottom: 80px;
+          width: 100%;
+          background: #000;
+        //          * {
+        //            width: 100%;
+        //            height: 100%;
+        //          }
+        }
+        .prev-lecture {
+          position: absolute;
+          left: 172px;
+          top: 14px;
+          width: 130px;
+          cursor: pointer;
+          &:first-child {
+            display: none;
+          }
+          &:last-child {
+            display: none;
+          }
+          span {
+            float: left;
+            color: #84848c;
+            font-size: 12px;
+            line-height: 20px;
+            font-weight: bold;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+            padding-left: 5px;
+          }
+          a{
+            height: 18px;
+            width: 19px;
+            background-color: #000;
+            color: #ababae;
+            text-shadow: 0 -1px 2px #000000;
+            border-radius: 4px;
+            padding: 2px 0px 0px 3px;
+            box-shadow: 1px 0 0 rgba(255, 255, 255, 0.1);
+            display: block;
+            float: left;
+
+            &:before {
+              background: url("../img/sprites.png?v=10") 0px -690px;
+              content: "";
+              float: left;
+              margin-left: 2px;
+              height: 13px;
+              width: 9px;
+              -webkit-transform: rotate(270deg);
+              -o-transform: rotate(270deg);
+              -ms-transform: rotate(270deg);
+              transform: rotate(270deg);
+              -webkit-backface-visibility: hidden;
+            }
+          }
+        }
+        .top {
+          position: absolute;
+          top: 40px;
+          width: 100%;
+          *zoom: 1;
+          &:before {
+            display: table;
+            content: "";
+            line-height: 0;
+          }
+          &:after {
+            clear: both;
+          }
+        }
+        .bottom {
+          position: absolute;
+          width: 100%;
+          bottom: 20px;
+
+          .next {
+            height: 30px;
+            line-height: 24px;
+            padding: 0 10px;
+            font-size: 10px;
+            font-weight: bold;
+            display: inline-block;
+            &:hover {
+              color: #999;
+            }
+          }
+
+          .share {
+            float: right;
+            width: 26px;
+            height: 26px;
+            background: url("../../img/sprites.png?v=10") 0 -600px;
+            text-indent: -999em;
+            margin: 5px 0 0 5px;
+            cursor: pointer;
+            background-position: 0 -600px;
+          }
+
+          .mark {
+            float: right;
+            width: 26px;
+            height: 26px;
+            background: url("../../img/sprites.png?v=10") 0 -570px;
+            text-indent: -999em;
+            margin: 5px 0 0 5px;
+            cursor: pointer;
+
+            b {
+              &:nth-child(1) {
+                display: block;
+              }
+              &:nth-child(2) {
+                display: none;
+              }
+              &:hover {
+                background: url("../../img/sprites.png?v=10") -30px -570px;
+              }
+              .read {
+                background-position: -30px -570px;
+                b {
+                  &:nth-child(1) {
+                    display: none;
+                  }
+                  &:nth-child(2) {
+                    display: block;
+                  }
+                }
+              }
+
+            }
+          }
+        }
+        .note {
+          left: 240px;
+          margin-top: -16px;
+          overflow: hidden;
+          position: absolute;
+          right: 0;
+          top: 50%;
+
+          span {
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 100%;
+            display: inline-block;
+            background: rgba(0, 0, 0, 0.5);
+            color: #999;
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-shadow: 0 0px 0px #000 inset;
+          }
+        }
+        .badge {
+          position: absolute;
+          top: 50%;
+          left: 106px;
+          margin-top: -120px;
+          background: none;
+          text-align: center;
+          .title {
+            background: #000;
+            padding: 0;
+            display: inline-block;
+            line-height: 23px;
+            color: #f7ecc5;
+            margin-top: 17px;
+            display: block;
+          }
+          .icon {
+            background: #e7dcad url("../../img/noise.png");
+            background: url("../../img/noise.png"), -webkit-linear-gradient(#e7dcad, #e09226);
+            background: url("../../img/noise.png"), -o-linear-gradient(#e7dcad, #e09226);
+            background: url("../../img/noise.png"), -ms-linear-gradient(#e7dcad, #e09226);
+            background: url("../../img/noise.png"), linear-gradient(#e7dcad, #e09226);
+            width: 130px;
+            height: 130px;
+            border-radius: 99em;
+            display: block;
+            box-shadow: 0 0 0 5px #dca32a, 0 0 0 10px #000;
+            &:before {
+              content: '';
+              width: 84px;
+              height: 84px;
+              background: url("../../img/badges.png");
+              display: inline-block;
+              margin-top: 26px;
+            }
+          }
+        }
+        .congrats {
+          left: 50%;
+          margin: -130px 0 0 -200px;
+          position: absolute;
+          text-align: center;
+          width: 400px;
+          background: url("../../img/huge-tick.png") no-repeat center;
+          height: 260px;
+          top: 50%;
+          h2 {
+            color: #fff;
+            font-size: 30px;
+            font-weight: lighter;
+          }
+          p {
+            color: #babdc2;
+            font-size: 16px;
+            margin-top: 20px;
+            line-height: 24px;
+            b {
+              color: #fff3af;
+            }
+            span {
+              color: #FFFFFF;
+              font-weight: bold;
+            }
+            .share {
+              h4 {
+                color: #FFFFFF;
+                font-size: 12px;
+                text-transform: uppercase;
+              }
+              .btns {
+                border-radius: 20px;
+                box-shadow: 0 0 0 1px #000000, 0 0 0 4px rgba(0, 0, 0, 0.5);
+                display: inline-block;
+                margin-top: 5px;
+                overflow: hidden;
+                line-height: 25px;
+                * {
+                  background: #6992d6 url("../../img/noise.png");
+                  background: url("../../img/noise.png"), -webkit-linear-gradient(#6992d6, #3564ab);
+                  background: url("../../img/noise.png"), -o-linear-gradient(#6992d6, #3564ab);
+                  background: url("../../img/noise.png"), -ms-linear-gradient(#6992d6, #3564ab);
+                  background: url("../../img/noise.png"), linear-gradient(#6992d6, #3564ab);
+                  color: #FFFFFF;
+                  display: table-cell;
+                  font-size: 14px;
+                  font-weight: bold;
+                  overflow: hidden;
+                  text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
+                  padding-right: 10px;
+                  &:before {
+                    background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -632px, -moz-linear-gradient(#567fcc, #28529a);
+                    background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -632px, -webkit-linear-gradient(#567fcc, #28529a);
+                    background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -632px, -o-linear-gradient(#567fcc, #28529a);
+                    background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -632px, -ms-linear-gradient(#567fcc, #28529a);
+                    background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -632px, linear-gradient(#567fcc, #28529a);
+                    content: "";
+                    height: 26px;
+                    width: 30px;
+                    float: left;
+                    margin-right: 9px;
+                  }
+
+                }
+                .tw {
+                  border-left: 1px solid #000;
+                  background: #67b2d6 url("../../img/noise.png");
+                  background: url("../../img/noise.png"), -webkit-linear-gradient(#67b2d6, #3582ab);
+                  background: url("../../img/noise.png"), -o-linear-gradient(#67b2d6, #3582ab);
+                  background: url("../../img/noise.png"), -ms-linear-gradient(#67b2d6, #3582ab);
+                  background: url("../../img/noise.png"), linear-gradient(#67b2d6, #3582ab);
+                  &:before {
+                    background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -662px, -moz-linear-gradient(#59a5ce, #2b739e);
+                    background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -662px, -webkit-linear-gradient(#59a5ce, #2b739e);
+                    background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -662px, -o-linear-gradient(#59a5ce, #2b739e);
+                    background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -662px, -ms-linear-gradient(#59a5ce, #2b739e);
+                    background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -662px, linear-gradient(#59a5ce, #2b739e);
+                  }
+                }
+
+              }
+
+            }
+          }
+        }
+
+      }
+    }
+    a {
+      text-decoration: none;
+      #back{
+
+      }
+      &:hover {
+        color: #fff;
+        &:before {
+          opacity: 1;
+        }
+      }
+      &:before {
+        content: '';
+        width: 16px;
+        height: 16px;
+        float: left;
+        background: url("../../img/sprites.png?v=10") 0 -520px;
+        margin-right: 5px;
+        opacity: .3;
+      }
+    }
+  }
+
+  .sidebar {
+    background: #fff;
+    width: 425px;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    border-left: 1px solid #504f55;
+
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(1, 0, 0, 1);
+    -o-transition: -o-transform 0.3s cubic-bezier(1, 0, 0, 1);
+    -ms-transition: -ms-transform 0.3s cubic-bezier(1, 0, 0, 1);
+    transition: transform 0.3s cubic-bezier(1, 0, 0, 1);
+    -webkit-backface-visibility: hidden;
+
+    a {
+      .close-btn {
+        background: #232326;
+        border-color: #504F55;
+        border-radius: 3px 0 0 3px;
+        border-style: solid;
+        border-width: 1px 0 1px 1px;
+        display: block;
+        left: -26px;
+        overflow: hidden;
+        position: absolute;
+        top: 10px;
+        z-index: 1;
+        &:before {
+          background: url("../../img/sprites.png?v=10") 0 -690px;
+          content: "";
+          float: left;
+          height: 13px;
+          margin: 6px 8px 6px 8px;
+          width: 9px;
+        }
+      }
+    }
+  }
+}
+
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+audio:not([controls]) {
+  display: none;
+}
+
