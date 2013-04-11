@@ -9,6 +9,7 @@ angular.module('app.directives', []).
             elm.text(version);
         };
     }]).
+
     directive('aulaActivity', function ($compile) {
         var videoTemplate = '<video id="{{params.src}}" class="video-js vjs-default-skin" controls preload="auto" width="100%" height="100%" poster="{{params.poster}}">' +
             '<source src="{{params.src}}" type={{params.type}}>' +
@@ -30,7 +31,8 @@ angular.module('app.directives', []).
                             '</div>';
 
         var getTemplate = function(contentType) {
-            var template = '';
+            console.log('contentType var inside getTemplate::' + contentType);
+            var template = videoTemplate;
             switch(contentType) {
                 case 'video': template = videoTemplate;break;
                 case 'page':  template = pageTemplate;break;
@@ -38,14 +40,14 @@ angular.module('app.directives', []).
                 case 'quiz':  template = quizTemplate;break;
                 case 'slice': template = sliceTemplate; break;
                 case 'pdf':   template = pdfTemplate; break;
-                default:
-                    template = videoTemplate;
             }
-
             return template;
         }
 
         var linker = function(scope, element, attrs) {
+            console.log('scope::' + scope);
+            console.log('element::' + element);
+            console.log('attrs::' + attrs);
             element.html(getTemplate(scope.type));
             $compile(element.contents())(scope);
         }

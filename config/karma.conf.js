@@ -32,7 +32,7 @@ exclude = [];
 // use dots reporter, as travis terminal does not support escaping sequences
 // possible values: 'dots', 'progress', 'junit', 'teamcity'
 // CLI --reporters progress
-reporters = ['dots','progress', 'junit'];
+reporters = ['progress', 'junit'];
 
 junitReporter = {
   // will be resolved to basePath (in the same way as files/exclude patterns)
