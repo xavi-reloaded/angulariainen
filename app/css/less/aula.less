@@ -1,11 +1,11 @@
 @aulaMarginLeft: 40px;
 @aulaTabPanelSize: 420px;
 
-.aulaTrainningViewTransition (@seconds: 0.3s) {
-  -webkit-transition: right @seconds cubic-bezier(1, 0, 0, 1);
-  -moz-transition: right @seconds cubic-bezier(1, 0, 0, 1);
-  -o-transition: right @seconds cubic-bezier(1, 0, 0, 1);
-  transition: right @seconds cubic-bezier(1, 0, 0, 1);
+.aulaTrainningViewTransition (@direction: right, @seconds: 0.3s, @typeTransition: cubic-bezier(1, 0, 0, 1)) {
+  -webkit-transition: @direction @seconds @typeTransition;
+  -moz-transition: @direction @seconds @typeTransition;
+  -o-transition: @direction @seconds @typeTransition;
+  transition: @direction @seconds @typeTransition;
 }
 
 #aula-trainning {
@@ -35,10 +35,11 @@
       position: absolute;
       width: 100%;
       top: 0;
-      -webkit-transition: top 1s ease;
-      -moz-transition: top 1s ease;
-      -o-transition: top 1s ease;
-      transition: top 1s ease;
+      .aulaTrainningViewTransition(top,1s,ease);
+//      -webkit-transition: top 1s ease;
+//      -moz-transition: top 1s ease;
+//      -o-transition: top 1s ease;
+//      transition: top 1s ease;
       li {
         position: relative;
         height: 100%;
@@ -435,6 +436,8 @@
     top: 0;
     right: 0;
     border-left: 1px solid #504f55;
+
+    .aulaTrainningViewTransition();
 
     -webkit-transition: -webkit-transform 0.3s cubic-bezier(1, 0, 0, 1);
     -o-transition: -o-transform 0.3s cubic-bezier(1, 0, 0, 1);
