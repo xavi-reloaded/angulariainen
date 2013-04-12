@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="bottom">
-                    <a class="next" href="" ng-click="next(activity.number)">NEXT LECTURE</a>
+                    <a class="next" href="" ng-click="next(activity.number)">NEXT ACTIVITY</a>
 
                     <div class="share mini-tooltip">
                         share
