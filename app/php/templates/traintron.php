@@ -10,7 +10,7 @@
 
 <div
     id="aula-trainning"
-    class="viewer"
+    class=""
     data-courseid="{{course.courseId}}"
     data-isinstructor="{{course.isInstructor}}"
     data-courseurl="{{course.courseUrl}}"
@@ -103,7 +103,7 @@
     </div>
 
     <div class="sidebar">
-        <a class="close-btn" href=""></a>
+        <a class="close-btn" href="" ng-click="switchSidebar();"></a>
         <div class="tab-container">
             <tabs>
                 <pane heading="NO SE QUE">

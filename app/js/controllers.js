@@ -106,6 +106,10 @@ function trainTron($scope, $timeout)
         return index;
     }
 
+    $scope.switchSidebar = function(){
+        $('#aula-trainning').toggleClass('fullscreen');
+    }
+
 
 }
 

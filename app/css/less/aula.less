@@ -470,6 +470,35 @@
 
 }
 
+#aula-trainning.fullscreen {
+  .view {
+    right: 40px;
+  }
+  .sidebar {
+    -webkit-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-backface-visibility: hidden;
+
+    a.close-btn {
+      &:before{
+        -webkit-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+        -webkit-backface-visibility: hidden;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
 audio, canvas, video {
   display: inline-block;
   *display: inline;

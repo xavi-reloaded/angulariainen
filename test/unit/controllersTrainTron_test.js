@@ -15,7 +15,14 @@ describe('TrainTron controller ::>', function(){
     beforeEach(inject(function($rootScope) {
         $scope = $rootScope.$new();
         $('ul#timeline').remove();
+        $('#aula-trainning').remove();
+        $('body').append('<div id="aula-trainning" class=""></div>');
         $('body').append('<ul id="timeline" style="top: -0%;"><li>weke</li><li>weka</li></ul>');
+        $('body').append('<div class="sidebar"><a class="close-btn" href="" ng-click="switchSidebar();"></a><div class="tab-container"><tabs>' +
+                            '<pane heading="A"></pane>' +
+                            '<pane heading="B"></pane>' +
+                            '<pane heading="C"></pane>' +
+                          '</tabs></div></div>');
     }));
 
 
@@ -123,6 +130,30 @@ describe('TrainTron controller ::>', function(){
             console.log(dat[x]);
         }
     }));
+
+    it('switchSidebar with empty class', inject(function($controller) {ctrl = $controller('trainTron', { $scope: $scope});
+        var mainDiv = $('#aula-trainning');
+//        console.log(sidebar);
+        expect(mainDiv.children().size()).toBe(0);
+        $scope.switchSidebar();
+        var expectedClass = 'fullscreen';
+        expect(mainDiv.attr('class')).toBe(expectedClass);
+        $scope.switchSidebar();
+        expect(mainDiv.attr('class')).toBe('');
+    }));
+
+    it('switchSidebar with NON empty class', inject(function($controller) {ctrl = $controller('trainTron', { $scope: $scope});
+        var mainDiv = $('#aula-trainning');
+//        console.log(sidebar);
+        expect(mainDiv.children().size()).toBe(0);
+        mainDiv.attr('class',"someAnotherClass");
+        $scope.switchSidebar();
+        var expectedClass = 'someAnotherClass fullscreen';
+        expect(mainDiv.attr('class')).toBe(expectedClass);
+        $scope.switchSidebar();
+        expect(mainDiv.attr('class')).toBe('someAnotherClass');
+    }));
+
 
 
 
