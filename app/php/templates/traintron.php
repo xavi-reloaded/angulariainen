@@ -20,7 +20,8 @@
     data-autoplay="{{course.autoplay}}">
 
     <div class="view">
-        <a id="go-back" href="#dashboard" ng-click="back(1)">Back to Course</a>
+
+        <a href="" class="go-back" ng-click="back(1)">Back to Course</a>
 
         <ul id="timeline" style="top: -{{screenOnFront}}%;" ng-cloak>
 

@@ -152,26 +152,6 @@
 #aula-trainning .view ul li .bottom .mark span b .read b:nth-child(2) {
   display: block;
 }
-#aula-trainning .view ul li .note {
-  left: 240px;
-  margin-top: -16px;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  font-size: 20px;
-}
-#aula-trainning .view ul li .note span {
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  max-width: 100%;
-  display: inline-block;
-  color: #002a80;
-  padding: 10px 20px;
-  border-radius: 20px;
-}
 #aula-trainning .view ul li.chapter .element {
   position: absolute;
   width: 140px;
@@ -338,11 +318,28 @@
   text-align: center;
   font-weight: bold;
 }
+#aula-trainning .view ul li.show-progress .note {
+  left: 240px;
+  margin-top: -16px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  font-size: 20px;
+}
+#aula-trainning .view ul li.show-progress .note span {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 100%;
+  display: inline-block;
+  color: #002a80;
+}
 #aula-trainning .view a {
   text-decoration: none;
 }
 #aula-trainning .view a:hover {
-  color: #fff;
+  color: #e9e9e9;
 }
 #aula-trainning .view a:hover:before {
   opacity: 1;
@@ -354,6 +351,11 @@
   float: left;
   margin-right: 5px;
   opacity: .3;
+}
+#aula-trainning .view a.go-back {
+  position: absolute;
+  z-index: 1;
+  content: 'weke';
 }
 #aula-trainning .sidebar {
   background: #fff;

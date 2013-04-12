@@ -67,16 +67,13 @@
 
 #aula-trainning {
   .view {
-
     .aulaTrainningViewTransition;
-
     position: fixed;
     top: 0;
     bottom: 0;
     left: 40px;
     right: 465px;
     z-index: 1;
-
     ul {
       height: 100%;
       position: absolute;
@@ -128,12 +125,10 @@
             clear: both;
           }
         }
-
         .bottom {
           position: absolute;
           width: 100%;
           bottom: 20px;
-
           .next {
             height: 30px;
             line-height: 24px;
@@ -187,7 +182,6 @@
               }
             }
           }
-
           .mark {
             .miniIcon;
             background: url(@spritesImage) 0 -570px;
@@ -219,30 +213,8 @@
             }
           }
         }
-        .note {
-          left: 240px;
-          margin-top: -16px;
-          overflow: hidden;
-          position: absolute;
-          right: 0;
-          top: 50%;
-          font-size: 20px;
-
-          span {
-            display: block;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            max-width: 100%;
-            display: inline-block;
-            color: #002a80;
-            padding: 10px 20px;
-            border-radius: 20px;
-          }
-        }
 
       }
-
       li.chapter {
         .element {
           .element;
@@ -383,17 +355,31 @@
         .element{
           .element;
         }
+        .note {
+          left: 240px;
+          margin-top: -16px;
+          overflow: hidden;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          font-size: 20px;
+          span {
+            display: block;
+            overflow: hidden;
+            white-space: nowrap;
+            max-width: 100%;
+            display: inline-block;
+            color: #002a80;
+          }
+        }
       }
     }
 
 
     a {
       text-decoration: none;
-      #back{
-
-      }
       &:hover {
-        color: #fff;
+        color: #e9e9e9;
         &:before {
           opacity: 1;
         }
@@ -407,6 +393,11 @@
         margin-right: 5px;
         opacity: .3;
       }
+    }
+    a.go-back {
+        position: absolute;
+        z-index: 1;
+        content: 'weke';
     }
   }
   .sidebar {
