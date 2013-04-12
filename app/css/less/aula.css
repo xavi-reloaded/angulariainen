@@ -172,43 +172,6 @@
   padding: 10px 20px;
   border-radius: 20px;
 }
-#aula-trainning .view ul li .badge {
-  position: absolute;
-  top: 50%;
-  left: 106px;
-  margin-top: -120px;
-  background: none;
-  text-align: center;
-}
-#aula-trainning .view ul li .badge .title {
-  background: #000;
-  padding: 0;
-  display: inline-block;
-  line-height: 23px;
-  color: #f7ecc5;
-  margin-top: 17px;
-  display: block;
-}
-#aula-trainning .view ul li .badge .icon {
-  background: #e7dcad url("../../img/noise.png");
-  background: url("../../img/noise.png"), -webkit-linear-gradient(#e7dcad, #e09226);
-  background: url("../../img/noise.png"), -o-linear-gradient(#e7dcad, #e09226);
-  background: url("../../img/noise.png"), -ms-linear-gradient(#e7dcad, #e09226);
-  background: url("../../img/noise.png"), linear-gradient(#e7dcad, #e09226);
-  width: 130px;
-  height: 130px;
-  border-radius: 99em;
-  display: block;
-  box-shadow: 0 0 0 5px #dca32a, 0 0 0 10px #000;
-}
-#aula-trainning .view ul li .badge .icon:before {
-  content: '';
-  width: 84px;
-  height: 84px;
-  background: url("../../img/badges.png");
-  display: inline-block;
-  margin-top: 26px;
-}
 #aula-trainning .view ul li.chapter .element {
   position: absolute;
   width: 140px;
@@ -241,6 +204,43 @@
 }
 #aula-trainning .view ul li.chapter .intro span b {
   color: #002a80;
+}
+#aula-trainning .view ul li.certificate .badge {
+  position: absolute;
+  top: 50%;
+  left: 106px;
+  margin-top: -120px;
+  background: none;
+  text-align: center;
+}
+#aula-trainning .view ul li.certificate .badge .title {
+  background: #000;
+  padding: 0;
+  display: inline-block;
+  line-height: 23px;
+  color: #f7ecc5;
+  margin-top: 17px;
+  display: block;
+}
+#aula-trainning .view ul li.certificate .badge .icon {
+  background: #e7dcad url("../../img/noise.png");
+  background: url("../../img/noise.png"), -webkit-linear-gradient(#e7dcad, #ecdfa8);
+  background: url("../../img/noise.png"), -o-linear-gradient(#e7dcad, #ecdfa8);
+  background: url("../../img/noise.png"), -ms-linear-gradient(#e7dcad, #ecdfa8);
+  background: url("../../img/noise.png"), linear-gradient(#e7dcad, #ecdfa8);
+  width: 130px;
+  height: 130px;
+  border-radius: 99em;
+  display: block;
+  box-shadow: 0 0 0 5px #dca32a, 0 0 0 10px #000;
+}
+#aula-trainning .view ul li.certificate .badge .icon:before {
+  content: '';
+  width: 84px;
+  height: 84px;
+  background: url("../../img/badges.png");
+  display: inline-block;
+  margin-top: 26px;
 }
 #aula-trainning .view ul li.certificate .congrats {
   left: 50%;
@@ -285,10 +285,10 @@
 }
 #aula-trainning .view ul li.certificate .congrats .share .btns * {
   background: #6992d6 url("../../img/noise.png");
-  background: url("../../img/noise.png"), -webkit-linear-gradient(#6992d6, #7394cc);
-  background: url("../../img/noise.png"), -o-linear-gradient(#6992d6, #7394cc);
-  background: url("../../img/noise.png"), -ms-linear-gradient(#6992d6, #7394cc);
-  background: url("../../img/noise.png"), linear-gradient(#6992d6, #7394cc);
+  background: url("../../img/noise.png"), -webkit-linear-gradient(#6992d6, #5f90e0);
+  background: url("../../img/noise.png"), -o-linear-gradient(#6992d6, #5f90e0);
+  background: url("../../img/noise.png"), -ms-linear-gradient(#6992d6, #5f90e0);
+  background: url("../../img/noise.png"), linear-gradient(#6992d6, #5f90e0);
   color: #FFFFFF;
   display: table-cell;
   font-size: 14px;
@@ -298,11 +298,11 @@
   padding-right: 10px;
 }
 #aula-trainning .view ul li.certificate .congrats .share .btns *:before {
-  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -632px, -moz-linear-gradient(#567fcc, #6182c1);
-  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -632px, -webkit-linear-gradient(#567fcc, #6182c1);
-  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -632px, -o-linear-gradient(#567fcc, #6182c1);
-  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -632px, -ms-linear-gradient(#567fcc, #6182c1);
-  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -632px, linear-gradient(#567fcc, #6182c1);
+  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -632px, -moz-linear-gradient(#567fcc, #4b7cd7);
+  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -632px, -webkit-linear-gradient(#567fcc, #4b7cd7);
+  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -632px, -o-linear-gradient(#567fcc, #4b7cd7);
+  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -632px, -ms-linear-gradient(#567fcc, #4b7cd7);
+  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -632px, linear-gradient(#567fcc, #4b7cd7);
   content: "";
   height: 26px;
   width: 30px;
@@ -312,17 +312,17 @@
 #aula-trainning .view ul li.certificate .congrats .share .btns .tw {
   border-left: 1px solid #000;
   background: #67b2d6 url("../../img/noise.png");
-  background: url("../../img/noise.png"), -webkit-linear-gradient(#67b2d6, #71afcc);
-  background: url("../../img/noise.png"), -o-linear-gradient(#67b2d6, #71afcc);
-  background: url("../../img/noise.png"), -ms-linear-gradient(#67b2d6, #71afcc);
-  background: url("../../img/noise.png"), linear-gradient(#67b2d6, #71afcc);
+  background: url("../../img/noise.png"), -webkit-linear-gradient(#67b2d6, #5db5e0);
+  background: url("../../img/noise.png"), -o-linear-gradient(#67b2d6, #5db5e0);
+  background: url("../../img/noise.png"), -ms-linear-gradient(#67b2d6, #5db5e0);
+  background: url("../../img/noise.png"), linear-gradient(#67b2d6, #5db5e0);
 }
 #aula-trainning .view ul li.certificate .congrats .share .btns .tw:before {
-  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -662px, -moz-linear-gradient(#59a5ce, #64a2c3);
-  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -662px, -webkit-linear-gradient(#59a5ce, #64a2c3);
-  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -662px, -o-linear-gradient(#59a5ce, #64a2c3);
-  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -662px, -ms-linear-gradient(#59a5ce, #64a2c3);
-  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -662px, linear-gradient(#59a5ce, #64a2c3);
+  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -662px, -moz-linear-gradient(#59a5ce, #4ea8d9);
+  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -662px, -webkit-linear-gradient(#59a5ce, #4ea8d9);
+  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -662px, -o-linear-gradient(#59a5ce, #4ea8d9);
+  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -662px, -ms-linear-gradient(#59a5ce, #4ea8d9);
+  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -662px, linear-gradient(#59a5ce, #4ea8d9);
 }
 #aula-trainning .view ul li.show-progress .element {
   position: absolute;

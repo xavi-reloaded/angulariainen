@@ -47,18 +47,18 @@
 
 .setBackgroundFlipante(@bgcolor:#6992d6){
   background: @bgcolor url(@noiseImage);
-  background: url(@noiseImage), -webkit-linear-gradient(@bgcolor, desaturate(@bgcolor, 10%));
-  background: url(@noiseImage), -o-linear-gradient(@bgcolor, desaturate(@bgcolor, 10%));
-  background: url(@noiseImage), -ms-linear-gradient(@bgcolor, desaturate(@bgcolor, 10%));
-  background: url(@noiseImage), linear-gradient(@bgcolor, desaturate(@bgcolor, 10%));
+  background: url(@noiseImage), -webkit-linear-gradient(@bgcolor, saturate(@bgcolor, 10%));
+  background: url(@noiseImage), -o-linear-gradient(@bgcolor, saturate(@bgcolor, 10%));
+  background: url(@noiseImage), -ms-linear-gradient(@bgcolor, saturate(@bgcolor, 10%));
+  background: url(@noiseImage), linear-gradient(@bgcolor, saturate(@bgcolor, 10%));
 }
 
 .setBackgroundFlipanteBefore(@bgcolor:#567fcc, @position: 0 -632px){
-  background: url(@noiseImage), url(@spritesImage) @position, -moz-linear-gradient(@bgcolor, desaturate(@bgcolor, 10%));
-  background: url(@noiseImage), url(@spritesImage) @position, -webkit-linear-gradient(@bgcolor, desaturate(@bgcolor, 10%));
-  background: url(@noiseImage), url(@spritesImage) @position, -o-linear-gradient(@bgcolor, desaturate(@bgcolor, 10%));
-  background: url(@noiseImage), url(@spritesImage) @position, -ms-linear-gradient(@bgcolor, desaturate(@bgcolor, 10%));
-  background: url(@noiseImage), url(@spritesImage) @position, linear-gradient(@bgcolor, desaturate(@bgcolor, 10%));
+  background: url(@noiseImage), url(@spritesImage) @position, -moz-linear-gradient(@bgcolor, saturate(@bgcolor, 10%));
+  background: url(@noiseImage), url(@spritesImage) @position, -webkit-linear-gradient(@bgcolor, saturate(@bgcolor, 10%));
+  background: url(@noiseImage), url(@spritesImage) @position, -o-linear-gradient(@bgcolor, saturate(@bgcolor, 10%));
+  background: url(@noiseImage), url(@spritesImage) @position, -ms-linear-gradient(@bgcolor, saturate(@bgcolor, 10%));
+  background: url(@noiseImage), url(@spritesImage) @position, linear-gradient(@bgcolor, saturate(@bgcolor, 10%));
 }
 
 ///////////////////////////////////////////////
@@ -240,43 +240,6 @@
             border-radius: 20px;
           }
         }
-        .badge {
-          position: absolute;
-          top: 50%;
-          left: 106px;
-          margin-top: -120px;
-          background: none;
-          text-align: center;
-          .title {
-            background: #000;
-            padding: 0;
-            display: inline-block;
-            line-height: 23px;
-            color: #f7ecc5;
-            margin-top: 17px;
-            display: block;
-          }
-          .icon {
-            background: #e7dcad url(@noiseImage);
-            background: url(@noiseImage), -webkit-linear-gradient(#e7dcad, #e09226);
-            background: url(@noiseImage), -o-linear-gradient(#e7dcad, #e09226);
-            background: url(@noiseImage), -ms-linear-gradient(#e7dcad, #e09226);
-            background: url(@noiseImage), linear-gradient(#e7dcad, #e09226);
-            width: 130px;
-            height: 130px;
-            border-radius: 99em;
-            display: block;
-            box-shadow: 0 0 0 5px #dca32a, 0 0 0 10px #000;
-            &:before {
-              content: '';
-              width: 84px;
-              height: 84px;
-              background: url("../../img/badges.png");
-              display: inline-block;
-              margin-top: 26px;
-            }
-          }
-        }
 
       }
 
@@ -309,6 +272,40 @@
 
       }
       li.certificate {
+
+        .badge {
+          position: absolute;
+          top: 50%;
+          left: 106px;
+          margin-top: -120px;
+          background: none;
+          text-align: center;
+          .title {
+            background: #000;
+            padding: 0;
+            display: inline-block;
+            line-height: 23px;
+            color: #f7ecc5;
+            margin-top: 17px;
+            display: block;
+          }
+          .icon {
+            .setBackgroundFlipante(#e7dcad);
+            width: 130px;
+            height: 130px;
+            border-radius: 99em;
+            display: block;
+            box-shadow: 0 0 0 5px #dca32a, 0 0 0 10px #000;
+            &:before {
+              content: '';
+              width: 84px;
+              height: 84px;
+              background: url("../../img/badges.png");
+              display: inline-block;
+              margin-top: 26px;
+            }
+          }
+        }
         .congrats {
           left: 50%;
           margin: -130px 0 0 -200px;
@@ -491,11 +488,9 @@
     .tooltip-content {
       visibility: visible;
     }
-
   }
   .tooltip-content {
     .aulaTrainningViewTransition(visibility,0.3s,ease);
-
     background: #000;
     border-radius: 4px;
     bottom: 100%;
@@ -521,9 +516,7 @@
       background: #000;
       display: block;
       position: absolute;
-
       .aulaTrainningViewRotate(45deg);
-
       bottom: -5px;
       left: 50%;
       margin-left: -5px;
