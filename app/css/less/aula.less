@@ -1,5 +1,7 @@
 @aulaMarginLeft: 40px;
 @aulaTabPanelSize: 420px;
+@noiseImage:   "../../img/noise.png";
+@spritesImage: "../../img/sprites.png?v=10";
 
 .aulaTrainningViewTransition (@direction: right, @seconds: 0.3s, @typeTransition: cubic-bezier(1, 0, 0, 1)) {
   -webkit-transition: @direction @seconds @typeTransition;
@@ -8,8 +10,62 @@
   transition: @direction @seconds @typeTransition;
 }
 
-#aula-trainning {
+.aulaTrainningViewRotate(@rotate: 180deg) {
+  -webkit-transform: rotate(@rotate);
+  -o-transform: rotate(@rotate);
+  -ms-transform: rotate(@rotate);
+  transform: rotate(@rotate);
+  -webkit-backface-visibility: hidden;
+}
 
+.element() {
+  position: absolute;
+  width: 140px;
+  height: 180px;
+  cursor: default;
+  color: #002a80;
+
+  top: 30%;
+  width: 300px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 60px;
+  text-align: center;
+  font-weight: bold;
+  &:hover{
+  }
+}
+
+.miniIcon() {
+  float: right;
+  width: 26px;
+  height: 26px;
+  text-indent: -999em;
+  margin: 5px 0 0 5px;
+  cursor: pointer;
+}
+
+.setBackgroundFlipante(@bgcolor:#6992d6){
+  background: @bgcolor url(@noiseImage);
+  background: url(@noiseImage), -webkit-linear-gradient(@bgcolor, desaturate(@bgcolor, 10%));
+  background: url(@noiseImage), -o-linear-gradient(@bgcolor, desaturate(@bgcolor, 10%));
+  background: url(@noiseImage), -ms-linear-gradient(@bgcolor, desaturate(@bgcolor, 10%));
+  background: url(@noiseImage), linear-gradient(@bgcolor, desaturate(@bgcolor, 10%));
+}
+
+.setBackgroundFlipanteBefore(@bgcolor:#567fcc, @position: 0 -632px){
+  background: url(@noiseImage), url(@spritesImage) @position, -moz-linear-gradient(@bgcolor, desaturate(@bgcolor, 10%));
+  background: url(@noiseImage), url(@spritesImage) @position, -webkit-linear-gradient(@bgcolor, desaturate(@bgcolor, 10%));
+  background: url(@noiseImage), url(@spritesImage) @position, -o-linear-gradient(@bgcolor, desaturate(@bgcolor, 10%));
+  background: url(@noiseImage), url(@spritesImage) @position, -ms-linear-gradient(@bgcolor, desaturate(@bgcolor, 10%));
+  background: url(@noiseImage), url(@spritesImage) @position, linear-gradient(@bgcolor, desaturate(@bgcolor, 10%));
+}
+
+///////////////////////////////////////////////
+// E N D   O F   L E S S   F U N C T I O N S //
+///////////////////////////////////////////////
+
+#aula-trainning {
   .view {
 
     .aulaTrainningViewTransition;
@@ -21,103 +77,20 @@
     right: 465px;
     z-index: 1;
 
-    &:before{
-    //      content: '';
-    //      width: 5px;
-    //      height: 100%;
-    //      position: fixed;
-    //      background: url("../../img/at_bar.png");
-    //      left: 200px;
-    }
-
     ul {
       height: 100%;
       position: absolute;
       width: 100%;
       top: 0;
+      margin-left: 0;
+      list-style: none;
       .aulaTrainningViewTransition(top,1s,ease);
-//      -webkit-transition: top 1s ease;
-//      -moz-transition: top 1s ease;
-//      -o-transition: top 1s ease;
-//      transition: top 1s ease;
+
       li {
         position: relative;
         height: 100%;
         float: left;
         width: 100%;
-        .element {
-          position: absolute;
-          width: 140px;
-          height: 180px;
-          border-radius: 5px;
-          cursor: default;
-
-          top: 30%;
-          width: 300px;
-          height: 80px;
-          line-height: 80px;
-          font-size: 60px;
-          text-align: center;
-          color: #002a80;
-          font-weight: bold;
-          &:hover{
-            box-shadow: 0px 0px 20px rgba(0,255,255,0.75);
-            border: 1px solid rgba(127,255,255,0.75);
-          }
-
-        }
-
-        .tell {
-          left: 250px;
-          overflow: hidden;
-          position: absolute;
-          right: 0;
-          top: 45%;
-          span {
-            display: block;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            max-width: 100%;
-            display: inline-block;
-            font-size: 25px;
-            b{
-              color: #002a80;
-            }
-          }
-        }
-        .chapter {
-          background: #6090bf;
-          background: -webkit-linear-gradient(#cee7fa, #6090bf);
-          background: -o-linear-gradient(#cee7fa, #6090bf);
-          background: -ms-linear-gradient(#cee7fa, #6090bf);
-          background: linear-gradient(#cee7fa, #6090bf);
-          box-shadow: 0 0 0 5px #4574a9, 0 0 0 6px rgba(255, 255, 255, 0.2), 0 0 0 9px #010101;
-          line-height: 104px;
-          .element {
-            position: absolute;
-            width: 140px;
-            height: 180px;
-            border: 1px solid rgba(127,255,255,0.25);
-            box-shadow: 0px 0px 20px rgba(0,255,255,0.5);
-            border-radius: 5px;
-            cursor: default;
-
-            top: 30%;
-            width: 300px;
-            height: 80px;
-            line-height: 80px;
-            font-size: 60px;
-            text-align: center;
-            color: rgba(255,255,255,0.75);
-            font-weight: bold;
-            &:hover{
-              box-shadow: 0px 0px 20px rgba(0,255,255,0.75);
-              border: 1px solid rgba(127,255,255,0.75);
-            }
-          }
-        }
-
 
         .activity-container {
           position: absolute;
@@ -133,49 +106,14 @@
           top: 14px;
           width: 130px;
           cursor: pointer;
-
-          &:first-child {
-            display: none;
-          }
-          &:last-child {
-            display: none;
-          }
           span {
             float: left;
-            color: #84848c;
             font-size: 12px;
             line-height: 20px;
-            font-weight: bold;
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
             padding-left: 5px;
           }
-          a{
-            height: 18px;
-            width: 19px;
-            background-color: #000;
-            color: #ababae;
-            text-shadow: 0 -1px 2px #000000;
-            border-radius: 4px;
-            padding: 2px 0px 0px 3px;
-            box-shadow: 1px 0 0 rgba(255, 255, 255, 0.1);
-            display: block;
-            float: left;
-
-            &:before {
-              background: url("../img/sprites.png?v=10") 0px -690px;
-              content: "";
-              float: left;
-              margin-left: 2px;
-              height: 13px;
-              width: 9px;
-              -webkit-transform: rotate(270deg);
-              -o-transform: rotate(270deg);
-              -ms-transform: rotate(270deg);
-              transform: rotate(270deg);
-              -webkit-backface-visibility: hidden;
-            }
-          }
         }
+
         .top {
           position: absolute;
           top: 40px;
@@ -190,6 +128,7 @@
             clear: both;
           }
         }
+
         .bottom {
           position: absolute;
           width: 100%;
@@ -213,43 +152,66 @@
           }
 
           .share {
-            float: right;
-            width: 26px;
-            height: 26px;
-            background: url("../../img/sprites.png?v=10") 0 -600px;
-            text-indent: -999em;
-            margin: 5px 0 0 5px;
-            cursor: pointer;
-            background-position: 0 -600px;
+            .miniIcon;
+            background: url(@spritesImage) 0 -600px;
+            .tooltip-content {
+              a{
+                width: 30px;
+                height: 30px;
+                text-indent: -999em;
+                float: left;
+                margin: 5px 0 5px 5px;
+                .aulaTrainningViewTransition(background,0.2s,ease);
+                cursor: pointer;
+                &:first-child {
+                  margin-left: 0;
+                }
+              }
+              a.f{
+                background: #444444 url(@spritesImage) 0 -630px;
+                &:hover {
+                  background-color: #446298;
+                }
+              }
+              a.m {
+                background: #444444 url(@spritesImage) -27px -630px;
+                &:hover {
+                  background-color: #878;
+                }
+              }
+              a.t {
+                background: #444444 url(@spritesImage) 0 -660px;
+                &:hover {
+                  background-color: #73b4ca;
+                }
+              }
+            }
           }
 
           .mark {
-            float: right;
-            width: 26px;
-            height: 26px;
-            background: url("../../img/sprites.png?v=10") 0 -570px;
-            text-indent: -999em;
-            margin: 5px 0 0 5px;
-            cursor: pointer;
+            .miniIcon;
+            background: url(@spritesImage) 0 -570px;
 
-            b {
-              &:nth-child(1) {
-                display: block;
-              }
-              &:nth-child(2) {
-                display: none;
-              }
-              &:hover {
-                background: url("../../img/sprites.png?v=10") -30px -570px;
-              }
-              .read {
-                background-position: -30px -570px;
-                b {
-                  &:nth-child(1) {
-                    display: none;
-                  }
-                  &:nth-child(2) {
-                    display: block;
+            span {
+              b {
+                &:nth-child(1) {
+                  display: block;
+                }
+                &:nth-child(2) {
+                  display: none;
+                }
+                &:hover {
+                  background: url(@spritesImage) -30px -570px;
+                }
+                .read {
+                  background-position: -30px -570px;
+                  b {
+                    &:nth-child(1) {
+                      display: none;
+                    }
+                    &:nth-child(2) {
+                      display: block;
+                    }
                   }
                 }
               }
@@ -295,11 +257,11 @@
             display: block;
           }
           .icon {
-            background: #e7dcad url("../../img/noise.png");
-            background: url("../../img/noise.png"), -webkit-linear-gradient(#e7dcad, #e09226);
-            background: url("../../img/noise.png"), -o-linear-gradient(#e7dcad, #e09226);
-            background: url("../../img/noise.png"), -ms-linear-gradient(#e7dcad, #e09226);
-            background: url("../../img/noise.png"), linear-gradient(#e7dcad, #e09226);
+            background: #e7dcad url(@noiseImage);
+            background: url(@noiseImage), -webkit-linear-gradient(#e7dcad, #e09226);
+            background: url(@noiseImage), -o-linear-gradient(#e7dcad, #e09226);
+            background: url(@noiseImage), -ms-linear-gradient(#e7dcad, #e09226);
+            background: url(@noiseImage), linear-gradient(#e7dcad, #e09226);
             width: 130px;
             height: 130px;
             border-radius: 99em;
@@ -315,6 +277,38 @@
             }
           }
         }
+
+      }
+
+      li.chapter {
+        .element {
+          .element;
+        }
+        .intro {
+          left: 250px;
+          overflow: hidden;
+          position: absolute;
+          right: 0;
+          top: 45%;
+          span {
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 100%;
+            display: inline-block;
+            font-size: 25px;
+            b{
+              color: #002a80;
+            }
+          }
+        }
+      }
+      li.on {}
+      li.off {
+
+      }
+      li.certificate {
         .congrats {
           left: 50%;
           margin: -130px 0 0 -200px;
@@ -341,70 +335,61 @@
               color: #FFFFFF;
               font-weight: bold;
             }
-            .share {
-              h4 {
+          }
+
+          .share {
+            h4 {
+              color: #FFFFFF;
+              font-size: 12px;
+              text-transform: uppercase;
+            }
+            .btns {
+              border-radius: 20px;
+              box-shadow: 0 0 0 1px #000000, 0 0 0 4px rgba(0, 0, 0, 0.5);
+              display: inline-block;
+              margin-top: 5px;
+              overflow: hidden;
+              line-height: 25px;
+              * {
+                .setBackgroundFlipante(#6992d6);
+
                 color: #FFFFFF;
-                font-size: 12px;
-                text-transform: uppercase;
-              }
-              .btns {
-                border-radius: 20px;
-                box-shadow: 0 0 0 1px #000000, 0 0 0 4px rgba(0, 0, 0, 0.5);
-                display: inline-block;
-                margin-top: 5px;
+                display: table-cell;
+                font-size: 14px;
+                font-weight: bold;
                 overflow: hidden;
-                line-height: 25px;
-                * {
-                  background: #6992d6 url("../../img/noise.png");
-                  background: url("../../img/noise.png"), -webkit-linear-gradient(#6992d6, #3564ab);
-                  background: url("../../img/noise.png"), -o-linear-gradient(#6992d6, #3564ab);
-                  background: url("../../img/noise.png"), -ms-linear-gradient(#6992d6, #3564ab);
-                  background: url("../../img/noise.png"), linear-gradient(#6992d6, #3564ab);
-                  color: #FFFFFF;
-                  display: table-cell;
-                  font-size: 14px;
-                  font-weight: bold;
-                  overflow: hidden;
-                  text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
-                  padding-right: 10px;
-                  &:before {
-                    background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -632px, -moz-linear-gradient(#567fcc, #28529a);
-                    background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -632px, -webkit-linear-gradient(#567fcc, #28529a);
-                    background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -632px, -o-linear-gradient(#567fcc, #28529a);
-                    background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -632px, -ms-linear-gradient(#567fcc, #28529a);
-                    background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -632px, linear-gradient(#567fcc, #28529a);
-                    content: "";
-                    height: 26px;
-                    width: 30px;
-                    float: left;
-                    margin-right: 9px;
-                  }
+                text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
+                padding-right: 10px;
 
+                &:before {
+                  .setBackgroundFlipanteBefore(#567fcc,0 -632px);
+                  content: "";
+                  height: 26px;
+                  width: 30px;
+                  float: left;
+                  margin-right: 9px;
                 }
-                .tw {
-                  border-left: 1px solid #000;
-                  background: #67b2d6 url("../../img/noise.png");
-                  background: url("../../img/noise.png"), -webkit-linear-gradient(#67b2d6, #3582ab);
-                  background: url("../../img/noise.png"), -o-linear-gradient(#67b2d6, #3582ab);
-                  background: url("../../img/noise.png"), -ms-linear-gradient(#67b2d6, #3582ab);
-                  background: url("../../img/noise.png"), linear-gradient(#67b2d6, #3582ab);
-                  &:before {
-                    background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -662px, -moz-linear-gradient(#59a5ce, #2b739e);
-                    background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -662px, -webkit-linear-gradient(#59a5ce, #2b739e);
-                    background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -662px, -o-linear-gradient(#59a5ce, #2b739e);
-                    background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -662px, -ms-linear-gradient(#59a5ce, #2b739e);
-                    background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -662px, linear-gradient(#59a5ce, #2b739e);
-                  }
-                }
-
               }
-
+              .tw {
+                border-left: 1px solid #000;
+                .setBackgroundFlipante(#67b2d6);
+                &:before {
+                  .setBackgroundFlipanteBefore(#59a5ce,0 -662px);
+                }
+              }
             }
           }
         }
 
       }
+      li.show-progress {
+        .element{
+          .element;
+        }
+      }
     }
+
+
     a {
       text-decoration: none;
       #back{
@@ -421,13 +406,12 @@
         width: 16px;
         height: 16px;
         float: left;
-      //        background: url("../../img/sprites.png?v=10") 0 -520px;
+      //        background: url(@spritesImage) 0 -520px;
         margin-right: 5px;
         opacity: .3;
       }
     }
   }
-
   .sidebar {
     background: #fff;
     width: 420px;
@@ -443,7 +427,6 @@
     -o-transition: -o-transform 0.3s cubic-bezier(1, 0, 0, 1);
     -ms-transition: -ms-transform 0.3s cubic-bezier(1, 0, 0, 1);
     transition: transform 0.3s cubic-bezier(1, 0, 0, 1);
-
     -webkit-backface-visibility: hidden;
 
     .close-btn {
@@ -460,7 +443,7 @@
       z-index: 1;
 
       &:before {
-        background: url("../../img/sprites.png?v=10") 0 -690px;
+        background: url(@spritesImage) 0 -690px;
         content: "";
         float: left;
         height: 13px;
@@ -479,7 +462,6 @@
     }
 
   }
-
 }
 
 #aula-trainning.fullscreen {
@@ -495,20 +477,59 @@
 
     a.close-btn {
       &:before{
-        -webkit-transform: rotate(180deg);
-        -o-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-        transform: rotate(180deg);
-        -webkit-backface-visibility: hidden;
+        .aulaTrainningViewRotate(180deg);
       }
     }
   }
 }
 
 
+.mini-tooltip {
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    .tooltip-content {
+      visibility: visible;
+    }
 
+  }
+  .tooltip-content {
+    .aulaTrainningViewTransition(visibility,0.3s,ease);
 
+    background: #000;
+    border-radius: 4px;
+    bottom: 100%;
+    color: #FFFFFF;
+    cursor: default;
+    display: block;
+    font-size: 10px;
+    padding: 2px 5px;
+    position: absolute;
+    text-align: center;
+    text-indent: 0;
+    visibility: hidden;
+    z-index: 45;
+    min-width: 80px;
+    max-width: 300px;
+    left: 50%;
+    margin-left: -38px;
 
+    &:before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: #000;
+      display: block;
+      position: absolute;
+
+      .aulaTrainningViewRotate(45deg);
+
+      bottom: -5px;
+      left: 50%;
+      margin-left: -5px;
+    }
+  }
+}
 
 
 audio, canvas, video {
@@ -519,5 +540,17 @@ audio, canvas, video {
 
 audio:not([controls]) {
   display: none;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+//  background-image: url("../images/v3/bg.jpg?v=2");
+  background-position: center;
+  background-repeat: repeat;
+  background-color: rgba(233, 233, 233, 0.23);
+  position: relative;
 }
 

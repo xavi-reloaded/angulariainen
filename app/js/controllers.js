@@ -46,7 +46,7 @@ function trainTron($scope, $timeout)
 
     var showProgressElement = '' +
         '<li class="show-progress">' +
-        '   <span class="element completion-ratio">' + $scope.course.ratioCompleted + '%</span>' +
+        '   <span class="element">' + $scope.course.ratioCompleted + '%</span>' +
         '   <div class="note"> <span>You have completed <b class="completion-ratio">' + $scope.course.ratioCompleted + '%</b> of this course</span> </div>' +
         '</li>';
 
