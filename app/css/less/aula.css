@@ -378,11 +378,11 @@
 }
 #aula-trainning .sidebar {
   background: #fff;
-  width: 425px;
+  width: 420px;
   height: 100%;
   position: fixed;
-  right: 0;
   top: 0;
+  right: 0;
   border-left: 1px solid #504f55;
   -webkit-transition: -webkit-transform 0.3s cubic-bezier(1, 0, 0, 1);
   -o-transition: -o-transform 0.3s cubic-bezier(1, 0, 0, 1);
@@ -390,7 +390,7 @@
   transition: transform 0.3s cubic-bezier(1, 0, 0, 1);
   -webkit-backface-visibility: hidden;
 }
-#aula-trainning .sidebar a .close-btn {
+#aula-trainning .sidebar .close-btn {
   background: #232326;
   border-color: #504F55;
   border-radius: 3px 0 0 3px;
@@ -400,16 +400,23 @@
   left: -26px;
   overflow: hidden;
   position: absolute;
-  top: 10px;
+  top: 50px;
   z-index: 1;
 }
-#aula-trainning .sidebar a .close-btn:before {
+#aula-trainning .sidebar .close-btn:before {
   background: url("../../img/sprites.png?v=10") 0 -690px;
   content: "";
   float: left;
   height: 13px;
   margin: 6px 8px 6px 8px;
   width: 9px;
+}
+#aula-trainning .sidebar .tab-container {
+  padding: 5px;
+  box-shadow: 1px 0 1px #151517 inset;
+  position: relative;
+  height: 100%;
+  z-index: 0;
 }
 audio,
 canvas,

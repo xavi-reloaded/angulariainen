@@ -25,7 +25,7 @@
         <ul id="timeline" style="top: -{{screenOnFront}}%;" ng-cloak>
 
             <li class="chapter">
-<!--                <span class="percent chapter-number"><span>Section</span>1</span>-->
+                <!--                <span class="percent chapter-number"><span>Section</span>1</span>-->
                 <span class="element"><span>Section</span>1</span>
                 <div class="tell"><span><b>{{course.intro.message}}</b></span></div>
                 <div class="bottom"><a href="" class="next continue" ng-click="continue(1)">Continue</a></div>
@@ -44,27 +44,27 @@
 
                 <div class="activity-container">
                     <aula-activity id="activity.id" type="activity.type" params="activity.params"></aula-activity>
-<!--                    <script>-->
-<!--                        (function() {-->
-<!--                            var vid1, progressed;-->
-<!---->
-<!--                            // create a really simple plugin-->
-<!--                            // this one just logs the buffered percentage to the console whenever-->
-<!--                            // more data is downloaded-->
-<!--                            progressed = function(options) {-->
-<!--                                this.on('progress', function(e) {-->
-<!--                                    console.log(this.bufferedPercent());-->
-<!--                                });-->
-<!--                            };-->
-<!---->
-<!--                            // register the plugin-->
-<!--                            vjs.plugin('progressed', progressed);-->
-<!---->
-<!--                            // initialize it-->
-<!--                            vid1 = vjs('vid_{{activity.number}}');-->
-<!--                            vid1.progressed();-->
-<!--                        })();-->
-<!--                    </script>-->
+                    <!--                    <script>-->
+                    <!--                        (function() {-->
+                    <!--                            var vid1, progressed;-->
+                    <!---->
+                    <!--                            // create a really simple plugin-->
+                    <!--                            // this one just logs the buffered percentage to the console whenever-->
+                    <!--                            // more data is downloaded-->
+                    <!--                            progressed = function(options) {-->
+                    <!--                                this.on('progress', function(e) {-->
+                    <!--                                    console.log(this.bufferedPercent());-->
+                    <!--                                });-->
+                    <!--                            };-->
+                    <!---->
+                    <!--                            // register the plugin-->
+                    <!--                            vjs.plugin('progressed', progressed);-->
+                    <!---->
+                    <!--                            // initialize it-->
+                    <!--                            vid1 = vjs('vid_{{activity.number}}');-->
+                    <!--                            vid1.progressed();-->
+                    <!--                        })();-->
+                    <!--                    </script>-->
                 </div>
 
                 <div class="bottom">
@@ -104,13 +104,14 @@
 
     <div class="sidebar">
         <a class="close-btn" href=""></a>
-                <tabs>
-                    <pane heading="NO SE QUE">
-                        <div>está demostrado que eres una pinki</div>
-                    </pane>
-                    <pane heading="PONER POR"></pane>
-                    <pane heading="CULPA'LAURA"></pane>
-                </tabs>
-
+        <div class="tab-container">
+            <tabs>
+                <pane heading="NO SE QUE">
+                    <div>está demostrado que eres una pinki</div>
+                </pane>
+                <pane heading="PONER POR"></pane>
+                <pane heading="CULPA'LAURA"></pane>
+            </tabs>
+        </div>
     </div>
 </div>
