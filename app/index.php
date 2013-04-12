@@ -10,8 +10,7 @@
     <script src="lib/ui-bootstrap/ui-bootstrap-tpls-0.2.0.js"></script>
 
     <link rel="stylesheet" href="css/bootstrap.css"/>
-
-    <link rel="stylesheet" href="css/less/aula.css"/>
+    <link rel="stylesheet" href="css/aula.css"/>
 
     <!-- jQuery -->
     <script src="lib/jquery/jquery.min.js" type="text/javascript"></script>

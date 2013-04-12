@@ -90,7 +90,7 @@
   text-indent: -999em;
   margin: 5px 0 0 5px;
   cursor: pointer;
-  background: url("../../img/sprites.png?v=10") 0 -600px;
+  background: url("../img/sprites.png?v=10") 0 -600px;
 }
 #aula-trainning .view ul li .bottom .share .tooltip-content a {
   width: 30px;
@@ -108,19 +108,19 @@
   margin-left: 0;
 }
 #aula-trainning .view ul li .bottom .share .tooltip-content a.f {
-  background: #444444 url("../../img/sprites.png?v=10") 0 -630px;
+  background: #444444 url("../img/sprites.png?v=10") 0 -630px;
 }
 #aula-trainning .view ul li .bottom .share .tooltip-content a.f:hover {
   background-color: #446298;
 }
 #aula-trainning .view ul li .bottom .share .tooltip-content a.m {
-  background: #444444 url("../../img/sprites.png?v=10") -27px -630px;
+  background: #444444 url("../img/sprites.png?v=10") -27px -630px;
 }
 #aula-trainning .view ul li .bottom .share .tooltip-content a.m:hover {
   background-color: #878;
 }
 #aula-trainning .view ul li .bottom .share .tooltip-content a.t {
-  background: #444444 url("../../img/sprites.png?v=10") 0 -660px;
+  background: #444444 url("../img/sprites.png?v=10") 0 -660px;
 }
 #aula-trainning .view ul li .bottom .share .tooltip-content a.t:hover {
   background-color: #73b4ca;
@@ -132,7 +132,7 @@
   text-indent: -999em;
   margin: 5px 0 0 5px;
   cursor: pointer;
-  background: url("../../img/sprites.png?v=10") 0 -570px;
+  background: url("../img/sprites.png?v=10") 0 -570px;
 }
 #aula-trainning .view ul li .bottom .mark span b:nth-child(1) {
   display: block;
@@ -141,7 +141,7 @@
   display: none;
 }
 #aula-trainning .view ul li .bottom .mark span b:hover {
-  background: url("../../img/sprites.png?v=10") -30px -570px;
+  background: url("../img/sprites.png?v=10") -30px -570px;
 }
 #aula-trainning .view ul li .bottom .mark span b .read {
   background-position: -30px -570px;
@@ -203,11 +203,11 @@
   display: block;
 }
 #aula-trainning .view ul li.certificate .badge .icon {
-  background: #e7dcad url("../../img/noise.png");
-  background: url("../../img/noise.png"), -webkit-linear-gradient(#e7dcad, #ecdfa8);
-  background: url("../../img/noise.png"), -o-linear-gradient(#e7dcad, #ecdfa8);
-  background: url("../../img/noise.png"), -ms-linear-gradient(#e7dcad, #ecdfa8);
-  background: url("../../img/noise.png"), linear-gradient(#e7dcad, #ecdfa8);
+  background: #e7dcad url("../img/noise.png");
+  background: url("../img/noise.png"), -webkit-linear-gradient(#e7dcad, #ecdfa8);
+  background: url("../img/noise.png"), -o-linear-gradient(#e7dcad, #ecdfa8);
+  background: url("../img/noise.png"), -ms-linear-gradient(#e7dcad, #ecdfa8);
+  background: url("../img/noise.png"), linear-gradient(#e7dcad, #ecdfa8);
   width: 130px;
   height: 130px;
   border-radius: 99em;
@@ -264,11 +264,11 @@
   line-height: 25px;
 }
 #aula-trainning .view ul li.certificate .congrats .share .btns * {
-  background: #6992d6 url("../../img/noise.png");
-  background: url("../../img/noise.png"), -webkit-linear-gradient(#6992d6, #5f90e0);
-  background: url("../../img/noise.png"), -o-linear-gradient(#6992d6, #5f90e0);
-  background: url("../../img/noise.png"), -ms-linear-gradient(#6992d6, #5f90e0);
-  background: url("../../img/noise.png"), linear-gradient(#6992d6, #5f90e0);
+  background: #6992d6 url("../img/noise.png");
+  background: url("../img/noise.png"), -webkit-linear-gradient(#6992d6, #5f90e0);
+  background: url("../img/noise.png"), -o-linear-gradient(#6992d6, #5f90e0);
+  background: url("../img/noise.png"), -ms-linear-gradient(#6992d6, #5f90e0);
+  background: url("../img/noise.png"), linear-gradient(#6992d6, #5f90e0);
   color: #FFFFFF;
   display: table-cell;
   font-size: 14px;
@@ -278,11 +278,11 @@
   padding-right: 10px;
 }
 #aula-trainning .view ul li.certificate .congrats .share .btns *:before {
-  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -632px, -moz-linear-gradient(#567fcc, #4b7cd7);
-  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -632px, -webkit-linear-gradient(#567fcc, #4b7cd7);
-  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -632px, -o-linear-gradient(#567fcc, #4b7cd7);
-  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -632px, -ms-linear-gradient(#567fcc, #4b7cd7);
-  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -632px, linear-gradient(#567fcc, #4b7cd7);
+  background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -632px, -moz-linear-gradient(#567fcc, #4b7cd7);
+  background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -632px, -webkit-linear-gradient(#567fcc, #4b7cd7);
+  background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -632px, -o-linear-gradient(#567fcc, #4b7cd7);
+  background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -632px, -ms-linear-gradient(#567fcc, #4b7cd7);
+  background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -632px, linear-gradient(#567fcc, #4b7cd7);
   content: "";
   height: 26px;
   width: 30px;
@@ -291,18 +291,18 @@
 }
 #aula-trainning .view ul li.certificate .congrats .share .btns .tw {
   border-left: 1px solid #000;
-  background: #67b2d6 url("../../img/noise.png");
-  background: url("../../img/noise.png"), -webkit-linear-gradient(#67b2d6, #5db5e0);
-  background: url("../../img/noise.png"), -o-linear-gradient(#67b2d6, #5db5e0);
-  background: url("../../img/noise.png"), -ms-linear-gradient(#67b2d6, #5db5e0);
-  background: url("../../img/noise.png"), linear-gradient(#67b2d6, #5db5e0);
+  background: #67b2d6 url("../img/noise.png");
+  background: url("../img/noise.png"), -webkit-linear-gradient(#67b2d6, #5db5e0);
+  background: url("../img/noise.png"), -o-linear-gradient(#67b2d6, #5db5e0);
+  background: url("../img/noise.png"), -ms-linear-gradient(#67b2d6, #5db5e0);
+  background: url("../img/noise.png"), linear-gradient(#67b2d6, #5db5e0);
 }
 #aula-trainning .view ul li.certificate .congrats .share .btns .tw:before {
-  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -662px, -moz-linear-gradient(#59a5ce, #4ea8d9);
-  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -662px, -webkit-linear-gradient(#59a5ce, #4ea8d9);
-  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -662px, -o-linear-gradient(#59a5ce, #4ea8d9);
-  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -662px, -ms-linear-gradient(#59a5ce, #4ea8d9);
-  background: url("../../img/noise.png"), url("../../img/sprites.png?v=10") 0 -662px, linear-gradient(#59a5ce, #4ea8d9);
+  background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -662px, -moz-linear-gradient(#59a5ce, #4ea8d9);
+  background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -662px, -webkit-linear-gradient(#59a5ce, #4ea8d9);
+  background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -662px, -o-linear-gradient(#59a5ce, #4ea8d9);
+  background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -662px, -ms-linear-gradient(#59a5ce, #4ea8d9);
+  background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -662px, linear-gradient(#59a5ce, #4ea8d9);
 }
 #aula-trainning .view ul li.show-progress .element {
   position: absolute;
@@ -389,7 +389,7 @@
   z-index: 1;
 }
 #aula-trainning .sidebar .close-btn:before {
-  background: url("../../img/sprites.png?v=10") 0 -690px;
+  background: url("../img/sprites.png?v=10") 0 -690px;
   content: "";
   float: left;
   height: 13px;
