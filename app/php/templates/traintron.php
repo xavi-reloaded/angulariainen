@@ -87,8 +87,8 @@
     </div>
 
     <div class="sidebar">
-        <button class="close-btn btn btn-mini btn-inverse" ng-click="switchSidebar();">
-            <i class="icon-fast-forward icon-white"></i>
+        <button  class="close-btn btn btn-mini btn-inverse" ng-click="switchSidebar();">
+            <i id="sideBarImage" class="icon-forward icon-white"></i>
         </button>
         <div class="tab-container">
             <tabs>

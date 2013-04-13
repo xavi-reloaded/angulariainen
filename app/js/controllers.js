@@ -117,6 +117,8 @@ function trainTron($scope, $timeout)
 
     $scope.switchSidebar = function(){
         $('#aula-trainning').toggleClass('fullscreen');
+        $('#sideBarImage').toggleClass('icon-forward');
+        $('#sideBarImage').toggleClass('icon-backward');
     }
     $scope.markAsCompleted = function(activityId){
         console.log(activityId);
