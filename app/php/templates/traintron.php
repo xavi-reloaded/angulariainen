@@ -27,7 +27,7 @@
                 <div class="hero-unit">
                     <h1>Hello, world!</h1>
                     <p>{{course.intro.message}}</p>
-                    <p class="btn btn-primary btn-large" ng-click="continue(1)">Begin course</p>
+                    <p class="btn btn-primary btn-large" ng-click="continue(1)"><br/>Begin course<br/><br/></p>
                 </div>
 
             </li>
@@ -47,9 +47,9 @@
 
                 <div class="top">
                     <div class="btn-group">
-                        <button class="btn btn-info btn-large">SECTION {{activity.t}}</button>
-                        <button class="btn btn-info btn-large">LECTURE {{activity.number}}</button>
-                        <button class="btn btn-inverse btn-large">{{activity.title}}</button>
+                        <button class="btn btn-info">SECTION {{activity.t}}</button>
+                        <button class="btn btn-info">LECTURE {{activity.number}}</button>
+                        <button class="btn btn-inverse">{{activity.title}}</button>
                     </div>
                 </div>
 
