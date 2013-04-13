@@ -59,20 +59,17 @@
 
                 <div class="bottom">
 
-                    <div class="btn-group">
-                        <button class="btn btn-mini btn-success"><i class="icon-arrow-down icon-white"></i></button>
-                        <button class="btn btn-mini btn-success" ng-click="next(activity.number)">NEXT ACTIVITY</button>
-                    </div>
+                    <button class="btn btn-mini btn-success" ng-click="next(activity.number)"><i class="icon-arrow-down icon-white"></i>NEXT ACTIVITY</button>
 
-                    <div class="share mini-tooltip">
-                        share
-                        <div class="tooltip-content">
-                            <a class="f" href="http://www.facebook.com/sharer.php?t=">facebook</a>
-                            <a class="t" href="https://twitter.com/intent/tweet?text=">twitter</a>
-                        </div>
+                    <div class="btn-group dropup">
+                        <button class="btn btn-mini btn-success" ng-show="activity.completed">Completed<i class="icon-star icon-white"></i></button>
+                        <button class="btn btn-mini btn-danger" ng-hide="activity.completed">Pending<i class="icon-star-empty icon-white"></i></button>
+                        <button class="btn dropdown-toggle btn-mini btn-success" data-toggle="dropdown">Share<i class="icon-share-alt icon-white"></i></button>
+                        <ul class="dropdown-menu">
+                            <li><a target="_blank" href="http://www.facebook.com/sharer.php?t">Facebook</a></li>
+                            <li><a target="_blank" href="http://twitter.com/intent/tweet?text=">Twitter</a></li>
+                        </ul>
                     </div>
-
-                    <a href="" class="mark mini-tooltip read"><span class="tooltip-content"><b>Mark as Completed</b><b>Mark as Uncompleted</b></span></a>
                 </div>
             </li>
 

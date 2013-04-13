@@ -54,90 +54,9 @@
   width: 100%;
   bottom: 20px;
 }
-#aula-trainning .view ul#timeline li .bottom .next {
-  height: 30px;
-  line-height: 24px;
-  padding: 0 10px;
-  font-size: 10px;
-  font-weight: bold;
-  display: inline-block;
-}
-#aula-trainning .view ul#timeline li .bottom .next:hover {
-  color: #999;
-}
-#aula-trainning .view ul#timeline li .bottom .next .continue {
+#aula-trainning .view ul#timeline li .bottom div {
   position: absolute;
-  bottom: 0px;
-  left: 147px;
-}
-#aula-trainning .view ul#timeline li .bottom .share {
-  float: right;
-  width: 26px;
-  height: 26px;
-  text-indent: -999em;
-  margin: 5px 0 0 5px;
-  cursor: pointer;
-  background: url("../img/sprites.png?v=10") 0 -600px;
-}
-#aula-trainning .view ul#timeline li .bottom .share .tooltip-content a {
-  width: 30px;
-  height: 30px;
-  text-indent: -999em;
-  float: left;
-  margin: 5px 0 5px 5px;
-  -webkit-transition: background 0.2s ease;
-  -moz-transition: background 0.2s ease;
-  -o-transition: background 0.2s ease;
-  transition: background 0.2s ease;
-  cursor: pointer;
-}
-#aula-trainning .view ul#timeline li .bottom .share .tooltip-content a:first-child {
-  margin-left: 0;
-}
-#aula-trainning .view ul#timeline li .bottom .share .tooltip-content a.f {
-  background: #444444 url("../img/sprites.png?v=10") 0 -630px;
-}
-#aula-trainning .view ul#timeline li .bottom .share .tooltip-content a.f:hover {
-  background-color: #446298;
-}
-#aula-trainning .view ul#timeline li .bottom .share .tooltip-content a.m {
-  background: #444444 url("../img/sprites.png?v=10") -27px -630px;
-}
-#aula-trainning .view ul#timeline li .bottom .share .tooltip-content a.m:hover {
-  background-color: #878;
-}
-#aula-trainning .view ul#timeline li .bottom .share .tooltip-content a.t {
-  background: #444444 url("../img/sprites.png?v=10") 0 -660px;
-}
-#aula-trainning .view ul#timeline li .bottom .share .tooltip-content a.t:hover {
-  background-color: #73b4ca;
-}
-#aula-trainning .view ul#timeline li .bottom .mark {
-  float: right;
-  width: 26px;
-  height: 26px;
-  text-indent: -999em;
-  margin: 5px 0 0 5px;
-  cursor: pointer;
-  background: url("../img/sprites.png?v=10") 0 -570px;
-}
-#aula-trainning .view ul#timeline li .bottom .mark span b:nth-child(1) {
-  display: block;
-}
-#aula-trainning .view ul#timeline li .bottom .mark span b:nth-child(2) {
-  display: none;
-}
-#aula-trainning .view ul#timeline li .bottom .mark span b:hover {
-  background: url("../img/sprites.png?v=10") -30px -570px;
-}
-#aula-trainning .view ul#timeline li .bottom .mark span b .read {
-  background-position: -30px -570px;
-}
-#aula-trainning .view ul#timeline li .bottom .mark span b .read b:nth-child(1) {
-  display: none;
-}
-#aula-trainning .view ul#timeline li .bottom .mark span b .read b:nth-child(2) {
-  display: block;
+  right: 1px;
 }
 #aula-trainning .view ul#timeline li.chapter div.hero-unit {
   left: 0;

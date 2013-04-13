@@ -97,89 +97,9 @@
           position: absolute;
           width: 100%;
           bottom: 20px;
-          .next {
-
-            height: 30px;
-            line-height: 24px;
-            padding: 0 10px;
-            font-size: 10px;
-            font-weight: bold;
-            display: inline-block;
-            &:hover {
-              color: #999;
-            }
-            .continue {
-              position: absolute;
-              bottom: 0px;
-              left: 147px;
-            }
-          }
-
-          .share {
-            .miniIcon;
-            background: url(@spritesImage) 0 -600px;
-            .tooltip-content {
-              a{
-                width: 30px;
-                height: 30px;
-                text-indent: -999em;
-                float: left;
-                margin: 5px 0 5px 5px;
-                .aulaTrainningViewTransition(background,0.2s,ease);
-                cursor: pointer;
-                &:first-child {
-                  margin-left: 0;
-                }
-              }
-              a.f{
-                background: #444444 url(@spritesImage) 0 -630px;
-                &:hover {
-                  background-color: #446298;
-                }
-              }
-              a.m {
-                background: #444444 url(@spritesImage) -27px -630px;
-                &:hover {
-                  background-color: #878;
-                }
-              }
-              a.t {
-                background: #444444 url(@spritesImage) 0 -660px;
-                &:hover {
-                  background-color: #73b4ca;
-                }
-              }
-            }
-          }
-          .mark {
-            .miniIcon;
-            background: url(@spritesImage) 0 -570px;
-
-            span {
-              b {
-                &:nth-child(1) {
-                  display: block;
-                }
-                &:nth-child(2) {
-                  display: none;
-                }
-                &:hover {
-                  background: url(@spritesImage) -30px -570px;
-                }
-                .read {
-                  background-position: -30px -570px;
-                  b {
-                    &:nth-child(1) {
-                      display: none;
-                    }
-                    &:nth-child(2) {
-                      display: block;
-                    }
-                  }
-                }
-              }
-
-            }
+          div {
+            position: absolute;
+            right: 1px;
           }
         }
 
