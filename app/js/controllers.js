@@ -46,8 +46,11 @@ function trainTron($scope, $timeout)
 
     var showProgressElement = '' +
         '<li class="show-progress">' +
-        '   <span class="element">' + $scope.course.ratioCompleted + '%</span>' +
-        '   <div class="note"> <span>You have completed <b class="completion-ratio">' + $scope.course.ratioCompleted + '%</b> of this course</span> </div>' +
+        '   <div class="hero-unit">' +
+        '       <h1>' + $scope.course.courseTitle + '</h1>' +
+        '       <p><span>You have completed <b class="completion-ratio">' + $scope.course.ratioCompleted + '%</b> of this course</span></p>' +
+        '       <p class="btn btn-success btn-large">' + $scope.course.ratioCompleted + '%</p>' +
+        '   </div>' +
         '</li>';
 
     $scope.screenOnFront = 0;
@@ -73,7 +76,7 @@ function trainTron($scope, $timeout)
 
         $timeout(function() {
             $scope.screenOnFront = $scope.getTopValueForNextPosition(positionInTimeline+2);
-        }, 1000);
+        }, 2000);
     };
     $scope.getInitialPositionInULelementFromTopValue = function(topValue){
         return topValue/100;
