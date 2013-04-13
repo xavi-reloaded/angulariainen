@@ -25,7 +25,7 @@
 
             <li class="chapter">
                 <div class="hero-unit">
-                    <h1>Hello, wowAula Trainning!</h1>
+                    <h1>Hello, Wowaula Trainning!</h1>
                     <p>{{course.intro.message}}</p>
                     <p class="btn btn-primary btn-large" ng-click="continue(1)"><br/>Begin course<br/><br/></p>
                 </div>
@@ -34,20 +34,13 @@
 
             <li class="on" ng-repeat="activity in activities">
 
-                <div class="btn-group dropdown">
-                    <button class="btn dropdown-toggle btn-mini btn-success"  data-toggle="dropdown"><i class="icon-arrow-up icon-white"></i></button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#" ng-click="back(1)">Back to first</a></li>
-                        <li><a href="#" ng-click="back(activity.number)">Previous Activity</a></li>
-                    </ul>
-                    <button class="btn btn-mini btn-success" ng-click="back(activity.number)">PREVIOUS ACTIVITY</button>
-                </div><!-- /btn-group -->
 
+                <button class="btn btn-mini btn-success" ng-click="back(activity.number)"><i class="icon-arrow-up icon-white"></i>PREVIOUS ACTIVITY</button>
 
                 <div class="top">
                     <div class="btn-group">
                         <button class="btn btn-info">SECTION {{activity.t}}</button>
-                        <button class="btn btn-info">LECTURE {{activity.number}}</button>
+                        <button class="btn btn-info">ACTIVITY {{activity.number}}</button>
                         <button class="btn btn-inverse">{{activity.title}}</button>
                     </div>
                 </div>
