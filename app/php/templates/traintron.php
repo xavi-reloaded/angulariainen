@@ -25,7 +25,7 @@
 
             <li class="chapter">
                 <div class="hero-unit">
-                    <h1>Hello, world!</h1>
+                    <h1>Hello, wowAula Trainning!</h1>
                     <p>{{course.intro.message}}</p>
                     <p class="btn btn-primary btn-large" ng-click="continue(1)"><br/>Begin course<br/><br/></p>
                 </div>
@@ -42,7 +42,6 @@
                     </ul>
                     <button class="btn btn-mini btn-success" ng-click="back(activity.number)">PREVIOUS ACTIVITY</button>
                 </div><!-- /btn-group -->
-
 
 
                 <div class="top">
@@ -62,8 +61,8 @@
                     <button class="btn btn-mini btn-success" ng-click="next(activity.number)"><i class="icon-arrow-down icon-white"></i>NEXT ACTIVITY</button>
 
                     <div class="btn-group dropup">
-                        <button class="btn btn-mini btn-success" ng-show="activity.completed">Completed<i class="icon-star icon-white"></i></button>
-                        <button class="btn btn-mini btn-danger" ng-hide="activity.completed">Pending<i class="icon-star-empty icon-white"></i></button>
+                        <button class="btn btn-mini btn-success" ng-show="activity.completed" ng-click="markAsCompleted(activity.id)">Completed<i class="icon-star icon-white"></i></button>
+                        <button class="btn btn-mini btn-danger" ng-hide="activity.completed" ng-click="markAsCompleted(activity.id)">Pending<i class="icon-star-empty icon-white"></i></button>
                         <button class="btn dropdown-toggle btn-mini btn-success" data-toggle="dropdown">Share<i class="icon-share-alt icon-white"></i></button>
                         <ul class="dropdown-menu">
                             <li><a target="_blank" href="http://www.facebook.com/sharer.php?t">Facebook</a></li>
@@ -95,7 +94,9 @@
     </div>
 
     <div class="sidebar">
-        <a class="close-btn" href="" ng-click="switchSidebar();"></a>
+        <button class="close-btn btn btn-mini btn-inverse" ng-click="switchSidebar();">
+            <i class="icon-fast-forward icon-white"></i>
+        </button>
         <div class="tab-container">
             <tabs>
                 <pane heading="NO SE QUE">

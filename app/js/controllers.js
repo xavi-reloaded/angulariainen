@@ -29,23 +29,23 @@ function trainTron($scope, $timeout)
     };
 
     $scope.activities= [
-        {t:1,tt:'The first Section',    id:12345, number: 1, title: 'La primera actividad, un video de ejemplo',
+        {t:1,tt:'The first Section',    id:11111, number: 1, title: 'La primera actividad, un video de ejemplo',
             type:'video', params:{src:"http://video-js.zencoder.com/oceans-clip.mp4",type:'video/mp4',poster:"http://video-js.zencoder.com/oceans-clip.png"},
             completed:true},
-        {t:1,tt:'',                     id:12345, number: 2, title: 'La segunda actividad con un PDF de ejemplo',
+        {t:1,tt:'',                     id:22222, number: 2, title: 'La segunda actividad con un PDF de ejemplo',
             type:'pdf', params:{ url : 'http://cdn.mozilla.net/pdfjs/tracemonkey.pdf'},
             completed:false},
-        {t:1,tt:'',                     id:12345, number: 3, title: 'La segunda actividad',
+        {t:1,tt:'',                     id:33333, number: 3, title: 'La segunda actividad',
             type:'page', params:{},
             completed:true},
 
-        {t:1,tt:'',                     id:12345, number: 4, title: 'la tercera lectura',
+        {t:1,tt:'',                     id:44444, number: 4, title: 'la tercera lectura',
             type:'book', params:{},
             completed:true},
-        {t:2,tt:'The second Section',   id:12345, number: 5, title: 'la cuarta',
+        {t:2,tt:'The second Section',   id:55555, number: 5, title: 'la cuarta',
             type:'quiz', params:{},
             completed:true},
-        {t:2,tt:'',                     id:12345, number: 6, title: 'Caracola is the good life',
+        {t:2,tt:'',                     id:66666, number: 6, title: 'Caracola is the good life',
             type:'slice', params:{},
             completed:true}
     ];
@@ -118,6 +118,16 @@ function trainTron($scope, $timeout)
     $scope.switchSidebar = function(){
         $('#aula-trainning').toggleClass('fullscreen');
     }
+    $scope.markAsCompleted = function(activityId){
+        console.log(activityId);
+        var activities = $scope.activities;
+        for (var i = 0, ii = activities.length; i < ii; i++) {
+            if (activityId == activities[i].id) {
+                activities[i].completed=!activities[i].completed
+            }
+        }
+    }
+
 
 
 }
