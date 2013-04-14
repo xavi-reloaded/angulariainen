@@ -23,9 +23,11 @@
 
         <ul id="timeline" style="top: -{{screenOnFront}}%;" ng-cloak>
 
+
+
             <li class="chapter">
                 <div class="hero-unit">
-                    <h1>Hello, Wowaula Trainning!</h1>
+                    <h1>Hello, Aula!</h1>
                     <p>{{course.intro.message}}</p>
                     <p class="btn btn-primary btn-large" ng-click="continue(1)"><br/>Begin course<br/><br/></p>
                 </div>
@@ -66,20 +68,35 @@
             </li>
 
             <li class="certificate">
-                <div class="badge"><span class="icon"></span></div>
-                <div class="congrats">
-                    <h2>Congratulations!</h2>
-                    <p>You just completed the course<br>"<b>{{course.courseTitle}}</b>"!<br></p>
 
-                    <div class="share">
-                        <h4>Share the good news:</h4>
-                        <div class="btns">
-                            <a class="fb" target="_blank" href="http://www.facebook.com/sharer.php?t=eee&u=https://www.apiumtech.com">Facebook</a>
-                            <a class="tw" target="_blank" href="http://twitter.com/intent/tweet?text=eee&url=https://www.apiumtech.com">Twitter</a>
-                        </div>
+<!--                <div class="jumbotron masthead">-->
+<!--                    <div class="container">-->
+<!--                        <h1>Congratulations</h1>-->
+<!--                        <p>You just completed the course<br>"<b>{{course.courseTitle}}</b>"!<br></p>-->
+<!--                        <p><a href="getDiploma.php" class="btn btn-primary btn-large" >Download Your Diploma</a></p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!---->
+
+
+                <div class="hero-unit">
+                    <h1>Congratulations!</h1>
+                    <p>You just completed the course<br>"<b>{{course.courseTitle}}</b>"!<br></p>
+                    <p class="btn btn-primary btn-large" ng-click="back(1)"><br/>Back to begin<br/><br/></p>
+                    <p>Share the good news</p>
+                    <div class="bs-docs-social">
+                        <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=xavi-reloaded&repo=wordpress-aulaken&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+                        <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=xavi-reloaded&repo=wordpress-aulaken&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
+                        <i class="follow-btn">
+                            <a href="https://twitter.com/apiumtech" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">Follow @apiumtech</a>
+                        </i>
+                        <i class="tweet-btn">
+                            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://apiumtech .github.com/apiumtech/" data-count="horizontal" data-via="twbootstrap" data-related="mdo:Creator of Twitter Bootstrap">Tweet us</a>
+                        </i>
                     </div>
                 </div>
             </li>
+
 
         </ul>
 

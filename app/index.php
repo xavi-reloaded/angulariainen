@@ -42,6 +42,8 @@ include_once('php/templates/traintron.php');
 
   <script src="js/pdf_spike.js"></script>
 
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
 
 </body>
 </html>

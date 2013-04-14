@@ -1,3 +1,31 @@
+.gradient-striped {
+  background-color: #555555;
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+.gradient-vertical-three {
+  background-color: #8940a5;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#00b3ee), color-stop(50%, #7a43b6), to(#c3325f));
+  background-image: -webkit-linear-gradient(#00b3ee, #7a43b6 50%, #c3325f);
+  background-image: -moz-linear-gradient(top, #00b3ee, #7a43b6 50%, #c3325f);
+  background-image: -o-linear-gradient(#00b3ee, #7a43b6 50%, #c3325f);
+  background-image: linear-gradient(#00b3ee, #7a43b6 50%, #c3325f);
+  background-repeat: no-repeat;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff00b3ee', endColorstr='#ffc3325f', GradientType=0);
+}
+.gradient-horizontal-three {
+  background-color: #00b3ee;
+  background-image: -webkit-gradient(left, linear, 0 0, 0 100%, from(#00b3ee), color-stop(50%, #7a43b6), to(#c3325f));
+  background-image: -webkit-linear-gradient(left, #00b3ee, #7a43b6 50%, #c3325f);
+  background-image: -moz-linear-gradient(left, #00b3ee, #7a43b6 50%, #c3325f);
+  background-image: -o-linear-gradient(left, #00b3ee, #7a43b6 50%, #c3325f);
+  background-image: linear-gradient(to right, #00b3ee, #7a43b6 50%, #c3325f);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00b3ee', endColorstr='#c3325f', GradientType=0);
+}
 #aula-trainning .view {
   -webkit-transition: right 0.3s cubic-bezier(1, 0, 0, 1);
   -moz-transition: right 0.3s cubic-bezier(1, 0, 0, 1);
@@ -31,8 +59,9 @@
 #aula-trainning .view ul#timeline li .activity-container {
   position: absolute;
   top: 100px;
-  bottom: 80px;
+  bottom: 81px;
   width: 100%;
+  border: 2px;
   background: #000;
 }
 #aula-trainning .view ul#timeline li .top {
@@ -76,124 +105,34 @@
   max-width: 100%;
   width: 100%;
 }
-#aula-trainning .view ul#timeline li.certificate .badge {
+#aula-trainning .view ul#timeline li.certificate {
+  /* Social proof buttons from GitHub & Twitter */
+
+}
+#aula-trainning .view ul#timeline li.certificate div.hero-unit {
+  left: 0;
   position: absolute;
-  top: 50%;
-  left: 106px;
-  margin-top: -120px;
-  background: none;
-  text-align: center;
+  right: 0;
+  top: 25%;
 }
-#aula-trainning .view ul#timeline li.certificate .badge .title {
-  background: #000;
-  padding: 0;
-  display: inline-block;
-  line-height: 23px;
-  color: #f7ecc5;
-  margin-top: 17px;
+#aula-trainning .view ul#timeline li.certificate div.hero-unit span {
   display: block;
-}
-#aula-trainning .view ul#timeline li.certificate .badge .icon {
-  background: #e7dcad url("../img/noise.png");
-  background: url("../img/noise.png"), -webkit-linear-gradient(#e7dcad, #ecdfa8);
-  background: url("../img/noise.png"), -o-linear-gradient(#e7dcad, #ecdfa8);
-  background: url("../img/noise.png"), -ms-linear-gradient(#e7dcad, #ecdfa8);
-  background: url("../img/noise.png"), linear-gradient(#e7dcad, #ecdfa8);
-  width: 130px;
-  height: 130px;
-  border-radius: 99em;
-  display: block;
-  box-shadow: 0 0 0 5px #dca32a, 0 0 0 10px #000;
-}
-#aula-trainning .view ul#timeline li.certificate .badge .icon:before {
-  content: '';
-  width: 84px;
-  height: 84px;
-  background: url("../../img/badges.png");
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 100%;
   display: inline-block;
-  margin-top: 26px;
 }
-#aula-trainning .view ul#timeline li.certificate .congrats {
-  left: 50%;
-  margin: -130px 0 0 -200px;
-  position: absolute;
+#aula-trainning .view ul#timeline li.certificate div.hero-unit p {
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
+}
+#aula-trainning .view ul#timeline li.certificate div.bs-docs-social {
+  padding: 15px 0;
   text-align: center;
-  width: 400px;
-  background: url("../../img/huge-tick.png") no-repeat center;
-  height: 260px;
-  top: 50%;
-}
-#aula-trainning .view ul#timeline li.certificate .congrats h2 {
-  color: #fff;
-  font-size: 30px;
-  font-weight: lighter;
-}
-#aula-trainning .view ul#timeline li.certificate .congrats p {
-  color: #babdc2;
-  font-size: 16px;
-  margin-top: 20px;
-  line-height: 24px;
-}
-#aula-trainning .view ul#timeline li.certificate .congrats p b {
-  color: #fff3af;
-}
-#aula-trainning .view ul#timeline li.certificate .congrats p span {
-  color: #FFFFFF;
-  font-weight: bold;
-}
-#aula-trainning .view ul#timeline li.certificate .congrats .share h4 {
-  color: #FFFFFF;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-#aula-trainning .view ul#timeline li.certificate .congrats .share .btns {
-  border-radius: 20px;
-  box-shadow: 0 0 0 1px #000000, 0 0 0 4px rgba(0, 0, 0, 0.5);
-  display: inline-block;
-  margin-top: 5px;
-  overflow: hidden;
-  line-height: 25px;
-}
-#aula-trainning .view ul#timeline li.certificate .congrats .share .btns * {
-  background: #6992d6 url("../img/noise.png");
-  background: url("../img/noise.png"), -webkit-linear-gradient(#6992d6, #5f90e0);
-  background: url("../img/noise.png"), -o-linear-gradient(#6992d6, #5f90e0);
-  background: url("../img/noise.png"), -ms-linear-gradient(#6992d6, #5f90e0);
-  background: url("../img/noise.png"), linear-gradient(#6992d6, #5f90e0);
-  color: #FFFFFF;
-  display: table-cell;
-  font-size: 14px;
-  font-weight: bold;
-  overflow: hidden;
-  text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
-  padding-right: 10px;
-}
-#aula-trainning .view ul#timeline li.certificate .congrats .share .btns *:before {
-  background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -632px, -moz-linear-gradient(#567fcc, #4b7cd7);
-  background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -632px, -webkit-linear-gradient(#567fcc, #4b7cd7);
-  background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -632px, -o-linear-gradient(#567fcc, #4b7cd7);
-  background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -632px, -ms-linear-gradient(#567fcc, #4b7cd7);
-  background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -632px, linear-gradient(#567fcc, #4b7cd7);
-  content: "";
-  height: 26px;
-  width: 30px;
-  float: left;
-  margin-right: 9px;
-}
-#aula-trainning .view ul#timeline li.certificate .congrats .share .btns .tw {
-  border-left: 1px solid #000;
-  background: #67b2d6 url("../img/noise.png");
-  background: url("../img/noise.png"), -webkit-linear-gradient(#67b2d6, #5db5e0);
-  background: url("../img/noise.png"), -o-linear-gradient(#67b2d6, #5db5e0);
-  background: url("../img/noise.png"), -ms-linear-gradient(#67b2d6, #5db5e0);
-  background: url("../img/noise.png"), linear-gradient(#67b2d6, #5db5e0);
-}
-#aula-trainning .view ul#timeline li.certificate .congrats .share .btns .tw:before {
-  background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -662px, -moz-linear-gradient(#59a5ce, #4ea8d9);
-  background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -662px, -webkit-linear-gradient(#59a5ce, #4ea8d9);
-  background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -662px, -o-linear-gradient(#59a5ce, #4ea8d9);
-  background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -662px, -ms-linear-gradient(#59a5ce, #4ea8d9);
-  background: url("../img/noise.png"), url("../img/sprites.png?v=10") 0 -662px, linear-gradient(#59a5ce, #4ea8d9);
+  background-color: #f5f5f5;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #ddd;
 }
 #aula-trainning .view ul#timeline li.show-progress div {
   left: 0;
@@ -329,4 +268,139 @@ body {
   background-repeat: repeat;
   background-color: rgba(233, 233, 233, 0.23);
   position: relative;
+}
+/* Base class
+------------------------- */
+.jumbotron {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 40px 0;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
+  background: #020031;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(45deg, #020031 0%, #6d3353 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #020031), color-stop(100%, #6d3353));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(45deg, #020031 0%, #6d3353 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(45deg, #020031 0%, #6d3353 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(45deg, #020031 0%, #6d3353 100%);
+  /* IE10+ */
+
+  background: linear-gradient(45deg, #020031 0%, #6d3353 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#020031', endColorstr='#6d3353', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+
+  -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.2), inset 0 -3px 7px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.2), inset 0 -3px 7px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.2), inset 0 -3px 7px rgba(0, 0, 0, 0.2);
+}
+.jumbotron h1 {
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+.jumbotron p {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.25;
+  margin-bottom: 30px;
+}
+/* Link styles (used on .masthead-links as well) */
+.jumbotron a {
+  color: #fff;
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.jumbotron a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+}
+/* Download button */
+.masthead .btn {
+  padding: 19px 24px;
+  font-size: 24px;
+  font-weight: 200;
+  color: #fff;
+  /* redeclare to override the `.jumbotron a` */
+
+  border: 0;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 5px rgba(0, 0, 0, 0.25);
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+}
+.masthead .btn:hover {
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+.masthead .btn:active {
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+/* Pattern overlay
+------------------------- */
+.jumbotron .container {
+  position: relative;
+  z-index: 2;
+}
+.jumbotron:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(../img/bs-docs-masthead-pattern.png) repeat center center;
+  opacity: .4;
+}
+/* Masthead (docs home)
+------------------------- */
+.masthead {
+  padding: 70px 0 80px;
+  margin-bottom: 0;
+  color: #fff;
+}
+.masthead h1 {
+  font-size: 120px;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+.masthead p {
+  font-size: 40px;
+  font-weight: 200;
+  line-height: 1.25;
+}
+/* Textual links in masthead */
+.masthead-links {
+  margin: 0;
+  list-style: none;
+}
+.masthead-links li {
+  display: inline;
+  padding: 0 10px;
+  color: rgba(255, 255, 255, 0.25);
 }
