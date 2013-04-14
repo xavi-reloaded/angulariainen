@@ -18,7 +18,14 @@ angular.module('app.directives', []).
         var pageTemplate = '<div><h2>PAGE</h2></div>';
         var bookTemplate = '<div><h2>BOOK</h2></div>';
         var quizTemplate = '<div><h2>QUIZ</h2></div>';
-        var sliceTemplate = '<div><h2>SLICE</h2></div>';
+
+        var sliceTemplate = '<carousel interval="myInterval">' +
+                            '   <slide ng-repeat="slide in slides" active="slide.active">' +
+                            '       <img ng-src="{{slide.image}}" style="margin:auto;">' +
+                            '       <div class="carousel-caption"><h4>Slide {{$index}}</h4><p>{{slide.text}}</p></div>' +
+                            '   </slide>' +
+                            '</carousel>';
+
         var pdfTemplate =   '<div>' +
                             '<button id="prev" onclick="goPrevious()">Previous</button>' +
                             '<button id="next" onclick="goNext()">Next</button>' +

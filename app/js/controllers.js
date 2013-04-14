@@ -29,12 +29,12 @@ function trainTron($scope, $timeout)
     };
 
     $scope.activities= [
-        {t:1,tt:'The first Section',    id:11111, number: 1, title: 'La primera actividad, un video de ejemplo',
-            type:'video', params:{src:"http://video-js.zencoder.com/oceans-clip.mp4",type:'video/mp4',poster:"http://video-js.zencoder.com/oceans-clip.png"},
-            completed:true},
         {t:1,tt:'',                     id:22222, number: 2, title: 'La segunda actividad con un PDF de ejemplo',
             type:'pdf', params:{ url : 'http://cdn.mozilla.net/pdfjs/tracemonkey.pdf'},
             completed:false},
+        {t:1,tt:'The first Section',    id:11111, number: 1, title: 'La primera actividad, un video de ejemplo',
+            type:'video', params:{src:"http://video-js.zencoder.com/oceans-clip.mp4",type:'video/mp4',poster:"http://video-js.zencoder.com/oceans-clip.png"},
+            completed:true},
         {t:1,tt:'',                     id:33333, number: 3, title: 'La segunda actividad',
             type:'page', params:{},
             completed:true},

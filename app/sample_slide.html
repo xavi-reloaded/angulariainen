@@ -1,0 +1,91 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <title>My AngularJS App</title>
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-resource.js"></script>
+    <script src="lib/angular/angular-ui.min.js"></script>
+    <script src="lib/ui-bootstrap/ui-bootstrap-tpls-0.2.0.js"></script>
+    <script src="lib/ui-bootstrap/ui-bootstrap-0.2.0.js"></script>
+
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/aula.css"/>
+
+    <!-- jQuery -->
+    <script src="lib/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="lib/jquery/jquery-ui.min.js" type="text/javascript"></script>
+    <!-- Wijmo CSS and script -->
+    <link href="lib/wijmo/themes/cobalt/jquery-wijmo.css" rel="stylesheet" title="metro-jqueryui" type="text/css" />
+    <link href="lib/wijmo/jquery.wijmo-complete.all.2.3.2.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="lib/wijmo/jquery.wijmo-open.all.2.3.2.min.js" type="text/javascript"></script>
+    <script src="lib/wijmo/jquery.wijmo-complete.all.2.3.2.min.js" type="text/javascript"></script>
+
+    <script src="lib/wijmo/angular.wijmo.js" type="text/javascript"></script>
+
+
+
+
+</head>
+
+
+<body>
+
+
+<div ng-controller="CarouselDemoCtrl">
+    <carousel interval="myInterval">
+        <slide ng-repeat="slide in slides" active="slide.active">
+            <img ng-src="{{slide.image}}" style="margin:auto;">
+            <div class="carousel-caption">
+                <h4>Slide {{$index}}</h4>
+                <p>{{slide.text}}</p>
+            </div>
+        </slide>
+    </carousel>
+    <div class="row-fluid">
+        <div class="span6">
+            <ul>
+                <li ng-repeat="slide in slides">
+                    <button class="btn btn-mini" ng-class="{'btn-info': !slide.active, 'btn-success': slide.active}" ng-disabled="slide.active" ng-click="slide.active = true">select</button>
+                    {{$index}}: {{slide.text}}
+                </li>
+            </ul>
+            <a class="btn" ng-click="addSlide()">Add Slide</a>
+        </div>
+        <div class="span6">
+            Interval, in milliseconds: <input type="number" ng-model="myInterval">
+            <br />Enter a negative number to stop the interval.
+        </div>
+    </div>
+</div>
+
+
+<script src="js/app.js"></script>
+
+<script src="js/services.js"></script>
+<script>
+    function CarouselDemoCtrl($scope) {
+        $scope.myInterval = 5000;
+        $scope.slides = [
+            {image: 'http://placekitten.com/200/200',text: 'Kitten.'},
+            {image: 'http://placekitten.com/225/200',text: 'Kitty!'},
+            {image: 'http://placekitten.com/250/200',text: 'Cat.'},
+            {image: 'http://placekitten.com/275/200',text: 'Feline!'}
+        ];
+        $scope.addSlide = function() {
+            $scope.slides.push({
+                image: 'http://placekitten.com/'+(200+25*Math.floor(Math.random()*4))+'/200',
+                text: ['More','Extra','Lots of','Surplus'][Math.floor(Math.random()*4)] + ' ' +
+                        ['Cats', 'Kittys', 'Felines', 'Cutes'][Math.floor(Math.random()*4)]
+            });
+        };
+    }
+</script>
+<script src="js/filters.js"></script>
+<script src="js/directives.js"></script>
+
+
+</body>
+</html>
