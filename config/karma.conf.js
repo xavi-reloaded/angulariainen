@@ -16,6 +16,7 @@ files = [
 
     'app/lib/angular/angular.js',
     'app/lib/angular/angular-*.js',
+    'app/lib/ui-bootstrap/ui-bootstrap-apium.js',
     'app/lib/jquery/jquery.min.js',
     'app/lib/jquery/jquery-ui.min.js',
     'test/lib/angular/angular-mocks.js',

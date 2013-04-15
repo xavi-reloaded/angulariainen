@@ -8,6 +8,7 @@
     <script src="lib/angular/angular-resource.js"></script>
     <script src="lib/angular/angular-ui.min.js"></script>
     <script src="lib/ui-bootstrap/ui-bootstrap-tpls-0.2.0.js"></script>
+    <script src="lib/ui-bootstrap/ui-bootstrap-apium.js"></script>
 
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="css/aula.css"/>

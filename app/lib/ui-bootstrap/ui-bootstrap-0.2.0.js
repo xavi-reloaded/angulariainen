@@ -394,7 +394,7 @@ angular.module('ui.bootstrap.carousel', ['ui.bootstrap.transition'])
     replace: true,
     controller: 'CarouselController',
     require: 'carousel',
-    templateUrl: 'template/carousel/carousel.html',
+    templateUrl: 'template/carousel/slideviewer.html',
     scope: {
       interval: '=',
       noTransition: '='

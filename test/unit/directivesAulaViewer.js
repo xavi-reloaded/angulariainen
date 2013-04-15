@@ -25,7 +25,7 @@ describe('directives', function() {
 
         it('should show page template html', function() {
             module(function($provide) {
-                $provide.value('type', 'page');
+                $provide.value('type', 'video');
             });
 
             inject(function($controller, $compile, $rootScope) {
@@ -34,7 +34,7 @@ describe('directives', function() {
                 ctrl = $controller('trainTron', {$scope: $scope });
                 var activity = $scope.activities[2];
 
-                expect(activity.type).toEqual('page');
+                expect(activity.type).toEqual('video');
                 console.log('checking: '+activity.type);
 
                 var element = $compile('<aula-activity id="activity.id" type="activity.type" params="activity.params"></aula-activity>')($scope);

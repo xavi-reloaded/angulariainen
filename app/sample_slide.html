@@ -9,6 +9,7 @@
     <script src="lib/angular/angular-ui.min.js"></script>
     <script src="lib/ui-bootstrap/ui-bootstrap-tpls-0.2.0.js"></script>
     <script src="lib/ui-bootstrap/ui-bootstrap-0.2.0.js"></script>
+    <script src="lib/ui-bootstrap/ui-bootstrap-apium.js"></script>
 
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="css/aula.css"/>
@@ -35,15 +36,17 @@
 
 
 <div ng-controller="CarouselDemoCtrl">
-    <carousel interval="myInterval">
-        <slide ng-repeat="slide in slides" active="slide.active">
+
+    <slide-viewer interval="myInterval">
+        <slide-apium ng-repeat="slide in slides" active="slide.active">
             <img ng-src="{{slide.image}}" style="margin:auto;">
             <div class="carousel-caption">
                 <h4>Slide {{$index}}</h4>
                 <p>{{slide.text}}</p>
             </div>
-        </slide>
-    </carousel>
+        </slide-apium >
+    </slide-viewer>
+
     <div class="row-fluid">
         <div class="span6">
             <ul>
