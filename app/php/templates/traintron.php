@@ -38,9 +38,9 @@
                 <button class="btn btn-mini btn-success" ng-click="back(activity.number)"><i class="icon-arrow-up icon-white"></i>PREVIOUS ACTIVITY</button>
 
                 <div class="top">
-                    <span class="label label-inverse"><h2>SECTION {{activity.t}}</h2></span>
-                    <span class="label label-inverse"><h2>ACTIVITY {{activity.number}}</h2></span>
-                    <span class="label label-inverse"><h2>{{activity.title}}</h2></span>
+                    <span class="badge badge-success"><h4>SECTION {{activity.t}}</h4></span>
+                    <span class="badge badge-success"><h4>ACTIVITY {{activity.number}}</h4></span>
+                    <span class="badge badge-success"><h4>{{activity.title}}</h4></span>
                 </div>
 
                 <div class="activity-container">
