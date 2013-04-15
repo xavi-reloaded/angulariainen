@@ -37,15 +37,15 @@
 
 <div ng-controller="CarouselDemoCtrl">
 
-    <slide-viewer interval="myInterval">
-        <slide-apium ng-repeat="slide in slides" active="slide.active">
+    <apium-slide-viewer interval="myInterval">
+        <apium-slide ng-repeat="slide in slides" active="slide.active">
             <img ng-src="{{slide.image}}" style="margin:auto;">
             <div class="carousel-caption">
                 <h4>Slide {{$index}}</h4>
                 <p>{{slide.text}}</p>
             </div>
-        </slide-apium >
-    </slide-viewer>
+        </apium-slide>
+    </apium-slide-viewer>
 
     <div class="row-fluid">
         <div class="span6">

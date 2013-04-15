@@ -1,6 +1,6 @@
-angular.module("ui.bootstrap-apium", ["ui.bootstrap-apium.tpls", "ui.bootstrap-apium.apiumac","ui.bootstrap-apium.slideviewer"]);
+angular.module("ui.bootstrap-apium", ["ui.bootstrap-apium.tpls", "ui.bootstrap-apium.apiumac","ui.bootstrap-apium.apiumslideviewer"]);
 
-angular.module("ui.bootstrap-apium.tpls", ["template/apiumac/apiumac-group.html","template/apiumac/apiumac.html","template/slideviewer/slideviewer.html","template/slideviewer/slideapium.html"]);
+angular.module("ui.bootstrap-apium.tpls", ["template/apiumac/apiumac-group.html","template/apiumac/apiumac.html","template/apiumslideviewer/apiumslideviewer.html","template/apiumslideviewer/apiumslide.html"]);
 
 
 /*
@@ -14,8 +14,8 @@ angular.module("ui.bootstrap-apium.tpls", ["template/apiumac/apiumac-group.html"
  *      To change the carousel's active slide set the active attribute to true
  *      Template: <carousel interval="none"><slide active="someModel">{{anything}}</slide></carousel>
  */
-angular.module('ui.bootstrap-apium.slideviewer', ['ui.bootstrap-apium.transition'])
-    .controller('SlideViewerController', ['$scope', '$timeout', '$transition', '$q', function ($scope, $timeout, $transition, $q) {
+angular.module('ui.bootstrap-apium.apiumslideviewer', ['ui.bootstrap-apium.transition'])
+    .controller('ApiumSlideViewerController', ['$scope', '$timeout', '$transition', '$q', function ($scope, $timeout, $transition, $q) {
         var self = this,
             slides = self.slides = [],
             currentIndex = -1,
@@ -160,27 +160,27 @@ angular.module('ui.bootstrap-apium.slideviewer', ['ui.bootstrap-apium.transition
             }
         };
     }])
-    .directive('slideViewer', [function() {
+    .directive('apiumSlideViewer', [function() {
         return {
             restrict: 'EA',
             transclude: true,
             replace: true,
-            controller: 'SlideViewerController',
-            require: 'slideViewer',
-            templateUrl: 'template/slideviewer/slideviewer.html',
+            controller: 'ApiumSlideViewerController',
+            require: 'apiumSlideViewer',
+            templateUrl: 'template/apiumslideviewer/apiumslideviewer.html',
             scope: {
                 interval: '=',
                 noTransition: '='
             }
         };
     }])
-    .directive('slideApium', [function() {
+    .directive('apiumSlide', [function() {
         return {
-            require: '^slideViewer',
+            require: '^apiumSlideViewer',
             restrict: 'EA',
             transclude: true,
             replace: true,
-            templateUrl: 'template/slideviewer/slideapium.html',
+            templateUrl: 'template/apiumslideviewer/apiumslide.html',
             scope: {
                 active: '='
             },
@@ -578,8 +578,8 @@ angular.module('ui.bootstrap-apium.transition', [])
 
 
 
-angular.module("template/slideviewer/slideviewer.html", []).run(["$templateCache", function($templateCache){
-    $templateCache.put("template/slideviewer/slideviewer.html",
+angular.module("template/apiumslideviewer/apiumslideviewer.html", []).run(["$templateCache", function($templateCache){
+    $templateCache.put("template/apiumslideviewer/apiumslideviewer.html",
         "<div ng-mouseenter=\"pause()\" ng-mouseleave=\"play()\" class=\"carousel\">" +
             "    <ol class=\"carousel-indicators\">" +
             "        <li ng-repeat=\"slide in slides()\" ng-class=\"{active: isActive(slide)}\" ng-click=\"select(slide)\"></li>" +
@@ -591,8 +591,8 @@ angular.module("template/slideviewer/slideviewer.html", []).run(["$templateCache
             "");
 }]);
 
-angular.module("template/slideviewer/slideapium.html", []).run(["$templateCache", function($templateCache){
-    $templateCache.put("template/slideviewer/slideapium.html",
+angular.module("template/apiumslideviewer/apiumslide.html", []).run(["$templateCache", function($templateCache){
+    $templateCache.put("template/apiumslideviewer/apiumslide.html",
         "<div ng-class=\"{" +
             "    'active': leaving || (active && !entering)," +
             "    'prev': (next || active) && direction=='prev'," +
