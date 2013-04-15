@@ -29,6 +29,18 @@ function trainTron($scope, $timeout)
     };
 
     $scope.activities= [
+        {t:2,tt:'',                     id:66666, number: 6,
+            title: 'Caracola is the good life',
+            type:'slide',
+            params:{
+                interval:'5000',
+                slides:[
+                    {active:true,image:'http://placekitten.com/200/200',text:'hello I am a text'},
+                    {active:true,image:'http://placekitten.com/225/200',text:'hello another'},
+                    {active:true,image:'http://placekitten.com/250/200',text:'hello yet another text'}
+                ]
+            },
+            completed:true},
         {t:1,tt:'',                     id:22222, number: 2, title: 'La segunda actividad con un PDF de ejemplo',
             type:'pdf', params:{ url : 'http://cdn.mozilla.net/pdfjs/tracemonkey.pdf'},
             completed:false},
@@ -44,10 +56,8 @@ function trainTron($scope, $timeout)
             completed:true},
         {t:2,tt:'The second Section',   id:55555, number: 5, title: 'la cuarta',
             type:'quiz', params:{},
-            completed:true},
-        {t:2,tt:'',                     id:66666, number: 6, title: 'Caracola is the good life',
-            type:'slice', params:{},
             completed:true}
+
     ];
 
     var showProgressElement = '' +
@@ -121,7 +131,6 @@ function trainTron($scope, $timeout)
         $('#sideBarImage').toggleClass('icon-backward');
     }
     $scope.markAsCompleted = function(activityId){
-        console.log(activityId);
         var activities = $scope.activities;
         for (var i = 0, ii = activities.length; i < ii; i++) {
             if (activityId == activities[i].id) {

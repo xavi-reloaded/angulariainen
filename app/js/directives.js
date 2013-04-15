@@ -15,12 +15,13 @@ angular.module('app.directives', []).
             '<source src="{{params.src}}" type={{params.type}}>' +
             '<p>Video Playback Not Supported</p>' +
             '</video>';
+
         var pageTemplate = '<div><h2>PAGE</h2></div>';
         var bookTemplate = '<div><h2>BOOK</h2></div>';
         var quizTemplate = '<div><h2>QUIZ</h2></div>';
 
-        var sliceTemplate = '<carousel interval="myInterval">' +
-                            '   <slide ng-repeat="slide in slides" active="slide.active">' +
+        var slideTemplate = '<carousel interval="params.interval">' +
+                            '   <slide ng-repeat="slide in params.slides" active="slide.active">' +
                             '       <img ng-src="{{slide.image}}" style="margin:auto;">' +
                             '       <div class="carousel-caption"><h4>Slide {{$index}}</h4><p>{{slide.text}}</p></div>' +
                             '   </slide>' +
@@ -38,23 +39,20 @@ angular.module('app.directives', []).
                             '</div>';
 
         var getTemplate = function(contentType) {
-            console.log('contentType var inside getTemplate::' + contentType);
+            //console.log('contentType var inside getTemplate::' + contentType);
             var template = videoTemplate;
             switch(contentType) {
                 case 'video': template = videoTemplate;break;
                 case 'page':  template = pageTemplate;break;
                 case 'book':  template = bookTemplate; break;
                 case 'quiz':  template = quizTemplate;break;
-                case 'slice': template = sliceTemplate; break;
+                case 'slide': template = slideTemplate; break;
                 case 'pdf':   template = pdfTemplate; break;
             }
             return template;
         }
 
         var linker = function(scope, element, attrs) {
-            console.log('scope::' + scope);
-            console.log('element::' + element);
-            console.log('attrs::' + attrs);
             element.html(getTemplate(scope.type));
             $compile(element.contents())(scope);
         }
