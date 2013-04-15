@@ -585,9 +585,21 @@ angular.module("template/apiumslideviewer/apiumslideviewer.html", []).run(["$tem
             "        <li ng-repeat=\"slide in slides()\" ng-class=\"{active: isActive(slide)}\" ng-click=\"select(slide)\"></li>" +
             "    </ol>" +
             "    <div class=\"slide-viewer-inner\" ng-transclude></div>" +
-            "    <a ng-click=\"prev()\" class=\"slide-viewer-control left\">&lsaquo;</a>" +
-            "    <a ng-click=\"next()\" class=\"slide-viewer-control right\">&rsaquo;</a>" +
+//            "    <a ng-click=\"prev()\" class=\"slide-viewer-control left\">&lsaquo;</a>" +
+//            "    <a ng-click=\"next()\" class=\"slide-viewer-control right\">&rsaquo;</a>" +
+            '       ' +
+            '       <div class=\"slide-viewer-toolbar\">' +
+            '           <div class="btn-group">' +
+            '               <a ng-click="prev()" class="btn btn-success"><i class="icon-fast-backward icon-white"></i></a>' +
+            '               <a ng-click="prev()" class="btn btn-success"><i class="icon-backward icon-white"></i></a>' +
+            '               <a ng-click="auto()" class="btn btn-success"><i class="icon-play icon-white"></i></a>' +
+            '               <a ng-click="auto()" class="btn btn-success"><i class="icon-pause icon-white"></i></a>' +
+            '               <a ng-click="next()" class="btn btn-success"><i class="icon-forward icon-white"></i></a>' +
+            '               <a ng-click="next()" class="btn btn-success"><i class="icon-fast-forward icon-white"></i></a>' +
+            '           </div>' +
+            '       </div>' +
             "</div>" +
+            "" +
             "");
 }]);
 
