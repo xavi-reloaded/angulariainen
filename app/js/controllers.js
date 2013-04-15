@@ -29,13 +29,13 @@ function trainTron($scope, $timeout)
     };
 
     $scope.activities= [
-        {t:2,tt:'',                     id:66666, number: 6,
+        {t:2,tt:'',                     id:66666, number: 1,
             title: 'Caracola is the good life',
             type:'slide',
             params:{
                 interval:'2000',
                 slides:[
-                    {image: 'sampledata/slide_sample_1.png',text: 'BLA BLA BLA this is the first slide'},
+                    {image: 'sampledata/slide_sample_1.png',text: 'dftgdfg '},
                     {image: 'sampledata/slide_sample_2.png',text: 'Kitty!'},
                     {image: 'sampledata/slide_sample_3.png',text: 'Cat.'},
                     {image: 'sampledata/slide_sample_4.png',text: 'Kitty!'},
@@ -44,21 +44,21 @@ function trainTron($scope, $timeout)
                     {image: 'sampledata/slide_sample_7.png',text: 'The last slide is this one'}
                 ]
             },
-            completed:true},
+            completed:false},
         {t:1,tt:'',                     id:22222, number: 2, title: 'La segunda actividad con un PDF de ejemplo',
             type:'pdf', params:{ url : 'http://cdn.mozilla.net/pdfjs/tracemonkey.pdf'},
             completed:false},
-        {t:1,tt:'The first Section',    id:11111, number: 1, title: 'La primera actividad, un video de ejemplo',
+        {t:1,tt:'The first Section',    id:11111, number: 3, title: 'La primera actividad, un video de ejemplo',
             type:'video', params:{src:"http://video-js.zencoder.com/oceans-clip.mp4",type:'video/mp4',poster:"http://video-js.zencoder.com/oceans-clip.png"},
             completed:true},
-        {t:1,tt:'',                     id:33333, number: 3, title: 'La segunda actividad',
+        {t:1,tt:'',                     id:33333, number: 4, title: 'La segunda actividad',
             type:'page', params:{},
             completed:true},
 
-        {t:1,tt:'',                     id:44444, number: 4, title: 'la tercera lectura',
+        {t:1,tt:'',                     id:44444, number: 5, title: 'la tercera lectura',
             type:'book', params:{},
             completed:true},
-        {t:2,tt:'The second Section',   id:55555, number: 5, title: 'la cuarta',
+        {t:2,tt:'The second Section',   id:55555, number: 6, title: 'la cuarta',
             type:'quiz', params:{},
             completed:true}
 
@@ -102,6 +102,7 @@ function trainTron($scope, $timeout)
         return topValue/100;
     }
     $scope.back = function(activityId){
+        console.log(activityId);
         if (activityId==1) {
             $('li.show-progress').remove();
             $scope.screenOnFront = 0;
