@@ -33,7 +33,7 @@ function trainTron($scope, $timeout)
             title: 'Caracola is the good life',
             type:'slide',
             params:{
-                interval:'-1',
+                interval:'2000',
                 slides:[
                     {image: 'sampledata/slide_sample_1.png',text: 'BLA BLA BLA this is the first slide'},
                     {image: 'sampledata/slide_sample_2.png',text: 'Kitty!'},

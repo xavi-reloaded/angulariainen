@@ -23,7 +23,7 @@ angular.module('app.directives', []).
         var slideTemplate = '<apium-slide-viewer interval="params.interval">' +
                             '   <apium-slide ng-repeat="slide in params.slides" active="slide.active">' +
                             '       <img ng-src="{{slide.image}}" style="margin:auto;">' +
-                            '       <div class="slide-viewer-caption"><h4>Slide {{$index}}</h4><p>{{slide.text}}</p></div>' +
+                            '       <div class="slide-viewer-caption"><h4>Slide {{$index+1}}</h4><p>{{slide.text}}</p></div>' +
                             '   </apium-slide>' +
                             '</apium-slide-viewer>';
 

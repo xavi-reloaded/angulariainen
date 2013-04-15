@@ -457,9 +457,9 @@ body {
 .slide-viewer-indicators li{display:block;float:left;width:10px;height:10px;margin-left:5px;text-indent:-999px;background-color:#ccc;background-color:rgba(255, 255, 255, 0.25);border-radius:5px;}
 .slide-viewer-indicators .active{background-color:#fff;}
 
-.slide-viewer-caption{position:absolute;left:0;right:0;bottom:40px;padding:20px;background:#333333;background:rgba(0, 0, 0, 0.75);}
+.slide-viewer-caption{position:absolute;left:0;right:0;bottom:0px;padding:20px;background:#333333;background:rgba(0, 0, 0, 0.75);}
 .slide-viewer-caption h4,.slide-viewer-caption p{color:#ffffff;line-height:20px;}
 .slide-viewer-caption h4{margin:0 0 5px;}
 .slide-viewer-caption p{margin-bottom:0;}
 
-.slide-viewer-toolbar{position:absolute;left:0;right:0;bottom:-20px;padding:0px;background:#ffffff;background:rgba(0, 0, 0, 0.75);z-index: 999;}
+.slide-viewer-toolbar{position:absolute;left:0;right:0;bottom:-20px;padding:0px;z-index: 999;width: 100%;text-align: center;}

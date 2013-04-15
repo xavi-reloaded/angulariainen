@@ -90,6 +90,16 @@ angular.module('ui.bootstrap-apium.apiumslideviewer', ['ui.bootstrap-apium.trans
             return self.select(slides[newIndex], 'prev');
         };
 
+        $scope.first = function() {
+            var newIndex = 0;
+            return self.select(slides[newIndex], 'prev');
+        };
+
+        $scope.last = function() {
+            var newIndex = slides.length-1;
+            return self.select(slides[newIndex], 'next');
+        };
+
         $scope.select = function(slide) {
             self.select(slide);
         };
@@ -120,6 +130,22 @@ angular.module('ui.bootstrap-apium.apiumslideviewer', ['ui.bootstrap-apium.trans
                 currentTimeout = $timeout(go, interval);
             }
         }
+
+        $scope.togglePlay = function() {
+            if (!isPlaying) {
+                $scope.play();
+            } else {
+                $scope.pause();
+            }
+            $('#slideviewertoggleplay').toggleClass('icon-pause');
+            $('#slideviewertoggleplay').toggleClass('icon-play');
+        };
+
+        $scope.pauseAction = function() {
+            $scope.interval=0;
+            $scope.pause();
+
+        };
         $scope.play = function() {
             if (!isPlaying) {
                 isPlaying = true;
@@ -590,12 +616,11 @@ angular.module("template/apiumslideviewer/apiumslideviewer.html", []).run(["$tem
             '       ' +
             '       <div class=\"slide-viewer-toolbar\">' +
             '           <div class="btn-group">' +
-            '               <a ng-click="prev()" class="btn btn-success"><i class="icon-fast-backward icon-white"></i></a>' +
-            '               <a ng-click="prev()" class="btn btn-success"><i class="icon-backward icon-white"></i></a>' +
-            '               <a ng-click="auto()" class="btn btn-success"><i class="icon-play icon-white"></i></a>' +
-            '               <a ng-click="auto()" class="btn btn-success"><i class="icon-pause icon-white"></i></a>' +
-            '               <a ng-click="next()" class="btn btn-success"><i class="icon-forward icon-white"></i></a>' +
-            '               <a ng-click="next()" class="btn btn-success"><i class="icon-fast-forward icon-white"></i></a>' +
+            '               <a ng-click="first()" class="btn btn-large btn-success"><i class="icon-fast-backward icon-white"></i></a>' +
+            '               <a ng-click="prev()" class="btn btn-large btn-success"><i class="icon-backward icon-white"></i></a>' +
+            '               <a ng-click="togglePlay()" class="btn btn-large btn-success"><i  class="icon-play icon-white" id="slideviewertoggleplay" ></i></a>' +
+            '               <a ng-click="next()" class="btn btn-large btn-success"><i class="icon-forward icon-white"></i></a>' +
+            '               <a ng-click="last()" class="btn btn-large btn-success"><i class="icon-fast-forward icon-white"></i></a>' +
             '           </div>' +
             '       </div>' +
             "</div>" +
