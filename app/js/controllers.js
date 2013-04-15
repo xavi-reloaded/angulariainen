@@ -69,9 +69,13 @@ function trainTron($scope, $timeout)
         '   <div class="hero-unit">' +
         '       <h1>' + $scope.course.courseTitle + '</h1>' +
         '       <p><span>You have completed <b class="completion-ratio">' + $scope.course.ratioCompleted + '%</b> of this course</span></p>' +
-        '       <p class="btn btn-success btn-large">' + $scope.course.ratioCompleted + '%</p>' +
+//        '       <p class="btn btn-success btn-large">' + $scope.course.ratioCompleted + '%</p>' +
         '' +
-        '<div class="container"><div class="progress progress-striped active"><div class="bar" style="width: 0%;"></div></div></div>' +
+        '       <span class="container">' +
+        '           <span class="progress progress-success active" style="width:100%; height:50px;margin: 10px;">' +
+        '               <span class="bar" style="width: ' + $scope.course.ratioCompleted + '%;"><h4>' + $scope.course.ratioCompleted + '%</h4></span>' +
+        '           </span>' +
+        '       </span>' +
         '​' +
         '   </div>' +
         '</li>';
