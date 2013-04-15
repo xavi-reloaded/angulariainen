@@ -28,7 +28,6 @@
 
 
 
-
 </head>
 
 
@@ -37,15 +36,17 @@
 
 <div ng-controller="CarouselDemoCtrl">
 
+    <div style="width: 80%;height: 800px;">
     <apium-slide-viewer interval="myInterval">
         <apium-slide ng-repeat="slide in slides" active="slide.active">
             <img ng-src="{{slide.image}}" style="margin:auto;">
-            <div class="carousel-caption">
+            <div class="slide-viewer-caption">
                 <h4>Slide {{$index}}</h4>
                 <p>{{slide.text}}</p>
             </div>
         </apium-slide>
     </apium-slide-viewer>
+    </div>
 
     <div class="row-fluid">
         <div class="span6">
@@ -63,19 +64,28 @@
         </div>
     </div>
 </div>
-
+/home/fjhidalgo/Desktop/petarderco/slide_sample_1.png
+/home/fjhidalgo/Desktop/petarderco/slide_sample_2.png
+/home/fjhidalgo/Desktop/petarderco/slide_sample_3.png
+/home/fjhidalgo/Desktop/petarderco/slide_sample_4.png
+/home/fjhidalgo/Desktop/petarderco/slide_sample_5.png
+/home/fjhidalgo/Desktop/petarderco/slide_sample_6.png
+/home/fjhidalgo/Desktop/petarderco/slide_sample_7.png
 
 <script src="js/app.js"></script>
 
 <script src="js/services.js"></script>
 <script>
     function CarouselDemoCtrl($scope) {
-        $scope.myInterval = 5000;
+        $scope.myInterval = -1;
         $scope.slides = [
-            {image: 'http://placekitten.com/200/200',text: 'Kitten.'},
-            {image: 'http://placekitten.com/225/200',text: 'Kitty!'},
-            {image: 'http://placekitten.com/250/200',text: 'Cat.'},
-            {image: 'http://placekitten.com/275/200',text: 'Feline!'}
+            {image: 'sampledata/slide_sample_1.png',text: 'BLA BLA BLA this is the first slide'},
+            {image: 'sampledata/slide_sample_2.png',text: 'Kitty!'},
+            {image: 'sampledata/slide_sample_3.png',text: 'Cat.'},
+            {image: 'sampledata/slide_sample_4.png',text: 'Kitty!'},
+            {image: 'sampledata/slide_sample_5.png',text: 'Cat.'},
+            {image: 'sampledata/slide_sample_6.png',text: 'Cat.'},
+            {image: 'sampledata/slide_sample_7.png',text: 'The last slide is this one'}
         ];
         $scope.addSlide = function() {
             $scope.slides.push({

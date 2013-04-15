@@ -20,12 +20,12 @@ angular.module('app.directives', []).
         var bookTemplate = '<div><h2>BOOK</h2></div>';
         var quizTemplate = '<div><h2>QUIZ</h2></div>';
 
-        var slideTemplate = '<slide-viewer interval="params.interval">' +
-                            '   <slide-apium ng-repeat="slide in params.slides" active="slide.active">' +
+        var slideTemplate = '<apium-slide-viewer interval="params.interval">' +
+                            '   <apium-slide ng-repeat="slide in params.slides" active="slide.active">' +
                             '       <img ng-src="{{slide.image}}" style="margin:auto;">' +
-                            '       <div class="carousel-caption"><h4>Slide {{$index}}</h4><p>{{slide.text}}</p></div>' +
-                            '   </slide-apium>' +
-                            '</slide-viewer>';
+                            '       <div class="slide-viewer-caption"><h4>Slide {{$index}}</h4><p>{{slide.text}}</p></div>' +
+                            '   </apium-slide>' +
+                            '</apium-slide-viewer>';
 
         var pdfTemplate =   '<div>' +
                             '<button id="prev" onclick="goPrevious()">Previous</button>' +

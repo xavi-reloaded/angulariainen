@@ -33,11 +33,15 @@ function trainTron($scope, $timeout)
             title: 'Caracola is the good life',
             type:'slide',
             params:{
-                interval:'5000',
+                interval:'-1',
                 slides:[
-                    {active:true,image:'http://placekitten.com/200/200',text:'hello I am a text'},
-                    {active:true,image:'http://placekitten.com/225/200',text:'hello another'},
-                    {active:true,image:'http://placekitten.com/250/200',text:'hello yet another text'}
+                    {image: 'sampledata/slide_sample_1.png',text: 'BLA BLA BLA this is the first slide'},
+                    {image: 'sampledata/slide_sample_2.png',text: 'Kitty!'},
+                    {image: 'sampledata/slide_sample_3.png',text: 'Cat.'},
+                    {image: 'sampledata/slide_sample_4.png',text: 'Kitty!'},
+                    {image: 'sampledata/slide_sample_5.png',text: 'Cat.'},
+                    {image: 'sampledata/slide_sample_6.png',text: 'Cat.'},
+                    {image: 'sampledata/slide_sample_7.png',text: 'The last slide is this one'}
                 ]
             },
             completed:true},

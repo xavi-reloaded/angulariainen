@@ -580,13 +580,13 @@ angular.module('ui.bootstrap-apium.transition', [])
 
 angular.module("template/apiumslideviewer/apiumslideviewer.html", []).run(["$templateCache", function($templateCache){
     $templateCache.put("template/apiumslideviewer/apiumslideviewer.html",
-        "<div ng-mouseenter=\"pause()\" ng-mouseleave=\"play()\" class=\"carousel\">" +
-            "    <ol class=\"carousel-indicators\">" +
+        "<div ng-mouseenter=\"pause()\" ng-mouseleave=\"play()\" class=\"slide-viewer\">" +
+            "    <ol class=\"slide-viewer-indicators\">" +
             "        <li ng-repeat=\"slide in slides()\" ng-class=\"{active: isActive(slide)}\" ng-click=\"select(slide)\"></li>" +
             "    </ol>" +
-            "    <div class=\"carousel-inner\" ng-transclude></div>" +
-            "    <a ng-click=\"prev()\" class=\"carousel-control left\">&lsaquo;</a>" +
-            "    <a ng-click=\"next()\" class=\"carousel-control right\">&rsaquo;</a>" +
+            "    <div class=\"slide-viewer-inner\" ng-transclude></div>" +
+            "    <a ng-click=\"prev()\" class=\"slide-viewer-control left\">&lsaquo;</a>" +
+            "    <a ng-click=\"next()\" class=\"slide-viewer-control right\">&rsaquo;</a>" +
             "</div>" +
             "");
 }]);
