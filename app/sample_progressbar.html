@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>My AngularJS App</title>
+
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap-progressbar/bootstrap-progressbar.js"></script>
+
+
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/bootstrap-progressbar.css"/>
+
+
+
+</head>
+
+
+<body>
+
+<div class="progress progress-success active" style="width:100%; height:50px; border:1px solid black;">
+    <div class="bar" style="width:50%; /*change this width */
+       height:45px;"
+         data-percentage="48" data-amount-part="1337" data-amount-total="9000"
+            >
+    </div>
+</div>
+
+
+</body>
+
+<script>
+    $(document).ready(function() {
+//        $('.progress .bar').progressbar();
+    });
+</script>
+</html>

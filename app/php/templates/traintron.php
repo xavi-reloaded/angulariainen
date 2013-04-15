@@ -17,7 +17,7 @@
     data-coursetitle="{{course.courseTitle}}"
     data-userid="{{course.userId}}"
     data-uimessages="{{course.uiMessages}}"
-    data-autoplay="{{course.autoplay}}">
+    data-autoplay="{{course.autoplay}}" xmlns="http://www.w3.org/1999/html">
 
     <div class="view">
 
@@ -38,11 +38,9 @@
                 <button class="btn btn-mini btn-success" ng-click="back(activity.number)"><i class="icon-arrow-up icon-white"></i>PREVIOUS ACTIVITY</button>
 
                 <div class="top">
-                    <div class="btn-group">
-                        <button class="btn btn-info">SECTION {{activity.t}}</button>
-                        <button class="btn btn-info">ACTIVITY {{activity.number}}</button>
-                        <button class="btn btn-inverse">{{activity.title}}</button>
-                    </div>
+                        <span class="label label-inverse"><h2>SECTION {{activity.t}}</h2></span>
+                        <span class="label label-inverse"><h2>ACTIVITY {{activity.number}}</h2></span>
+                        <span class="label label-inverse"><h2>{{activity.title}}</h2></span>
                 </div>
 
                 <div class="activity-container">
