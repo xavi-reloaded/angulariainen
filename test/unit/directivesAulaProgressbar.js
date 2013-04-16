@@ -5,7 +5,7 @@
 describe('apium directives', function() {
     var $scope,ctrl;
 
-    beforeEach(module('ui.bootstrap-apium'));
+    beforeEach(module('app.directives'));
 
     describe('aula slide viewer', function() {
 
@@ -14,8 +14,8 @@ describe('apium directives', function() {
                 //$provide.value('version', 'TEST_VER');
             });
             inject(function($compile, $rootScope) {
-                var element = $compile('<slide-viewer></slide-viewer>')($rootScope);
-                var expected = '';
+                var element = $compile('<aula-progress-bar></aula-progress-bar>')($rootScope);
+                var expected = 'asdf';
                 expect(element.text()).toEqual(expected);
             });
         });

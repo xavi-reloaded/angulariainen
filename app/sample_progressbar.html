@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="css/bootstrap-progressbar.css"/>
 
+    <script src="lib/gauge/gauge.js"></script>
+
+
 
 
 </head>
@@ -28,6 +31,18 @@
     <div class="bar bullet" style="width: 20%;"></div>
     <div class="bar bar-success" style="width: 10%;"></div>
 </div>
+
+<div id="gauge_bar" style="width: 100%;"></div>
+
+
+
+<script language="javascript">
+    if(typeof $=='undefined') {function $(v) {return(document.getElementById(v));}}
+    window.onload = function () {
+        gauge.add($("gauge_bar"),{width:600, height:99, radius:0.3, scale:7,values:[1,7], colors:['#316DC8','#e9e9e9','#64A8E5','#00aa00']});
+    }
+</script>
+
 
 
 
