@@ -9,6 +9,7 @@
     <script src="lib/angular/angular-ui.min.js"></script>
     <script src="lib/ui-bootstrap/ui-bootstrap-tpls-0.2.0.js"></script>
     <script src="lib/ui-bootstrap/ui-bootstrap-0.2.0.js"></script>
+    <script src="lib/ui-bootstrap/ui-bootstrap-apium.js"></script>
 
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="css/app.css"/>
@@ -26,6 +27,9 @@
     <script src="lib/wijmo/angular.wijmo.js" type="text/javascript"></script>
 
 
+    <style type="text/css">
+        body { background: silver; color: black; font-family: Georgia,serif; line-height: 1.5; margin: 2em 2em;}
+   </style>
 
 
 </head>
@@ -33,23 +37,9 @@
 
 <body ng-controller="trainTron">
 
-<!--<div ng-view></div>/-->
-<div
-        id="course-taking-page"
-        class="ud-coursetaking wrapper">
-
-    <div class="main">
-        <ul id="timeline">
-            <aula-topic n="2" t="Wekeinendel is good"> </aula-topic>
-        </ul>
-    </div>
-</div>
-<!--<div class="footer">AngularJS app: v<span app-version></span></div>-->
+<aula-progressbar scale="15" value="7"></aula-progressbar>
 
 
-<!-- In production use:
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
--->
 
 <script src="js/app.js"></script>
 

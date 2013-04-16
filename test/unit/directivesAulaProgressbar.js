@@ -9,16 +9,15 @@ describe('apium directives', function() {
 
     describe('aula slide viewer', function() {
 
-        it('should load the slide viewer directive', function() {
+        it('aula progress bar directive', function() {
             module(function($provide) {
                 //$provide.value('version', 'TEST_VER');
             });
             inject(function($compile, $rootScope) {
-                var element = $compile('<aula-progress-bar></aula-progress-bar>')($rootScope);
-                var expected = 'asdf';
-                expect(element.text()).toEqual(expected);
+                var element = $compile('<aula-progressbar scale="15" value="7"></aula-progressbar>')($rootScope);
+                var expected = '<div id="aulaProgressbar" style="width: 100%;" class="ng-scope"></div>';
+                expect(element.html()).toEqual(expected);
             });
         });
     });
-
 });
