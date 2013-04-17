@@ -60,6 +60,7 @@ angular.module('app.directives', []).
         return {
             restrict: "E",
             rep1ace: true,
+            transclude: true,
             link: linker,
             scope: {id: '=', type:'=', params:'='}
         };

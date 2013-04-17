@@ -2,7 +2,7 @@
 
 /* Controllers */
 
-function trainTron($scope, $timeout)
+function trainTron($scope, $timeout,$compile)
 {
 
     $scope.course = {
@@ -33,7 +33,7 @@ function trainTron($scope, $timeout)
             title: 'Caracola is the good life',
             type:'slide',
             params:{
-                interval:'2000',
+                interval:'-1',
                 slides:[
                     {image: 'sampledata/slide_sample_1.png',text: 'dftgdfg '},
                     {image: 'sampledata/slide_sample_2.png',text: 'Kitty!'},
@@ -72,13 +72,15 @@ function trainTron($scope, $timeout)
 //        '       <p class="btn btn-success btn-large">' + $scope.course.ratioCompleted + '%</p>' +
         '' +
         '       <span class="container">' +
-        '           <span class="progress progress-success active" style="width:100%; height:50px;margin: 10px;">' +
-        '               <span class="bar" style="width: ' + $scope.course.ratioCompleted + '%;"><h4>' + $scope.course.ratioCompleted + '%</h4></span>' +
-        '           </span>' +
+        '           <aula-progressbar scale="10" value="10"></aula-progressbar>' +
         '       </span>' +
         '​' +
         '   </div>' +
         '</li>';
+
+//    '           <span class="progress progress-success active" style="width:100%; height:50px;margin: 10px;">' +
+//        '               <span class="bar" style="width: ' + $scope.course.ratioCompleted + '%;"><h4>' + $scope.course.ratioCompleted + '%</h4></span>' +
+//        '           </span>' +
 
     $scope.screenOnFront = 0;
 
@@ -97,9 +99,16 @@ function trainTron($scope, $timeout)
     };
 
     $scope.next = function(){
+
+        console.log('before compilation:'+$('ul#timeline').contents());
+
+//        $compile($('ul#timeline'))();
+
         var positionInTimeline = $scope.getInitialPositionInULelementFromTopValue($scope.screenOnFront);
         $scope.insertAt(positionInTimeline+1, $('ul#timeline'), showProgressElement);
         $scope.screenOnFront = $scope.getTopValueForNextPosition(positionInTimeline+1);
+
+
 
         $timeout(function() {
             $scope.screenOnFront = $scope.getTopValueForNextPosition(positionInTimeline+2);
@@ -125,7 +134,6 @@ function trainTron($scope, $timeout)
     };
 
     $scope.insertAt = function(index, parentElement, childElement) {
-
         var lastIndex = parentElement.children().size();
         if (index < 0) {
             index = Math.max(0, lastIndex + 1 + index)
