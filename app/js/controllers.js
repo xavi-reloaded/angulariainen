@@ -64,20 +64,6 @@ function trainTron($scope, $timeout,$compile)
 
     ];
 
-    var showProgressElement = '' +
-        '<li class="show-progress">' +
-        '   <div class="hero-unit">' +
-        '       <h1>' + $scope.course.courseTitle + '</h1>' +
-        '       <p><span>You have completed <b class="completion-ratio">' + $scope.course.ratioCompleted + '%</b> of this course</span></p>' +
-//        '       <p class="btn btn-success btn-large">' + $scope.course.ratioCompleted + '%</p>' +
-        '' +
-        '       <span class="container">' +
-        '           <aula-progressbar scale="10" value="10"></aula-progressbar>' +
-        '       </span>' +
-        '​' +
-        '   </div>' +
-        '</li>';
-
 //    '           <span class="progress progress-success active" style="width:100%; height:50px;margin: 10px;">' +
 //        '               <span class="bar" style="width: ' + $scope.course.ratioCompleted + '%;"><h4>' + $scope.course.ratioCompleted + '%</h4></span>' +
 //        '           </span>' +
@@ -98,17 +84,29 @@ function trainTron($scope, $timeout,$compile)
         return 0;
     };
 
+    $scope.showProgressElement = '' +
+        '<li class="show-progress">' +
+        '   <div class="hero-unit">' +
+        '       <h1>' + $scope.course.courseTitle + '</h1>' +
+        '       <p><span>You have completed <b class="completion-ratio">' + $scope.course.ratioCompleted + '%</b> of this course</span></p>' +
+
+        '​' +
+        '   </div>' +
+        '       <span class="container">' +
+        '           <aula-progressbar scale="10" value="10"></aula-progressbar>' +
+        '       </span>' +
+        '</li>';
+
     $scope.next = function(){
 
-        console.log('before compilation:'+$('ul#timeline').contents());
+        var showProgressElement = $compile($scope.showProgressElement)($scope);
 
-//        $compile($('ul#timeline'))();
+        console.log('before compilation:'+showProgressElement.html());
+
 
         var positionInTimeline = $scope.getInitialPositionInULelementFromTopValue($scope.screenOnFront);
-        $scope.insertAt(positionInTimeline+1, $('ul#timeline'), showProgressElement);
+        $scope.insertAt(positionInTimeline+1, $('ul#timeline'), '<li class="show-progress">' + showProgressElement.html() + '</li>');
         $scope.screenOnFront = $scope.getTopValueForNextPosition(positionInTimeline+1);
-
-
 
         $timeout(function() {
             $scope.screenOnFront = $scope.getTopValueForNextPosition(positionInTimeline+2);

@@ -23,18 +23,18 @@
 
         <ul id="timeline" style="top: -{{screenOnFront}}%;" ng-cloak>
 
-<!--            <li class="show-progress">-->
-<!--                <div class="hero-unit">-->
-<!--                    <h1> + $scope.course.courseTitle + </h1>-->
-<!--                    <p><span>You have completed <b class="completion-ratio"> 48% </b> of this course</span></p>-->
-<!--                    <p class="btn btn-success btn-large">48%</p>-->
-<!---->
-<!--                           <span class="container">-->
-<!--                                <aula-progressbar scale="10" value="10"></aula-progressbar>-->
-<!--                        </span>-->
-<!--                    ​-->
-<!--                </div>-->
-<!--            </li>-->
+            <li class="show-progress">
+                <div class="hero-unit">
+                    <h1> + $scope.course.courseTitle + </h1>
+                    <p><span>You have completed <b class="completion-ratio"> 48% </b> of this course</span></p>
+                    <p class="btn btn-success btn-large" ng-click="next(1)">48%</p>
+
+                           <span class="container">
+                                <aula-progressbar scale="10" value="10"></aula-progressbar>
+                        </span>
+                    ​
+                </div>
+            </li>
 
             <li class="chapter">
                 <div class="hero-unit">
