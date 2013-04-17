@@ -35,11 +35,25 @@
 </head>
 
 
-<body ng-controller="trainTron">
+<body ng-controller="progress">
 
-<aula-progressbar scale="15" value="7"></aula-progressbar>
+<div class="container" ng-repeat="prog in progresss">
+    <aula-progressbar scale="20" value="2"></aula-progressbar>
+    {{prog.value}}
+</div>
 
 
+
+<script>
+    function progress($scope){
+        $scope.progresss = [
+            {scale:'10',value:'7'},
+            {scale:'5',value:'2'},
+            {scale:'8',value:'7'},
+            {scale:'50',value:'45'}
+        ]
+    }
+</script>
 
 <script src="js/app.js"></script>
 

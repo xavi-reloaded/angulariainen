@@ -68,14 +68,19 @@ angular.module('app.directives', []).
 
     directive('aulaProgressbar', function ($compile) {
 
-        var template = '' +
-            '<div id="aulaProgressbar" style="width: 100%;"></div>';
-//            '   <canvas id="gauge_bar_gauge" style="padding: 0px; margin: 0px; border: none; height: 99px; width: 600px;" height="99" width="600"></canvas>' +
+        function getUniqueId() {
+            var v = Date.parse(new Date()) + Math.floor(Math.random() * 100000000000);
+            return v.toString(16);
+        }
+
+        var template = '<div id="'+getUniqueId()+'" style="width: 100%;" ></div>';
+//           '   <canvas id="gauge_bar_gauge" style="padding: 0px; margin: 0px; border: none; height: 99px; width: 600px;" height="99" width="600"></canvas>' +
 
         var linker = function(scope, element, attrs) {
-            element.html(template);
+            var tempDivId=getUniqueId();
+            element.html('<div id="'+tempDivId+'" style="width: 100%;" ></div>');
             var params = {width: 600, height: 99, radius: 0.3, scale: attrs.scale, values: [attrs.value, attrs.scale], colors: ['#316DC8', '#e9e9e9', '#64A8E5', '#00aa00']};
-            scope.add(params);
+            scope.add(tempDivId,params);
             $compile(element.contents())(scope);
          }
 
@@ -87,54 +92,8 @@ angular.module('app.directives', []).
                 defaultRadius: 1.0, defaultScale: null, defaultEmpty: '#e9e9e9', defaultName: null, defaultValues: null,
                 defaultColors: ['#3765d9', '#9ede7c', '#9e42ee', '#ec7612', '#00aaaa', '#cc0000', '#aaaa00', '#008000']};
 
-            function hex2rgb(val) {
-                function h2d(v) {
-                    return(Math.max(0, Math.min(parseInt(v, 16), 255)));
-                }
+            $scope.add = function (tempDivId,options) {
 
-                return h2d(val.substr(1, 2)) + ',' + h2d(val.substr(3, 2)) + ',' + h2d(val.substr(5, 2));
-            };
-            function P(i) {
-                var p = gauge.defaultColors;    //                var p = self.cl.concat(gauge.defaultColors);
-                var k = p.length - 1;
-                var t = i;
-                if (t > k) {
-                    t = (i % k) - 1;
-                }
-                return p[t];
-            };
-            function F(a, z, v, q) {
-                var r, g, b, x, y, l = 1 - v;
-
-                function h2d(h) {
-                    return(Math.max(0, Math.min(parseInt(h, 16), 255)));
-                };
-                function d2h(v) {
-                    v = Math.round(Math.min(Math.max(0, v), 255));
-                    return("0123456789ABCDEF".charAt((v - v % 16) / 16) + "0123456789ABCDEF".charAt(v % 16));
-                }
-
-                x = h2d(a.substr(1, 2));
-                y = h2d(z.substr(1, 2));
-                r = Math.max(0, Math.min(255, parseInt((x * l) + (y * v))));
-                x = h2d(a.substr(3, 2));
-                y = h2d(z.substr(3, 2));
-                g = Math.max(0, Math.min(255, parseInt((x * l) + (y * v))));
-                x = h2d(a.substr(5, 2));
-                y = h2d(z.substr(5, 2));
-                b = Math.max(0, Math.min(255, parseInt((x * l) + (y * v))));
-                if (!q) {
-                    return('#' + d2h(r) + d2h(g) + d2h(b));
-                } else {
-                    return(r + ',' + g + ',' + b);
-                }
-            };
-
-            $scope.add = function (options) {
-                function uniqueID() {
-                    var v = Date.parse(new Date()) + Math.floor(Math.random() * 100000000000);
-                    return v.toString(16);
-                }
 
 
                 var self, vo, width, height, tmp, id,
@@ -160,10 +119,10 @@ angular.module('app.directives', []).
 //                id = (typeof options['name'] === 'string' ? options['name'] : gauge.defaultName);
 //                object.id = (object.id != 'undefined' ? object.id : uniqueID());
 
-                var object = document.getElementById('aulaProgressbar');
+                var object = document.getElementById(tempDivId);
                 var id='';
 //                tmp = (id == '' || id == null ? object.id + '_gauge' : id);
-                tmp ='aulaProgressbar_gauge';
+                tmp =tempDivId+'_gauge';
                 if (!document.getElementById(tmp)) {
                     try {
                         if (document.all && document.namespaces && !window.opera && (!document.documentMode || document.documentMode < 9)) {
@@ -538,11 +497,55 @@ angular.module('app.directives', []).
             }
 
 
+
+            function hex2rgb(val) {
+                function h2d(v) {
+                    return(Math.max(0, Math.min(parseInt(v, 16), 255)));
+                }
+
+                return h2d(val.substr(1, 2)) + ',' + h2d(val.substr(3, 2)) + ',' + h2d(val.substr(5, 2));
+            };
+            function P(i) {
+                var p = gauge.defaultColors;    //                var p = self.cl.concat(gauge.defaultColors);
+                var k = p.length - 1;
+                var t = i;
+                if (t > k) {
+                    t = (i % k) - 1;
+                }
+                return p[t];
+            };
+            function F(a, z, v, q) {
+                var r, g, b, x, y, l = 1 - v;
+
+                function h2d(h) {
+                    return(Math.max(0, Math.min(parseInt(h, 16), 255)));
+                };
+                function d2h(v) {
+                    v = Math.round(Math.min(Math.max(0, v), 255));
+                    return("0123456789ABCDEF".charAt((v - v % 16) / 16) + "0123456789ABCDEF".charAt(v % 16));
+                }
+
+                x = h2d(a.substr(1, 2));
+                y = h2d(z.substr(1, 2));
+                r = Math.max(0, Math.min(255, parseInt((x * l) + (y * v))));
+                x = h2d(a.substr(3, 2));
+                y = h2d(z.substr(3, 2));
+                g = Math.max(0, Math.min(255, parseInt((x * l) + (y * v))));
+                x = h2d(a.substr(5, 2));
+                y = h2d(z.substr(5, 2));
+                b = Math.max(0, Math.min(255, parseInt((x * l) + (y * v))));
+                if (!q) {
+                    return('#' + d2h(r) + d2h(g) + d2h(b));
+                } else {
+                    return(r + ',' + g + ',' + b);
+                }
+            };
+
+
         }
 
         return {
             restrict: 'E',
-            transclude: true,
             controller: aulaProgressbarController,
             rep1ace: true,
             link: linker,
