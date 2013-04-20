@@ -18,7 +18,20 @@ angular.module('app.directives', []).
 
         var pageTemplate = '<div><h2>PAGE</h2></div>';
         var bookTemplate = '<div><h2>BOOK</h2></div>';
-        var quizTemplate = '<div><h2>QUIZ</h2></div>';
+        var quizTemplate = '' +
+            '   <div id="slickQuiz" class="hero-unit">' +
+            '       <h1 class="quizName"><!-- where the quiz name goes --></h1>' +
+            '       <div class="quizArea">' +
+            '           <div class="quizHeader">' +
+            '               <a class="button startQuiz" href="#">Get Started!</a>' +
+            '           </div>' +
+            '       </div>' +
+            '       <div class="quizResults">' +
+            '           <h3 class="quizScore">You Scored: <span><!-- where the quiz score goes --></span></h3>' +
+            '           <h3 class="quizLevel"><strong>Ranking:</strong> <span><!-- where the quiz ranking level goes --></span></h3>' +
+            '           <div class="quizResultsCopy"></div>' +
+            '       </div>' +
+            '   </div>';
 
         var slideTemplate = '<apium-slide-viewer interval="params.interval">' +
             '   <apium-slide ng-repeat="slide in params.slides" active="slide.active">' +

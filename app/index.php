@@ -39,10 +39,16 @@ include_once('php/templates/traintron.php');
 <script src="lib/angular/angular-ui.min.js"></script>
 <script src="lib/ui-bootstrap/ui-bootstrap-tpls-0.2.0.js"></script>
 <script src="lib/ui-bootstrap/ui-bootstrap-apium.js"></script>
+<!--<script src="lib/bootstrap/bootstrap-alert.js"></script>-->
 
 <!-- LOAD VIDEO.JS SOURCE FILES IN ORDER -->
 <script type="text/javascript" src="lib/video-js/source-loader.js"></script>
 <script type="text/javascript" src="lib/pdfjs/pdf.js"></script>
+
+<!-- LOAD QUIZ SOURCE -->
+<script type="text/javascript" src="lib/slickQuiz/js/slickQuiz-config.js"></script>
+<script type="text/javascript" src="lib/slickQuiz/js/slickQuiz.js"></script>
+<script type="text/javascript" src="lib/slickQuiz/js/master.js"></script>
 
 <script src="js/app.js"></script>
 

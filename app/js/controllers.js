@@ -29,7 +29,10 @@ function trainTron($scope, $timeout,$compile)
     };
 
     $scope.activities= [
-        {t:2,tt:'',                     id:66666, number: 1,
+        {t:1,tt:'',                     id:22222, number: 1, title: 'Esta es la prueba de quiz !!',
+            type:'quiz', params:{ url : 'http://cdn.mozilla.net/pdfjs/tracemonkey.pdf'},
+            completed:false},
+        {t:2,tt:'',                     id:66666, number: 2,
             title: 'Caracola is the good life',
             type:'slide',
             params:{
@@ -45,9 +48,7 @@ function trainTron($scope, $timeout,$compile)
                 ]
             },
             completed:false},
-        {t:1,tt:'',                     id:22222, number: 2, title: 'La segunda actividad con un PDF de ejemplo',
-            type:'pdf', params:{ url : 'http://cdn.mozilla.net/pdfjs/tracemonkey.pdf'},
-            completed:false},
+
         {t:1,tt:'The first Section',    id:11111, number: 3, title: 'La primera actividad, un video de ejemplo',
             type:'video', params:{src:"http://video-js.zencoder.com/oceans-clip.mp4",type:'video/mp4',poster:"http://video-js.zencoder.com/oceans-clip.png"},
             completed:true},

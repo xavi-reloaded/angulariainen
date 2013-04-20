@@ -108,8 +108,10 @@
           top: 100px;
           bottom: 81px;
           width: 100%;
-          border: 2px;
-          background: #000;
+          background: #eeeeee;
+          -webkit-border-radius: 6px;
+          -moz-border-radius: 6px;
+          border-radius: 6px;
         }
 
         .top {
@@ -143,7 +145,7 @@
           position: absolute;
           right: 0;
           top: 25%;
-
+          background: #eeeeee;
           span {
             display: block;
             overflow: hidden;
@@ -543,3 +545,97 @@ body {
 .slide-viewer-caption p{margin-bottom:0;}
 
 .slide-viewer-toolbar{position:absolute;left:0;right:0;bottom:-20px;padding:0px;z-index: 999;width: 100%;text-align: center;}
+
+
+
+
+
+/* BASE QUIZ STYLES */
+/* These styles ensure that the necessary elements are hidden for toggling */
+
+/* DO NOT EDIT UNLESS YOU KNOW WHAT YOU ARE DOING!! */
+#slickQuiz {
+//  height: 90%;
+  margin: 0 auto;
+  border-top: none;
+  padding: 20px;
+  line-height: 1.5em;
+
+}
+.startQuiz,
+.nextQuestion,
+.backToQuestion,
+.questions li.question,
+.questions li.question .responses,
+.questions li.question .responses .correct,
+.questions li.question .responses .incorrect,
+.quizResults {
+  display: none;
+}
+
+/* If response messages are disabled or only shown on quiz completion,
+   nextQuestion button IS checkAnswer button - so it must be displayed */
+.nextQuestion.checkAnswer {
+  display: block;
+}
+
+ol.questions,
+ul.answers,
+ul.responses,
+ol.questions li,
+ul.answers li,
+ul.responses li {
+  list-style-type: none;
+}
+
+
+.startQuiz {
+  margin-top: 40px;
+}
+
+/* clearfix */
+.quizArea, .quizResults {
+  zoom: 1;
+}
+.quizArea:before, .quizArea:after, .quizResults:before, .quizResults:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  font-size: 0;
+}
+.quizArea:after, .quizResults:after {
+  clear: both;
+}
+
+.questionCount {
+  font-size: 14px;
+  font-style: italic;
+}
+.questionCount span {
+  font-weight: bold;
+}
+
+ol.questions {
+  margin-top: 20px;
+  margin-left: 0;
+}
+ol.questions li {
+  margin-left: 0;
+}
+
+ul.answers {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.quizResults h3 {
+  margin: 0;
+}
+.quizResults h3 span {
+  font-weight: normal;
+  font-style: italic;
+}
+.quizResultsCopy {
+  margin-top: 20px;
+}
