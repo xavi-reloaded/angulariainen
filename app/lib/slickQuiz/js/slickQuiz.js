@@ -9,6 +9,8 @@
  * @license MIT
  */
 
+// TODO: make that function work transform it into a class, put it under test and pass quizJSON to make it dynamic
+
 (function($){
     $.slickQuiz = function(element, options) {
         var $element = $(element),
@@ -23,7 +25,7 @@
             randomSort: false,
             randomSortQuestions: false,
             randomSortAnswers: false,
-            preventUnanswered: false,
+            preventUnanswered: true,
             completionResponseMessaging: false,
             disableResponseMessaging: false
         };
