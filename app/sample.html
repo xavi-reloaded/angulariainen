@@ -38,7 +38,7 @@
 <body ng-controller="progress">
 
 <div class="container" ng-repeat="prog in progresss">
-    <aula-progressbar scale="100" value="48"></aula-progressbar>
+    <aula-progressbar scale="10" value="1"></aula-progressbar>
 </div>
 
 
@@ -47,9 +47,6 @@
     function progress($scope){
         $scope.progresss = [
             {scale:'10',value:'7'},
-            {scale:'5',value:'2'},
-            {scale:'8',value:'7'},
-            {scale:'50',value:'45'}
         ]
     }
 </script>

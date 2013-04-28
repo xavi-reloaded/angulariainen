@@ -21,6 +21,10 @@ files = [
     'app/lib/jquery/jquery-ui.min.js',
     'test/lib/angular/angular-mocks.js',
 
+    'app/lib/slickQuiz/js/slickQuiz-config.js',
+    'app/lib/slickQuiz/js/slickQuiz.js',
+    'app/lib/slickQuiz/js/slickQuizClass.js',
+
     'app/js/**/*.js',
     'test/unit/**/*.js'
 

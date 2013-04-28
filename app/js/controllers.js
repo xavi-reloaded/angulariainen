@@ -30,7 +30,7 @@ function trainTron($scope, $timeout,$compile)
 
     $scope.activities= [
         {t:1,tt:'',                     id:22222, number: 1, title: 'Esta es la prueba de quiz !!',
-            type:'quiz', params:{ url : 'http://cdn.mozilla.net/pdfjs/tracemonkey.pdf'},
+            type:'quiz', params:{ quizData : quizJSON},
             completed:false},
         {t:2,tt:'',                     id:66666, number: 2,
             title: 'Caracola is the good life',

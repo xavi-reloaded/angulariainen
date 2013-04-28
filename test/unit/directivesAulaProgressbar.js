@@ -16,7 +16,7 @@ describe('apium directives', function() {
             inject(function($compile, $rootScope) {
                 var element = $compile('<aula-progressbar scale="15" value="7"></aula-progressbar>')($rootScope);
                 var expected = '<div id="aulaProgressbar" style="width: 100%;" class="ng-scope"></div>';
-//                expect(element.html()).toEqual(expected);
+                expect(element.html().substr(0,5)).toEqual(expected.substr(0,5));
             });
         });
     });

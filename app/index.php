@@ -48,7 +48,7 @@ include_once('php/templates/traintron.php');
 <!-- LOAD QUIZ SOURCE -->
 <script type="text/javascript" src="lib/slickQuiz/js/slickQuiz-config.js"></script>
 <script type="text/javascript" src="lib/slickQuiz/js/slickQuiz.js"></script>
-<script type="text/javascript" src="lib/slickQuiz/js/master.js"></script>
+<!--<script type="text/javascript" src="lib/slickQuiz/js/master.js"></script>-->
 
 <script src="js/app.js"></script>
 
