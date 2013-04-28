@@ -17,6 +17,7 @@ describe('lickSquizClass.js specs', function() {
         completionResponseMessaging: false,
         disableResponseMessaging: false
     };
+    var json = quizJSON;
 
     beforeEach(function(){
 
@@ -36,20 +37,29 @@ describe('lickSquizClass.js specs', function() {
             '   </div>'
         );
 
+        sut = new SlickQuizClass(element, options,json);
+
     });
 
 
     describe('create class', function() {
         it('should return valid class instance',function(){
-            sut = new SlickQuizClass(element, options,quizJSON);
             expect(sut).not.toBe(null);
         });
     });
 
-    describe('create class', function() {
-        it('should return valid class instance',function(){
-            sut = new SlickQuizClass(element, options,quizJSON);
-            expect(sut).not.toBe(null);
+    describe('class quizz methods', function() {
+        it('should return execute setupQuiz()',function(){
+            expect(sut.setupQuiz()).toBe(true);
+        });
+
+        it('should return quizName setted value',function(){
+            var ulElement = $('h1.quizName');
+            expect(ulElement.text()).toBe('');
+        });
+
+        it('should return quiz values',function(){
+            expect(sut.getQuizValues()).toBe(json);
         });
     });
 

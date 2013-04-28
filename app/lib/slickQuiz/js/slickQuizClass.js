@@ -25,9 +25,6 @@ var Greeter = (function () {
 var SlickQuizClass = (function(){
 
     function SlickQuizClass(element, options, json) {
-        this.element = element;
-        this.options = options;
-        this.json = json;
 
         var defaults = {
             checkAnswerText:  'Check My Answer!',
@@ -99,13 +96,141 @@ var SlickQuizClass = (function(){
         // Count the number of questions
         var questionCount = questions.length;
 
+        this.element = element;
+        this.options = options;
+        this.json = json;
+        this.targets = targets;
+        this.triggers = triggers;
+        this.quizValues = quizValues;
+        this.questions = questions;
+        this.questionCount = questionCount;
+        this.defaults = defaults;
+        this.quizValues = quizValues;
+
     }
 
+    SlickQuizClass.prototype.getQuizValues = function() {
+        return this.quizValues;
+    }
+
+    SlickQuizClass.prototype.setupQuiz = function() {
+
+        $(this.targets.quizName).hide().html(this.quizValues.info.name).fadeIn(1000);
+        $(this.targets.quizHeader).hide().prepend(this.quizValues.info.main).fadeIn(1000);
+        $(this.targets.quizResultsCopy).append(this.quizValues.info.results);
+
+        // Setup questions
+        var quiz  = $('<ol class="questions"></ol>'),
+            count = 1;
+
+        // Loop through questions object
+        for (i in this.questions) {
+            if (this.questions.hasOwnProperty(i)) {
+                var question = this.questions[i];
+
+                var questionHTML = $('<li class="question" id="question' + (count - 1) + '"></li>');
+                questionHTML.append('<div class="questionCount">Question <span class="current">' + count + '</span> of <span class="total">' + this.questionCount + '</span></div>');
+                questionHTML.append('<h3>' + count + '. ' + question.q + '</h3>');
+
+                // Count the number of true values
+                var truths = 0;
+                for (i in question.a) {
+                    if (question.a.hasOwnProperty(i)) {
+                        var answer = question.a[i];
+                        if (answer.correct) {
+                            truths++;
+                        }
+                    }
+                }
+
+                // prepare a name for the answer inputs based on the question
+                var inputName  = 'question' + (count - 1);
+
+                // Now let's append the answers with checkboxes or radios depending on truth count
+                var answerHTML = $('<ul class="answers"></ul>');
+
+                var answers = this.defaults.randomSort || this.defaults.randomSortAnswers ?
+                    question.a.sort(function() { return (Math.round(Math.random())-0.5); }) :
+                    question.a;
+
+                for (i in answers) {
+                    if (answers.hasOwnProperty(i)) {
+                        var answer   = answers[i],
+                            optionId = inputName + '_' + i.toString();
+
+                        // If question has >1 true answers, use checkboxes; otherwise, radios
+                        var input = '<input id="' + optionId + '" name="' + inputName
+                            + '" type="' + (truths > 1 ? 'checkbox' : 'radio') + '" />';
+
+                        var optionLabel = '<label for="' + optionId + '">' + answer.option + '</label>';
+
+                        var answerContent = $('<li></li>')
+                            .append(input)
+                            .append(optionLabel);
+                        answerHTML.append(answerContent);
+                    }
+                }
+
+                // Append answers to question
+                questionHTML.append(answerHTML);
+
+                // If response messaging is NOT disabled, add it
+                if (!this.defaults.disableResponseMessaging) {
+                    // Now let's append the correct / incorrect response messages
+                    var responseHTML = $('<ul class="responses"></ul>');
+                    responseHTML.append('<li class="correct">' +
+                        '<div class="alert alert-success alert-block">' +
+                        '<h4 class="alert-heading">Well done !</h4>' +
+                        ''+question.correct+'</div>' +
+                        '</li>');
+                    responseHTML.append('<li class="incorrect">' +
+                        '<div class="alert alert-error alert-block">' +
+                        '<h4 class="alert-heading">Ups, you\'re wrong !</h4>' +
+                        ''+question.incorrect+'</div>' +
+                        '</li>');
+
+                    // Append responses to question
+                    questionHTML.append(responseHTML);
+                }
+
+//                        <div class="alert"><a class="close" data-dismiss="alert">×</a><strong>Warning!</strong> Best check yo self, you're not looking too good.</div>
+
+                // Appends check answer / back / next question buttons
+                if (this.defaults.backButtonText && this.defaults.backButtonText !== '') {
+                    questionHTML.append('<a href="#" class="btn btn-info backToQuestion">' + this.defaults.backButtonText + '</a>');
+                }
+
+                // If response messaging is disabled or hidden until the quiz is completed,
+                // make the nextQuestion button the checkAnswer button, as well
+                if (this.defaults.disableResponseMessaging || this.defaults.completionResponseMessaging) {
+                    questionHTML.append('<a href="#" class="btn btn-info nextQuestion checkAnswer">' + this.defaults.nextQuestionText + '<i class="icon-arrow-right icon-white"></i></a>');
+                } else {
+                    questionHTML.append('<a href="#" class="btn btn-info nextQuestion">' + this.defaults.nextQuestionText + '<i class="icon-arrow-right icon-white"></i></a>');
+                    questionHTML.append('<a href="#" class="btn btn-info checkAnswer">' + this.defaults.checkAnswerText + '</a>');
+                }
+
+                // Append question & answers to quiz
+                quiz.append(questionHTML);
+
+                count++;
+            }
+        }
+
+        // Add the quiz content to the page
+        $(this.targets.quizArea).append(quiz);
+
+        // Toggle the start button
+        $(this.triggers.starter).fadeIn(500);
+
+        return true;
+    };
 
 
 
 
-    $.slickQuiz = function(element, options) {
+
+
+   $.slickQuiz = function(element, options) {
         var $element = $(element),
              element = element;
 
