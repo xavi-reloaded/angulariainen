@@ -59,7 +59,9 @@ var SlickQuizClass = (function(){
 
 //        plugin.config = $.extend(defaults, options);
 
+        console.log('element: '+element);
         var selector = $(element).attr('id');
+        console.log('selector: '+selector);
 
         var triggers = {
             starter:         '#' + selector + ' .startQuiz',
@@ -106,12 +108,52 @@ var SlickQuizClass = (function(){
         this.questionCount = questionCount;
         this.defaults = defaults;
         this.quizValues = quizValues;
+        this.questions = questions;
+        this.selector = selector;
 
     }
 
     SlickQuizClass.prototype.getQuizValues = function() {
         return this.quizValues;
     }
+
+    SlickQuizClass.prototype.getQuizjquerySelector = function() {
+        return this.selector;
+    }
+
+    SlickQuizClass.prototype.getQuizQuestions = function() {
+        return this.questions;
+    }
+
+    SlickQuizClass.prototype.init =function() {
+        // Setup quiz
+        this.setupQuiz();
+
+        // Bind "start" button
+        $(this.triggers.starter).on('click', function(e) {
+            e.preventDefault();
+            this.startQuiz(this);
+        });
+
+        // Bind "submit answer" button
+        $(this.triggers.checker).on('click', function(e) {
+            e.preventDefault();
+            this.checkAnswer(this);
+        });
+
+        // Bind "back" button
+        $(this.triggers.back).on('click', function(e) {
+            e.preventDefault();
+            this.backToQuestion(this);
+        });
+
+        // Bind "next question" button
+        $(this.triggers.next).on('click', function(e) {
+            e.preventDefault();
+            this.nextQuestion(this);
+        });
+        return true;
+    };
 
     SlickQuizClass.prototype.setupQuiz = function() {
 
@@ -215,6 +257,10 @@ var SlickQuizClass = (function(){
                 count++;
             }
         }
+
+        console.log('quiz value setted into setup function [');
+        console.log(quiz.text());
+        console.log(']');
 
         // Add the quiz content to the page
         $(this.targets.quizArea).append(quiz);

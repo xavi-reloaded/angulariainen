@@ -37,7 +37,7 @@ describe('lickSquizClass.js specs', function() {
             '   </div>'
         );
 
-        sut = new SlickQuizClass(element, options,json);
+        sut = new SlickQuizClass("slickQuiz", options,json);
 
     });
 
@@ -54,13 +54,32 @@ describe('lickSquizClass.js specs', function() {
         });
 
         it('should return quizName setted value',function(){
-            var ulElement = $('h1.quizName');
-            expect(ulElement.text()).toBe('');
+            var ulElement = $('div');
+            expect(ulElement.children('li').text()).toBe('');
         });
 
         it('should return quiz values',function(){
             expect(sut.getQuizValues()).toBe(json);
         });
+
+        it('should return quiz questions of json that are five',function(){
+            expect(sut.getQuizQuestions().length).toBe(5);
+        });
+
+        it('shuld  create tag ol.questions',function(){
+            var ulElement = $('ol.questions');
+            expect(ulElement.children().lenght).toBe(0);
+        });
+
+        it('shuld execute init method',function(){
+            expect(sut.init()).toBe(true);
+        });
+
+        it('shuld check if jquery <SELECTOR> is properly created',function(){
+            expect(sut.getQuizjquerySelector()).toBe(true);
+        });
+
+
     });
 
 
