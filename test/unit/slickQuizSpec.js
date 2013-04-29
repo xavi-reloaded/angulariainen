@@ -5,7 +5,7 @@
 describe('lickSquizClass.js specs', function() {
 
     var sut;
-    var element = "slickQuiz";
+    var element = "div#slickQuiz";
     var options = {
         checkAnswerText:  'Check My Answer!',
         nextQuestionText: 'Next',
@@ -37,7 +37,7 @@ describe('lickSquizClass.js specs', function() {
             '   </div>'
         );
 
-        sut = new SlickQuizClass("slickQuiz", options,json);
+        sut = new SlickQuizClass(element, options,json);
 
     });
 
@@ -66,23 +66,32 @@ describe('lickSquizClass.js specs', function() {
             expect(sut.getQuizQuestions().length).toBe(5);
         });
 
-        it('shuld  create tag ol.questions',function(){
-            var ulElement = $('ol.questions');
+        it('should create tag ol.questions',function(){
+            sut.setupQuiz();
+            var ulElement = $('ol');
             expect(ulElement.children().lenght).toBe(0);
         });
 
-        it('shuld execute init method',function(){
+        it('should execute init method',function(){
             expect(sut.init()).toBe(true);
         });
 
-        it('shuld check if jquery <SELECTOR> is properly created',function(){
-            expect(sut.getQuizjquerySelector()).toBe(true);
+        it('should check if jquery SELECTOR> is properly created',function(){
+            expect(sut.getQuizjquerySelector()).toBe('slickQuiz');
         });
 
 
     });
 
-
+    describe('test jquery getAttr', function() {
+        it('should load selector',function(){
+            var element = "div#slickQuiz";
+            var selector = $(element).attr('id');
+            console.log('element: '+element);
+            console.log('selector: '+selector);
+            expect(selector).not.toBe(undefined);
+        });
+    });
 
 
 });
