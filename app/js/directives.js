@@ -31,7 +31,9 @@ angular.module('app.directives', []).
             '           <h3 class="quizLevel"><strong>Ranking:</strong> <span><!-- where the quiz ranking level goes --></span></h3>' +
             '           <div class="quizResultsCopy"></div>' +
             '       </div>' +
-            '   </div>';
+            '   </div>' +
+            '' +
+            '<script language="javascript">$(function () {$("#slickQuiz").slickQuiz();});</script>';
 
         var slideTemplate = '<apium-slide-viewer interval="params.interval">' +
             '   <apium-slide ng-repeat="slide in params.slides" active="slide.active">' +

@@ -18,11 +18,9 @@
 <body ng-controller="trainTron">
 
 
-<?php
+<div ng-show="true" ng-include="'php/templates/traintron.html'">
+</div>
 
-include_once('php/templates/traintron.php');
-
-?>
 
 
 
@@ -46,9 +44,12 @@ include_once('php/templates/traintron.php');
 <script type="text/javascript" src="lib/pdfjs/pdf.js"></script>
 
 <!-- LOAD QUIZ SOURCE -->
-<script type="text/javascript" src="lib/slickQuiz/js/slickQuiz-config.js"></script>
-<script type="text/javascript" src="lib/slickQuiz/js/slickQuiz.js"></script>
-<!--<script type="text/javascript" src="lib/slickQuiz/js/master.js"></script>-->
+<!--<script type="text/javascript" src="lib/slickQuiz/js/slickQuiz-config.js"></script>-->
+<!--<script type="text/javascript" src="lib/slickQuiz/js/slickQuiz.js"></script>-->
+
+<script type="text/javascript" src="SlickQuiz/js/slickQuiz-config.js"></script>
+<script type="text/javascript" src="SlickQuiz/js/slickQuiz.js"></script>
+<script type="text/javascript" src="SlickQuiz/js/master.js"></script>
 
 <script src="js/app.js"></script>
 

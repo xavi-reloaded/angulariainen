@@ -9,13 +9,13 @@ function trainTron($scope, $timeout,$compile)
         courseId: '123456789',
         isInstructor: true,
         courseUrl: 'http://www.apiumtech.com/course/course-flipante',
-        courseTitle: 'Curso Flipante de Taxidermia',
+        courseTitle: 'Curso fake para demostrar angular como tecnología de front-end',
         userId: '123456789',
         uiMessages: 'bla bla bla',
         autoplay: '1',
         introCourse: {},
         ratioCompleted: '48',
-        intro: {message:"Wellcome to the course flipante"},
+        intro: {message:"Curso de ejemplo"},
         topics: [
             {"number": 1, "title": 'The first Section',"type":"select",
                 "activities": [
@@ -29,8 +29,8 @@ function trainTron($scope, $timeout,$compile)
     };
 
     $scope.activities= [
-        {t:1,tt:'',                     id:22222, number: 1, title: 'Esta es la prueba de quiz !!',
-            type:'quiz', params:{ quizData : quizJSON},
+        {t:1,tt:'', id:22222, number: 1, title: 'Quiz test',
+            type:'quiz', params: { quizData : quizJSON },
             completed:false},
         {t:2,tt:'',                     id:66666, number: 2,
             title: 'Caracola is the good life',
@@ -52,15 +52,12 @@ function trainTron($scope, $timeout,$compile)
         {t:1,tt:'The first Section',    id:11111, number: 3, title: 'La primera actividad, un video de ejemplo',
             type:'video', params:{src:"http://video-js.zencoder.com/oceans-clip.mp4",type:'video/mp4',poster:"http://video-js.zencoder.com/oceans-clip.png"},
             completed:true},
-        {t:1,tt:'',                     id:33333, number: 4, title: 'La segunda actividad',
+        {t:1,tt:'',                     id:33333, number: 4, title: 'La segunda actividad es una página',
             type:'page', params:{},
             completed:true},
 
-        {t:1,tt:'',                     id:44444, number: 5, title: 'la tercera lectura',
+        {t:1,tt:'',                     id:44444, number: 5, title: 'la tercera actividad es un epub',
             type:'book', params:{},
-            completed:true},
-        {t:2,tt:'The second Section',   id:55555, number: 6, title: 'la cuarta',
-            type:'quiz', params:{},
             completed:true}
 
     ];
