@@ -13,6 +13,9 @@
     },
 
   "activities": [
+    {"t":1,"tt":"",                     "id":33333, "number": 3, "title": "Un video general sobre javascript",
+      "type":"youtube", "params":{"v":"xnWtGNiG2lg"},
+      "completed":false},
     {"t":1,"tt":"", "id":22222, "number": 1, "title": "Primero unas preguntas",
       "type":"quiz", "params": { "quizData": {} },
       "completed":false},

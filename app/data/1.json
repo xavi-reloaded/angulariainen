@@ -15,8 +15,8 @@
     {"t":1,"tt":"", "id":22222, "number": 1, "title": "Primero unas preguntas",
       "type":"quiz", "params": { "quizData": {} },
       "completed":false},
-    {"t":1,"tt":"", "id":22222, "number": 1, "title": "Primero unas preguntas",
-      "type":"page", "params": { "content": "puedes probar de hacer ejercicios para cada ejemplo en https://jsfiddle.net/" },
+    {"t":1,"tt":"", "id":22222, "number": 1, "title": "Para hacer los ejercicios",
+      "type":"page", "params": { "content": "     Puedes probar de hacer ejercicios para cada ejemplo en https://jsfiddle.net/" },
       "completed":false},
     {"t":1,"tt":"",                     "id":66666, "number": 2,
       "title": "Variables en Javascript",
@@ -34,7 +34,7 @@
       },
       "completed":false},
     {"t":1,"tt":"",                     "id":33333, "number": 3, "title": "Un video general sobre javascript",
-      "type":"youtube", "params":{"v":"xnWtGNiG2lg"},
+      "type":"youtube", "params":{"v":"m2nscBtQEIs"},
       "completed":false},
     {"t":1,"tt":"",                     "id":66666, "number": 4,
       "title": "Tipos de datos",
@@ -56,7 +56,7 @@
       },
       "completed":false},
     {"t":1,"tt":"",                     "id":33333, "number": 5, "title": "La segunda actividad es una página",
-      "type":"youtube", "params":{"v":"xnWtGNiG2lg"},
+      "type":"youtube", "params":{"v":"SVmKhuAWvY4"},
       "completed":false},
     {"t":1,"tt":"",                     "id":66666, "number": 6,
       "title": "Operadores",
@@ -78,8 +78,8 @@
         ]
       },
       "completed":false},
-    {"t":1,"tt":"",                     "id":33333, "number": 7, "title": "La segunda actividad es una página",
-      "type":"youtube", "params":{"v":"xnWtGNiG2lg"},
+    {"t":1,"tt":"",                     "id":33333, "number": 7, "title": "Video sobre Operadores",
+      "type":"youtube", "params":{"v":"eidffYi0kUk"},
       "completed":false},
     {"t":1,"tt":"",                     "id":66666, "number": 8,
       "title": "Estructuras de Control",
@@ -106,6 +106,9 @@
           {"image": "sampledata/45.png","text": ""}
         ]
       },
+      "completed":false},
+    {"t":1,"tt":"",                     "id":33333, "number": 8, "title": "La segunda actividad es una página",
+      "type":"youtube", "params":{"v":"eidffYi0kUk"},
       "completed":false},
     {"t":1,"tt":"",                     "id":66666, "number": 9,
       "title": "Funciones",
@@ -136,6 +139,7 @@
         ]
       },
       "completed":false},
+    {"t":1,"tt":"","id":33333, "number": 9, "title": "Video sobre funciones en javascript","type":"youtube", "params":{"v":"uUfYLGVLHfI"},"completed":false},
     {"t":1,"tt":"",                     "id":66666, "number": 10,
       "title": "Objectos",
       "type":"slide",
@@ -151,12 +155,7 @@
         ]
       },
       "completed":false},
-    {"t":1,"tt":"",                     "id":44444, "number": 11, "title": "la tercera actividad es un epub",
-      "type":"book", "params":{},
-      "completed":false},
-    {"t":1,"tt":"",                     "id":77777, "number": 12, "title": "la tercera actividad es un lo que me de la gana",
-      "type":"page", "params":{},
-      "completed":false}
+    {"t":1,"tt":"","id":33333, "number": 9, "title": "Video sobre Objectos en javascript","type":"youtube", "params":{"v":"6wB-0QSkk3Y"},"completed":false}
 
   ],
   "notes": [

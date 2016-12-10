@@ -18,7 +18,9 @@ angular.module('app.directives', []).
 
         var pageTemplate = '<div><h2>PAGE</h2>{{params.content}}</div>';
         var bookTemplate = '<div><h2>BOOK</h2></div>';
-        var youtubeTemplate = '<div><h2>Video de youtube</h2><iframe class="responsive-utilities-test" width="100%" height="100%" src="https://www.youtube.com/embed/{{params.v}}?playlist=XGSy3_Czz8k&loop=1"> </iframe></div>';
+        var youtubeTemplate = '<div class="video-container">' +
+                                '<iframe src="http://www.youtube.com/embed/{{params.v}}" frameborder="0" width="560" height="315"></iframe>' +
+                              '</div>';
         var quizTemplate = '' +
             '   <div id="slickQuiz" class="hero-unit">' +
             '       <h1 class="quizName"><!-- where the quiz name goes --></h1>' +
