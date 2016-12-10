@@ -1,14 +1,17 @@
 'use strict';
 
 angular.module('app.controllers',[])
-    .controller('trainTron', function ($scope, $timeout,$compile,courseData) {
+    .controller('trainTron', function ($scope, $timeout,$compile,courseData,$routeParams) {
+
+        var id = $routeParams.courseId;
 
         $scope.course={ratioCompleted:'1',courseTitle:'Curso flipante de javascript'};
         $scope.activities=[];
 
-        courseData.get({courseId:1},function(res){
+        courseData.get({courseId:id},function(res){
             $scope.course = res.course;
             $scope.activities= res.activities;
+            $scope.notes = res.notes;
         });
 
         $scope.screenOnFront = 0;
