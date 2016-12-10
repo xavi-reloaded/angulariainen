@@ -4,68 +4,68 @@
 
 var quizJSON = {
     "info": {
-        "name":    "Test Your Knowledge!!",
-        "main":    "<p>Think you're smart enough to be on Jeopardy? Find out with this super crazy knowledge quiz!</p>",
-        "results": "<h5>Learn More</h5><p>Etiam scelerisque, nunc ac egestas consequat, odio nibh euismod nulla, eget auctor orci nibh vel nisi. Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida congue sed sit amet purus.</p>",
-        "level1":  "Jeopardy Ready",
-        "level2":  "Jeopardy Contender",
-        "level3":  "Jeopardy Amateur",
-        "level4":  "Jeopardy Newb",
-        "level5":  "Stay in school, kid..." // no comma here
+        "name":    "Memoria general",
+        "main":    "<p>Seguro que puedes con esto ? Primero vamos a testear si te acuerdas de lo que hemos hecho.</p>",
+        "results": "<h5>Hay que seguir estudiando</h5><p>No vamos mal pero hay que estudiar más. Este curso es para aprender un lenguage más potente.</p>",
+        "level1":  "Has acertado todo, no está nada mal.",
+        "level2":  "Bueno... no te acuerdas de todo",
+        "level3":  "Madre mia ! tienes que repasar los apuntes",
+        "level4":  "Amelie... no te enteras, tendremos que repasarlo todo.",
+        "level5":  "No has acertado ni una !!! Que desastre pequeño demonio !!!"
     },
     "questions": [
         { // Question 1
-            "q": "What number is the letter A in the English alphabet?",
+            "q": "Para que sirve el comando 'man' ?",
             "a": [
-                {"option": "8",      "correct": false},
-                {"option": "14",     "correct": false},
-                {"option": "1",      "correct": true},
-                {"option": "23",     "correct": false} // no comma here
+                {"option": "Pinta los usuarios que se han conectado al ordenador",      "correct": false},
+                {"option": "Muestra los mandos del ordenador",     "correct": false},
+                {"option": "Da ayuda sobre un comando por pantalla",      "correct": true},
+                {"option": "Sirve para ver el contenido de los archivos de texto",     "correct": false} // no comma here
             ],
-            "correct": "<p><span>That's right!</span> The letter A is the first letter in the alphabet!</p>",
-            "incorrect": "<p><span>Uhh no.</span> It's the first letter of the alphabet. Did you actually <em>go</em> to kindergarden?</p>" // no comma here
+            "correct": "<p><span>Correcto !</span> Veo que te acuerdas... Muy bien !</p>",
+            "incorrect": "<p><span>Que va !</span> No te acuerdas que era `man`y el comando que quieras y te  <em>muestra</em> como se usa ?!?!?!</p>" // no comma here
         },
         { // Question 2
-            "q": "How many inches of rain does Michigan get on average per year?",
+            "q": "Qué es Ubuntu?",
             "a": [
-                {"option": "149",    "correct": false},
-                {"option": "32",     "correct": true},
-                {"option": "3",      "correct": false},
-                {"option": "1291",   "correct": false} // no comma here
+                {"option": "Un lenguage de ordenador.",    "correct": false},
+                {"option": "Un sistema operativo",     "correct": true},
+                {"option": "Un ordenador",      "correct": false},
+                {"option": "Lo contrario de Windows",   "correct": false} // no comma here
             ],
-            "correct": "<p><span>Holy bananas!</span> I didn't actually expect you to know that! Correct!</p>",
-            "incorrect": "<p><span>Fail.</span> Sorry. You lose. It actually rains approximately 32 times a year in Michigan.</p>" // no comma here
+            "correct": "<p><span>Menos mal !</span> La has acertado, muy bien pequeñaja !</p>",
+            "incorrect": "<p><span>Que desastre !</span> Eres una pinky !!</p>" // no comma here
         },
         { // Question 3
-            "q": "In which of these places can you purchase a car?",
+            "q": "Como se entra en un directorio?",
             "a": [
-                {"option": "The Zoo",        "correct": false},
-                {"option": "Ebay",           "correct": true},
-                {"option": "Grocery Store",  "correct": false},
-                {"option": "Used Car Lot",   "correct": true} // no comma here
+                {"option": "Con ls",        "correct": false},
+                {"option": "Con cd",           "correct": true},
+                {"option": "Con cat",  "correct": false},
+                {"option": "Abriendo el terminal",   "correct": false} // no comma here
             ],
-            "correct": "<p><span>Nice!</span> You can indeed buy a car on Ebay or in a used car lot.</p>",
-            "incorrect": "<p><span>No.</span> You can't buy a car at the zoo or in a grocery store, try Ebay or a used car lot instead.</p>" // no comma here
+            "correct": "<p><span>Bien!</span> Vas bien :)</p>",
+            "incorrect": "<p><span>No!!!!</span> Esto es muy básico, si no te acuerdas madre miaaaa !!!.</p>" // no comma here
         },
         { // Question 4
-            "q": "Is Earth bigger than a basketball?",
+            "q": "Si fueras un developer, podrías ganarte la vida tan bien como una profesión muy bien pagada",
             "a": [
-                {"option": "Yes",    "correct": true},
+                {"option": "Si",    "correct": true},
                 {"option": "No",     "correct": false} // no comma here
             ],
-            "correct": "<p><span>Good Job!</span> You must be very observant!</p>",
-            "incorrect": "<p><span>ERRRR!</span> What planet Earth are <em>you</em> living on?!?</p>" // no comma here
+            "correct": "<p><span>Claro que sí!</span> Eres grande mi pequeña Amelie !</p>",
+            "incorrect": "<p><span>ERRRR!</span> pues claro que sí, petardaken !!!" // no comma here
         },
         { // Question 5
-            "q": "Where are you right now? Select ALL that apply.",
+            "q": "Te acuerdas de que es una variable",
             "a": [
-                {"option": "Planet Earth",   "correct": true},
-                {"option": "Pluto",          "correct": false},
-                {"option": "At a computer",  "correct": true},
-                {"option": "The Milky Way",  "correct": true} // no comma here
+                {"option": "Un elemento que contiene valores",   "correct": true},
+                {"option": "Algo que dentro de un programa, que uso para hacer cálculos",          "correct": false},
+                {"option": "Es un comando dentro de un programa",  "correct": false},
+                {"option": "Es un script, es decir, el código que he escrito",  "correct": false} // no comma here
             ],
-            "correct": "<p><span>Brilliant!</span> You're seriously a genius, (wo)man.</p>",
-            "incorrect": "<p><span>Not Quite.</span> You're actually on Planet Earth, in The Milky Way, At a computer. But nice try.</p>" // no comma here
+            "correct": "<p><span>Brillante!</span> si te acuerdas de esto, es que eres guay !</p>",
+            "incorrect": "<p><span>Petardalen !!</span> Es urgente que volvamos a hacer ejercicios antes de seguir con este curso</p>" // no comma here
         } // no comma here
     ]
 };

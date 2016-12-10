@@ -8,5 +8,8 @@ angular.module('app', ['app.controllers', 'app.filters', 'app.services', 'app.di
       templateUrl: 'partials/traintron.html',
       controller: 'trainTron'
     });
+    $routeProvider.when('/registration', {
+      templateUrl: 'partials/registration.html',
+    });
     $routeProvider.otherwise({redirectTo: '/registration'});
   }]);

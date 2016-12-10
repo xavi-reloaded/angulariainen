@@ -24,11 +24,11 @@ angular.module('app.directives', []).
             '       <h1 class="quizName"><!-- where the quiz name goes --></h1>' +
             '       <div class="quizArea">' +
             '           <div class="quizHeader">' +
-            '               <a class="button startQuiz" href="#">Get Started!</a>' +
+            '               <a class="button startQuiz" href="#">Comienza la prueba !</a>' +
             '           </div>' +
             '       </div>' +
             '       <div class="quizResults">' +
-            '           <h3 class="quizScore">You Scored: <span><!-- where the quiz score goes --></span></h3>' +
+            '           <h3 class="quizScore">Tu puntuación: <span><!-- where the quiz score goes --></span></h3>' +
             '           <h3 class="quizLevel"><strong>Ranking:</strong> <span><!-- where the quiz ranking level goes --></span></h3>' +
             '           <div class="quizResultsCopy"></div>' +
             '       </div>' +
