@@ -11,7 +11,6 @@
     "ratioCompleted": "48",
     "intro": {"title":"Hola Rapunzel !","message":"Bienvenida a tu primer reto, vamos a empezar el curso de Javascript :)","buttonGO":"Empecemos !"}
     },
-
   "activities": [
     {"t":1,"tt":"", "id":22222, "number": 1, "title": "Primero unas preguntas",
       "type":"quiz", "params": { "quizData": {} },
