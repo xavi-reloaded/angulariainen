@@ -1,0 +1,51 @@
+{
+  "course": {
+    "courseId": "123456789",
+    "isInstructor": true,
+    "courseUrl": "http://www.apiumtech.com/course/course-flipante",
+    "courseTitle": "Curso de Javascript para ultra-padawans",
+    "userId": "123456789",
+    "uiMessages": "bla bla bla",
+    "autoplay": "1",
+    "introCourse": {},
+    "ratioCompleted": "48",
+    "intro": {"title":"Hola Rapunzel !","message":"Bienvenida a tu primer reto, vamos a empezar el curso de Javascript :)","buttonGO":"Empecemos !"}
+    },
+
+  "activities": [
+    {"t":1,"tt":"", "id":22222, "number": 1, "title": "Primero unas preguntas",
+      "type":"quiz", "params": { "quizData": {} },
+      "completed":false},
+    {"t":2,"tt":"",                     "id":66666, "number": 2,
+      "title": "Caracola is the good life",
+      "type":"slide",
+      "params":{
+        "interval":"-1",
+        "slides":[
+          {"image": "sampledata/slide_sample_1.png","text": "dftgdfg "},
+          {"image": "sampledata/slide_sample_2.png","text": "Kitty!"},
+          {"image": "sampledata/slide_sample_3.png","text": "Cat."},
+          {"image": "sampledata/slide_sample_4.png","text": "Kitty!"},
+          {"image": "sampledata/slide_sample_5.png","text": "Cat."},
+          {"image": "sampledata/slide_sample_6.png","text": "Cat."},
+          {"image": "sampledata/slide_sample_7.png","text": "The last slide is this one"}
+        ]
+      },
+      "completed":false},
+
+    {"t":1,"tt":"The first Section",    "id":11111, "number": 3, "title": "La primera actividad, un video de ejemplo",
+      "type":"video", "params":{"src":"http://video-js.zencoder.com/oceans-clip.mp4","type":"video/mp4","poster":"http://video-js.zencoder.com/oceans-clip.png"},
+      "completed":false},
+    {"t":1,"tt":"",                     "id":33333, "number": 4, "title": "La segunda actividad es una página",
+      "type":"youtube", "params":{"v":"xnWtGNiG2lg"},
+      "completed":false},
+
+    {"t":1,"tt":"",                     "id":44444, "number": 5, "title": "la tercera actividad es un epub",
+      "type":"book", "params":{},
+      "completed":false},
+    {"t":1,"tt":"",                     "id":77777, "number": 6, "title": "la tercera actividad es un lo que me de la gana",
+      "type":"page", "params":{},
+      "completed":false}
+
+  ]
+}

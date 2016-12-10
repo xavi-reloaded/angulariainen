@@ -3,9 +3,10 @@
 /* Services */
 
 angular.module('app.services', ['ngResource']).
-    factory('Phone', function($resource){
-        return $resource('phones/:phoneId.json', {}, {
-            query: {method:'GET', params:{phoneId:'phones'}, isArray:true}
+
+    factory('courseData', function($resource){
+        return $resource('data/:courseId.json', {
+            get: {method:'GET', isArray:false}
         });
     }).
 
