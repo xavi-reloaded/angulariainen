@@ -16,7 +16,7 @@ angular.module('app.directives', []).
             '<p>Video Playback Not Supported</p>' +
             '</video>';
 
-        var pageTemplate = '<div><h2>PAGE</h2></div>';
+        var pageTemplate = '<div><h2>PAGE</h2>{{params.content}}</div>';
         var bookTemplate = '<div><h2>BOOK</h2></div>';
         var youtubeTemplate = '<div><h2>Video de youtube</h2><iframe class="responsive-utilities-test" width="100%" height="100%" src="https://www.youtube.com/embed/{{params.v}}?playlist=XGSy3_Czz8k&loop=1"> </iframe></div>';
         var quizTemplate = '' +

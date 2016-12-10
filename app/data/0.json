@@ -1,0 +1,49 @@
+{
+  "course": {
+    "courseId": "123456789",
+    "isInstructor": true,
+    "courseUrl": "http://www.apiumtech.com/course/course-flipante",
+    "courseTitle": "Un curso cualquiera",
+    "userId": "123456789",
+    "uiMessages": "bla bla bla",
+    "autoplay": "1",
+    "introCourse": {},
+    "ratioCompleted": "48",
+    "intro": {"title":"Hola User !","message":"Bienvenida a tu primer reto, vamos a empezar el curso de Javascript :)","buttonGO":"here we go !"}
+    },
+
+  "activities": [
+    {"t":1,"tt":"", "id":22222, "number": 1, "title": "Primero unas preguntas",
+      "type":"quiz", "params": { "quizData": {} },
+      "completed":false},
+    {"t":1,"tt":"",                     "id":66666, "number": 2,
+      "title": "Algo para aprender",
+      "type":"slide",
+      "params":{
+        "interval":"-1",
+        "slides":[
+          {"image": "sampledata/2.png","text": " "},
+          {"image": "sampledata/3.png","text": ""},
+          {"image": "sampledata/4.png","text": ""},
+          {"image": "sampledata/5.png","text": ""},
+          {"image": "sampledata/6.png","text": ""},
+          {"image": "sampledata/7.png","text": ""}
+        ]
+      },
+      "completed":false},
+    {"t":1,"tt":"",                     "id":33333, "number": 3, "title": "Un video general sobre javascript",
+      "type":"youtube", "params":{"v":"xnWtGNiG2lg"},
+      "completed":false},
+    {"t":1,"tt":"",                     "id":44444, "number": 11, "title": "la tercera actividad es un epub",
+      "type":"book", "params":{},
+      "completed":false},
+    {"t":1,"tt":"",                     "id":77777, "number": 12, "title": "la tercera actividad es un lo que me de la gana",
+      "type":"page", "params":{},
+      "completed":false}
+
+  ],
+  "notes": [
+    "acuerdat",
+    "ho te olvides la toalla cuando vayas a la playa"
+  ]
+}
