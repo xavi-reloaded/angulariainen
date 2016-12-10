@@ -13,13 +13,13 @@
     },
 
   "activities": [
-    {"t":1,"tt":"",                     "id":33333, "number": 3, "title": "Un video general sobre javascript",
+    {"t":1,"tt":"adfgsdfg","id":1, "number": 1, "title": "Un video general sobre javascript",
       "type":"youtube", "params":{"v":"xnWtGNiG2lg"},
       "completed":false},
-    {"t":1,"tt":"", "id":22222, "number": 1, "title": "Primero unas preguntas",
+    {"t":1,"tt":"", "id":2, "number": 2, "title": "Primero unas preguntas",
       "type":"quiz", "params": { "quizData": {} },
       "completed":false},
-    {"t":1,"tt":"",                     "id":66666, "number": 2,
+    {"t":1,"tt":"","id":3, "number": 3,
       "title": "Algo para aprender",
       "type":"slide",
       "params":{
@@ -34,16 +34,15 @@
         ]
       },
       "completed":false},
-    {"t":1,"tt":"",                     "id":33333, "number": 3, "title": "Un video general sobre javascript",
+    {"t":1,"tt":"", "id":4, "number": 4, "title": "Un video general sobre javascript",
       "type":"youtube", "params":{"v":"xnWtGNiG2lg"},
       "completed":false},
-    {"t":1,"tt":"",                     "id":44444, "number": 11, "title": "la tercera actividad es un epub",
+    {"t":1,"tt":"", "id":5, "number": 5, "title": "la tercera actividad es un epub",
       "type":"book", "params":{},
       "completed":false},
-    {"t":1,"tt":"",                     "id":77777, "number": 12, "title": "la tercera actividad es un lo que me de la gana",
+    {"t":1,"tt":"", "id":6, "number": 6, "title": "la tercera actividad es un lo que me de la gana",
       "type":"page", "params":{},
       "completed":false}
-
   ],
   "notes": [
     "acuerdat",
